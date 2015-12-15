@@ -12,5 +12,5 @@ CGold: The Hitchhiker’s Guide to the CMake
 * Contacts: Ruslan Baratov <ruslan_baratov@yahoo.com>
 
 .. |LICENSE| image:: https://img.shields.io/github/license/ruslo/CGold.svg
-  :target:https://github.com/ruslo/CGold/blob/master/LICENSE
+  :target: https://github.com/ruslo/CGold/blob/master/LICENSE
   :alt: LICENSE
