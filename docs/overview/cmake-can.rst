@@ -1,0 +1,2 @@
+What CMake can do
+-----------------
