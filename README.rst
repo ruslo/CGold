@@ -3,6 +3,8 @@ CGold: The Hitchhiker’s Guide to the CMake
 
 |build| |license|
 
+**!!! WORK IN PROGRESS !!!**
+
 .. |build| image:: https://readthedocs.org/projects/cgold/badge/?version=latest
   :target: http://cgold.readthedocs.org/en/latest/?badge=latest
   :alt: Documentation Status
