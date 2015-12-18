@@ -3,10 +3,13 @@ Installation
 
 .. epigraph::
 
-  | That's it, ground.
-  | I wonder if it will be friends with me?
-  | Hello, ground!
-  | -- `Whale <https://www.youtube.com/watch?v=GOyalYaBlpU>`_
+  | *That's it, ground.*
+  | *I wonder if it will be friends with me?*
+  | *Hello, ground!*
+  | |-- Whale|_
+
+.. |-- Whale| replace:: *-- Whale*
+.. _-- Whale: https://www.youtube.com/watch?v=GOyalYaBlpU
 
 Obviously to use some tool you need to install it first. CMake can be installed
 using default system package manager or by getting binaries from
