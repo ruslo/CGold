@@ -40,3 +40,4 @@ Enjoy!
   /first-step/installation
   /first-step/cmake-cli
   /first-step/cmake-gui
+  /first-step/native-build-tool
