@@ -41,3 +41,9 @@ Enjoy!
   /first-step/cmake-cli
   /first-step/cmake-gui
   /first-step/native-build-tool
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Platforms
+
+  /platforms/ios
