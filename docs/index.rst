@@ -1,4 +1,4 @@
-CGold: The Hitchhiker’s Guide to the CMake
+CGold: The Hitchhiker's Guide to the CMake
 ------------------------------------------
 
 Welcome to **CGold**!
