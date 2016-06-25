@@ -27,23 +27,8 @@ Enjoy!
 .. _Hunter package manager: https://github.com/ruslo/hunter
 
 .. toctree::
-  :maxdepth: 1
-  :caption: Overview
+  :maxdepth: 2
 
-  /overview/cmake-can
-  /overview/cmake-can-not
-
-.. toctree::
-  :maxdepth: 1
-  :caption: First step
-
-  /first-step/installation
-  /first-step/cmake-cli
-  /first-step/cmake-gui
-  /first-step/native-build-tool
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Platforms
-
-  /platforms/ios
+  /overview
+  /first-step
+  /platforms
