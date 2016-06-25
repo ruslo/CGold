@@ -1,3 +1,6 @@
+.. Copyright (c) 2016, Ruslan Baratov
+.. All rights reserved.
+
 CGold: The Hitchhiker's Guide to the CMake
 ------------------------------------------
 

@@ -1,3 +1,6 @@
+.. Copyright (c) 2016, Ruslan Baratov
+.. All rights reserved.
+
 What can't be done with CMake
 -----------------------------
 
