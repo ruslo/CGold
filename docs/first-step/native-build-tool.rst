@@ -30,5 +30,9 @@ family generators not available on ``Linux``). You can get this list by running
   native-build-tool/unix-makefiles.rst
   native-build-tool/ninja.rst
 
+.. seealso::
+
+  * `CMake Generators <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html>`_
+
 .. _generators: https://cmake.org/cmake/help/v3.5/manual/cmake-generators.7.html
 .. _-G \<generator-name>: https://cmake.org/cmake/help/v3.5/manual/cmake.1.html#options
