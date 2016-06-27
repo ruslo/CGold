@@ -35,3 +35,5 @@ Enjoy!
   /overview
   /first-step
   /platforms
+  /generators
+  /glossary
