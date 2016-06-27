@@ -6,19 +6,17 @@ CGold: The Hitchhiker's Guide to the CMake
 
 Welcome to **CGold**!
 
-This guide will show you how to use CMake and helps you to write elegant and
+This guide will show you how to use :ref:`CMake <CMake>` and helps you to write elegant and
 correct projects. We'll start from the simple cases and add more features one
-by one. This tutorial covers only part of `CMake capabilities`_ - some topics
+by one. This tutorial covers only part of :ref:`CMake <CMake>` capabilities - some topics
 are skipped intentionally in favor of better modern approaches. E.g. there are
 no instructions for writing ``Find*.cmake`` files like `FindZLIB.cmake`_ because
 it's easier to add some code to generate `ZLIBConfig.cmake`_ automatically.
 There will be no hints about writing superbuild project using
-`ExternalProject`_ because same can be done nicely with `Hunter package
-manager`_ (actually this is the main motivation of creating CGold - there are a
-lot of questions about solving different issues but no appropriate places with
-examples to refer). Document designed to be a good tutorial for the very
+`ExternalProject`_ because same can be done nicely with :ref:`Hunter package
+manager <Hunter>`. Document designed to be a good tutorial for the very
 begginers but touches some aspects which may be interested to advanced
-developers too. Look at it as a skeleton/starting point for further CMake
+developers too. Look at it as a skeleton/starting point for further :ref:`CMake <CMake>`
 learning.
 
 Enjoy!
@@ -36,4 +34,9 @@ Enjoy!
   /first-step
   /platforms
   /generators
+
+.. toctree::
+  :hidden:
+  :maxdepth: 1
+
   /glossary

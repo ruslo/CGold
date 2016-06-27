@@ -3,3 +3,8 @@
 
 Glossary
 --------
+
+.. toctree::
+  :glob:
+
+  /glossary/*
