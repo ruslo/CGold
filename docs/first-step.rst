@@ -9,5 +9,8 @@ First step
 
   /first-step/installation
   /first-step/native-build-tool
-  /first-step/cmake-cli
-  /first-step/cmake-gui
+  /first-step/compiler
+  /first-step/minimal-example
+  /first-step/generate-native-tool
+  /first-step/build-project
+  /first-step/run-executable
