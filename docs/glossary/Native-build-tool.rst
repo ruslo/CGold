@@ -12,7 +12,7 @@ software. :ref:`CMake <CMake>` is not a build tool itself since it can't build
 your projects or help with development like IDE do. CMake responsibility is to
 **generate** native build tool files from abstracted configuration code.
 
-Examples:
+Examples of native build tools:
 
 * Xcode
 * Visual Studio
