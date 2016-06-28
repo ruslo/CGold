@@ -42,6 +42,8 @@ Same action - adding new target/file, will be done in **one step** now:
 .. image:: /overview/images/generate-native-files-add.png
   :align: center
 
+.. _keep using your favorite tools:
+
 Note that the right part of the diagram **was not changed**. I.e. you still can
 keep using your favorite tools like ``Visual Studio/msbuild``, ``Xcode/xcodebuild`` and ``Makefile/make``!
 
@@ -111,7 +113,7 @@ originally this may be changed in future. E.g. you have worked with ``Makefile``
 want to try ``Ninja``. What you will do? Convert manually? Find the converter?
 Write converter from scratch? Write new ``Ninja`` configuration from scratch?
 With :ref:`CMake <CMake>` you can change ``cmake -G 'Unix Makefiles'`` to
-``cmake -G Ninja``. Done!
+``cmake -G Ninja`` - done!
 
 This helps developers of new IDEs also. Instead of putting your IDE users into
 situations when they have to decide should they use your ``SuperDuperIDE``
