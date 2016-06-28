@@ -6,5 +6,6 @@ Glossary
 
 .. toctree::
   :glob:
+  :maxdepth: 1
 
   /glossary/*
