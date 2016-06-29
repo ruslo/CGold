@@ -3,3 +3,7 @@
 
 OSX Clang
 =========
+
+``Clang`` compiler will be installed with
+:doc:`/first-step/native-build-tool/xcode` or while installing
+:doc:`make </first-step/native-build-tool/unix-makefiles>`.

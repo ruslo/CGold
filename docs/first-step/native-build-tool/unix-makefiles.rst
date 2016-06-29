@@ -8,11 +8,8 @@ Unix Makefiles
 * `CMake documenation <https://cmake.org/cmake/help/v3.5/generator/Unix%20Makefiles.html>`_
 * `Make on wikipedia.org <https://en.wikipedia.org/wiki/Make_%28software%29>`_
 
-Installation
-============
-
-Ubuntu
-++++++
+Ubuntu Installation
+===================
 
 .. code-block:: bash
 
@@ -20,3 +17,74 @@ Ubuntu
   > make -v
   GNU Make 3.81
   ...
+
+OSX Installation
+================
+
+If you're planning to install :doc:`xcode` then install it first. ``make`` and
+other tools go with ``Xcode``. Otherwise ``make`` can be installed
+with ``Command line tools`` only.
+
+Run ``Launchpad``:
+
+.. image:: osx-screens/dev-tools/01-launchpad.png
+  :align: center
+
+Find ``Terminal`` and lauch it:
+
+.. image:: osx-screens/dev-tools/02-launchpad-terminal.png
+  :align: center
+
+Try to execute ``make`` (or any other commands for development like gcc, git,
+clang, etc.). Dialog window will popup:
+
+.. image:: osx-screens/dev-tools/03-developers-tools-pop-up.png
+  :align: center
+
+Click ``Install`` wait until it finished with successful message:
+
+.. image:: osx-screens/dev-tools/04-installed.png
+  :align: center
+
+.. _osx developer tools installed:
+
+Check ``make`` location and version:
+
+.. code-block:: bash
+
+  > which make
+  /usr/bin/make
+
+  > make --version
+  GNU Make 3.81
+  Copyright (C) 2006  Free Software Foundation, Inc.
+  This is free software; see the source for copying conditions.
+  There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+  PARTICULAR PURPOSE.
+
+  This program built for i386-apple-darwin11.3.0
+
+``Clang`` will be installed too:
+
+.. code-block:: bash
+
+  > which clang
+  /usr/bin/clang
+
+  > clang --version
+  Apple LLVM version 7.0.2 (clang-700.1.81)
+  Target: x86_64-apple-darwin14.0.0
+  Thread model: posix
+
+As well as ``GCC``:
+
+.. code-block:: bash
+
+  > which gcc
+  /usr/bin/gcc
+
+  > gcc --version
+  Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+  Apple LLVM version 7.0.2 (clang-700.1.81)
+  Target: x86_64-apple-darwin14.0.0
+  Thread model: posix

@@ -30,7 +30,7 @@ family generators not available on ``Linux``). You can get this list by running
     ...
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   native-build-tool/visual-studio
   native-build-tool/xcode
