@@ -75,7 +75,7 @@ Correct workflow:
 That said, it's not enough to know that if you want to add new library to your
 ``Visual Studio`` solution you can do:
 
-* ``Add`` -> ``New Project ...`` -> ``Visual C++`` -> ``Static Library``
+* :menuselection:`Add --> New Project ... --> Visual C++ --> Static Library`
 
 you have to know that this must be done by adding new
 ``add_library`` command to ``CMakeLists.txt``.
