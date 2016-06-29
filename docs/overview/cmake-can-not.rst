@@ -30,7 +30,7 @@ compare with what you have probably used before. There are no classes, no
 maps, no virtual functions or lambdas. Even parsing functions input arguments
 and returning results is something quite tricky for the beginners.
 :ref:`CMake <CMake>` is definitely not a language you want to try to experiment
-with implementation of red-black tree or parsing JSON response from server.
+with implementation of red-black tree or processing JSON response from server.
 **But it does** handle regular development very efficiently and it is much better
 then native XML files or autotools configs. Think about it in this way: if you
 want to do some nasty non-standard things probably you should stop. If you think it is

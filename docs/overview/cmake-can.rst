@@ -10,6 +10,11 @@ Usually such code lives in ``CMakeLists.txt`` files.
 
 What does it mean and how it can be useful?
 
+.. note::
+
+  If you already decide to use :ref:`CMake <CMake>` and want to give it a try
+  you can go straight to the :ref:`"First step" <first step>`.
+
 Cross-platform development
 ==========================
 
@@ -132,3 +137,9 @@ Summary
 * :ref:`VCS <VCS>` friendly development
 * Easy experimenting
 * Easy development of new IDEs
+
+.. note::
+
+  This section is not intended to cover all funtionality but only give
+  brief review. Testing, packing, installing, distributing, dependency
+  discovering, scripting etc. will be described fully in :ref:`Tutorials <tutorials>`.

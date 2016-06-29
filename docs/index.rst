@@ -6,8 +6,8 @@ CGold: The Hitchhiker's Guide to the CMake
 
 Welcome to **CGold**!
 
-This guide will show you how to use :ref:`CMake <CMake>` and helps you to write elegant and
-correct projects. We'll start from the simple cases and add more features one
+This guide will show you how to use :ref:`CMake <CMake>` and helps you to write elegant,
+correct and scalable projects. We'll start from the simple cases and add more features one
 by one. This tutorial covers only part of :ref:`CMake <CMake>` capabilities - some topics
 are skipped intentionally in favor of better modern approaches. E.g. there are
 no instructions for writing ``Find*.cmake`` files like `FindZLIB.cmake`_ because
@@ -32,6 +32,7 @@ Enjoy!
 
   /overview
   /first-step
+  /tutorials
   /platforms
   /generators
 
