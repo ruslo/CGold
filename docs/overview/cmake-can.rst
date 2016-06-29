@@ -35,6 +35,8 @@ To keep the environment consistent you have to do the similar update several
 times. And the most important thing is that you have to do it **manually**. Of
 course such approach is error prone and not flexible.
 
+.. _cmake generate native build tool:
+
 CMake solve this design flaw by adding extra step in development process. You
 can describe your project in ``CMakeLists.txt`` file and use :ref:`CMake <CMake>` to
 generate tools you currently interested in using cross-platform :ref:`CMake <CMake>` code:

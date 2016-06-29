@@ -35,6 +35,7 @@ Enjoy!
   /tutorials
   /platforms
   /generators
+  /compilers
 
 .. toctree::
   :hidden:

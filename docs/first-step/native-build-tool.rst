@@ -4,8 +4,10 @@
 Native build tool
 =================
 
-As already mentioned CMake *can't* do the build itself - it *generates files*
-which can be used by real native build tool, hence you need to choose such
+As already mentioned CMake is **not designed** to do the build itself -
+it :ref:`generates files <cmake generate native build tool>`
+which can be used by real :ref:`native build tool <Native build tool>`,
+hence you need to choose such
 tool(s) and install it if needed. Option `-G \<generator-name>`_ can be used to
 specify what type of generator will be run. If no such option present CMake
 will use default generator (e.g. ``Unix Makefiles`` on \*nix platforms).
@@ -30,8 +32,9 @@ family generators not available on ``Linux``). You can get this list by running
 .. toctree::
   :maxdepth: 1
 
-  native-build-tool/unix-makefiles.rst
-  native-build-tool/ninja.rst
+  native-build-tool/visual-studio
+  native-build-tool/xcode
+  native-build-tool/unix-makefiles
 
 .. seealso::
 
