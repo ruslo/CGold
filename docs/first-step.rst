@@ -22,5 +22,4 @@ Each command's usage/pitfalls will be described in depth further in :ref:`Tutori
   /first-step/compiler
   /first-step/minimal-example
   /first-step/generate-native-tool
-  /first-step/build-project
   /first-step/run-executable
