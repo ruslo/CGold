@@ -8,12 +8,12 @@ Create empty directory and put ``foo.cpp`` and ``CMakeLists.txt`` files into it.
 
 ``foo.cpp`` is a C++ source of our executable:
 
-.. literalinclude:: /first-step/minimal-example/foo.cpp
+.. literalinclude:: /examples/minimal-example/foo.cpp
   :language: cpp
 
 ``CMakeLists.txt`` is a project configuration, i.e. source for :ref:`CMake <CMake>`:
 
-.. literalinclude:: /first-step/minimal-example/CMakeLists.txt
+.. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
 
 Description
@@ -30,14 +30,14 @@ CMakeLists.txt
 
 First line of ``CMakeLists.txt`` is a comment and will be ignored:
 
-.. literalinclude:: /first-step/minimal-example/CMakeLists.txt
+.. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
   :linenos:
   :emphasize-lines: 1
 
 Next line tell us about ``CMake`` version for which this file is written:
 
-.. literalinclude:: /first-step/minimal-example/CMakeLists.txt
+.. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
   :linenos:
   :emphasize-lines: 3
@@ -49,14 +49,14 @@ Check that your version fits and move on.
 Declaration of the project ``foo``, e.g. ``Visual Studio`` solution will
 have name ``foo.sln``, ``Xcode`` project name will be ``foo.xcodeproj``:
 
-.. literalinclude:: /first-step/minimal-example/CMakeLists.txt
+.. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
   :linenos:
   :emphasize-lines: 4
 
 Adding executable ``foo`` with source ``foo.cpp``:
 
-.. literalinclude:: /first-step/minimal-example/CMakeLists.txt
+.. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
   :linenos:
   :emphasize-lines: 6
