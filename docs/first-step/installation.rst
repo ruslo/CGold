@@ -106,6 +106,32 @@ Version:
 
   CMake suite maintained and supported by Kitware (kitware.com/cmake).
 
+DMG installer
+~~~~~~~~~~~~~
+
+Download ``cmake-*.dmg`` installer from
+`Download page <https://cmake.org/download/>`_ and run it.
+
+Click ``Agree``:
+
+.. image:: osx-screens/01-agree.png
+  :align: center
+
+Drag ``CMake.app`` to ``Applications`` folder (or any other location):
+
+.. image:: osx-screens/02-drag.png
+  :align: center
+
+Start ``Launchpad``:
+
+.. image:: osx-screens/03-launchpad.png
+  :align: center
+
+Find ``CMake`` and lauch it:
+
+.. image:: osx-screens/04-search-cmake.png
+  :align: center
+
 Windows
 =======
 
