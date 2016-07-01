@@ -15,11 +15,9 @@ Run ``cmd.exe`` and go to the directory with sources:
   ... CMakeLists.txt
   ... foo.cpp
 
-Generate Visual Studio solution using CMake. Use:
-
-* ``-H.`` for specifying current directory as a directory with ``CMakeLists.txt``
-* ``-B_builds`` where should we put generated files
-* ``-G "Visual Studio 14 2015 Win64"`` for the generator
+Generate Visual Studio solution using CMake. Use
+:ref:`-H. <-H>` :ref:`-B_builds <-B>` for specifying paths
+and ``-G "Visual Studio 14 2015 Win64"`` for the generator:
 
 .. code-block:: shell
 
