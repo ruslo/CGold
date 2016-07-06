@@ -12,4 +12,5 @@ store generated files. There must be no spaces between ``-B`` and
 
 .. seealso::
 
+  * :ref:`Build tree <build tree>`
   * :ref:`-H <-H>`

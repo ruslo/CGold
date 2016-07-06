@@ -23,6 +23,7 @@ Use current directory as a source tree (i.e. start with
 .. seealso::
 
   * :ref:`-B <-B>`
+  * :ref:`Source tree <source tree>`
 
 .. seealso::
 
