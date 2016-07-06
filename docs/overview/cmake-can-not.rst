@@ -110,6 +110,8 @@ toolchains (at least for now) so it's not possible to generate ``Xcode``
 project with ``iOS`` and ``OSX`` targets - again, just generate code for each
 platform independently.
 
+.. _unrelocatable projects:
+
 Unrelocatable projects
 ======================
 
