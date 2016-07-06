@@ -20,5 +20,3 @@ matter how project was generated before: using GUI or CLI version of CMake).
   /first-step/run-executable/cli-visual-studio
   /first-step/run-executable/cli-xcode
   /first-step/run-executable/cli-make
-
-If everything works well you can dive deeper into :doc:`/tutorials`.
