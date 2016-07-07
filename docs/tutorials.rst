@@ -26,3 +26,5 @@ and add more features.
   :maxdepth: 2
 
   /tutorials/cmake-stages
+  /tutorials/out-of-source
+  /tutorials/workflow
