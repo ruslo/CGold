@@ -1,3 +1,6 @@
 [submodule "docs/examples/minimal-example"]
   path = docs/examples/minimal-example
   url = https://github.com/cgold-examples/minimal-example
+[submodule "docs/examples/minimal-with-message"]
+  path = docs/examples/minimal-with-message
+  url = https://github.com/cgold-examples/minimal-with-message
