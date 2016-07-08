@@ -46,6 +46,8 @@ to see how you can help with improving current state.
 
   * `Wrapping CMake functionality with another language <http://www.mail-archive.com/cmake-developers%40cmake.org/msg15199.html>`_
 
+.. _affecting workflow:
+
 Affecting workflow
 ==================
 
