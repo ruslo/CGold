@@ -30,3 +30,4 @@ and add more features.
   /tutorials/workflow
   /tutorials/version-policies
   /tutorials/project
+  /tutorials/syntax

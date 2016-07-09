@@ -75,6 +75,8 @@ Command ``cmake_minimum_required`` **must be the first** command in your
 versions of CMake then you need to put the smallest one in
 ``cmake_minimum_required`` and call it in the first line of CMakeLists.txt.
 
+.. _cmake_minimum_required should be first:
+
 Even if some commands look harmless at the first glance it may be not so
 in fact, e.g. ``project`` is the place where a lot of checks happens and where
 toolchain is loaded. If you run this example on ``Cygwin`` platform:
