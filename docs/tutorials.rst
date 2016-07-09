@@ -29,3 +29,4 @@ and add more features.
   /tutorials/out-of-source
   /tutorials/workflow
   /tutorials/version-policies
+  /tutorials/project

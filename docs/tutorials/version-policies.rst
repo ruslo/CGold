@@ -18,6 +18,21 @@ versions of CMake:
 * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
   for fune tuning newly introduced behaviour
 
+If you just want to experiment without worrying about backward compatibility,
+policies, warnings, etc. just set **first line** of CMakeLists.txt to
+``cmake_minimum_required(VERSION a.b.c)`` where ``a.b.c`` is a current version
+of CMake you're using:
+
+.. code-block:: shell
+
+  > cmake --version
+  cmake version 3.5.2
+
+  > cat CMakeLists.txt
+  cmake_minimum_required(VERSION 3.5.2)
+
+and move to the :doc:`project section </tutorials/project>`.
+
 cmake_minimum_required
 ======================
 
