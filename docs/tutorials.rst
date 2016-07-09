@@ -28,3 +28,4 @@ and add more features.
   /tutorials/cmake-stages
   /tutorials/out-of-source
   /tutorials/workflow
+  /tutorials/version-policies
