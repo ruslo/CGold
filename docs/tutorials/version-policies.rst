@@ -123,6 +123,11 @@ with no warnings:
   -- Generating done
   -- Build files have been written to: /.../minimum-required-example/_builds/good
 
+.. seealso::
+
+  * `Example on GitHub <https://github.com/cgold-examples/minimum-required-example>`__
+  * Archive with latest version: `zip <https://github.com/cgold-examples/minimum-required-example/archive/master.zip>`__
+
 CMake policies
 ==============
 
