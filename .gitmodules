@@ -7,3 +7,6 @@
 [submodule "docs/examples/minimum-required-example"]
   path = docs/examples/minimum-required-example
   url = https://github.com/cgold-examples/minimum-required-example
+[submodule "docs/examples/policy-examples"]
+  path = docs/examples/policy-examples
+  url = https://github.com/cgold-examples/policy-examples
