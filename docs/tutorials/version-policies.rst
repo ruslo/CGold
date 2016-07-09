@@ -138,3 +138,233 @@ CMake policies
 .. seealso::
 
  * `Official documentation <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
+
+When new version of CMake released there may be a list of policies describing
+cases when behaviour changed comparing to the previous CMake version.
+
+Let's see now it works on practice. In CMake ``3.0`` policy
+`CMP0038 <https://cmake.org/cmake/help/latest/policy/CMP0038.html>`__
+was introduced. Before version ``3.0`` user can have target linked to itself,
+which make no sense and definitely **is a bug**:
+
+.. literalinclude:: /examples/policy-examples/bug-2.8/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6
+
+.. seealso::
+
+  * `Example on GitHub <https://github.com/cgold-examples/policy-examples>`__
+  * Archive with latest version: `zip <https://github.com/cgold-examples/policy-examples/archive/master.zip>`__
+
+Works fine for CMake before ``3.0``:
+
+.. code-block:: shell
+  :emphasize-lines: 2,4
+
+  [policy-examples]> cmake --version
+  cmake version 2.8.12.2
+  [policy-examples]> rm -rf _builds
+  [policy-examples]> cmake -Hbug-2.8 -B_builds
+  -- The C compiler identification is GNU 4.8.4
+  -- The CXX compiler identification is GNU 4.8.4
+  -- Check for working C compiler: /usr/bin/cc
+  -- Check for working C compiler: /usr/bin/cc -- works
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working CXX compiler: /usr/bin/c++
+  -- Check for working CXX compiler: /usr/bin/c++ -- works
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../policy-examples/_builds
+
+For CMake version ``>= 3.0`` warning will be reported:
+
+.. code-block:: shell
+  :emphasize-lines: 2,4,7
+
+  [policy-examples]> cmake --version
+  cmake version 3.5.2
+  [policy-examples]> rm -rf _builds
+  [policy-examples]> cmake -Hbug-2.8 -B_builds
+  ...
+  -- Configuring done
+  CMake Warning (dev) at CMakeLists.txt:4 (add_library):
+    Policy CMP0038 is not set: Targets may not link directly to themselves.
+    Run "cmake --help-policy CMP0038" for policy details.  Use the cmake_policy
+    command to set the policy and suppress this warning.
+
+    Target "foo" links to itself.
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+  -- Generating done
+  -- Build files have been written to: /.../policy-examples/_builds
+
+Assume you want to drop the support of old version and more to some new
+``3.0`` features. When you set ``cmake_minimum_required(VERSION 3.0)``
+
+.. literalinclude:: /examples/policy-examples/set-3.0/CMakeLists.txt
+  :diff: /examples/policy-examples/bug-2.8/CMakeLists.txt
+
+warning turns into error:
+
+.. code-block:: shell
+  :emphasize-lines: 2,18
+
+  [policy-examples]> rm -rf _builds
+  [policy-examples]> cmake -Hset-3.0 -B_builds
+  -- The C compiler identification is GNU 4.8.4
+  -- The CXX compiler identification is GNU 4.8.4
+  -- Check for working C compiler: /usr/bin/cc
+  -- Check for working C compiler: /usr/bin/cc -- works
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Check for working CXX compiler: /usr/bin/c++
+  -- Check for working CXX compiler: /usr/bin/c++ -- works
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- Configuring done
+  CMake Error at CMakeLists.txt:4 (add_library):
+    Target "foo" links to itself.
+
+
+  -- Generating done
+  -- Build files have been written to: /.../policy-examples/_builds
+  [policy-examples]> echo $?
+  1
+
+In further two cases will be shown. In first case we want to keep support of old
+version (``2.8`` for now) so it will work with both ``CMake 2.8`` and
+``CMake 3.0+`` in second case we decide to drop support of old version and move
+to ``CMake 3.0+``. We'll see how it will affect policies. It will be shown in
+the end that in fact without **using new features** from ``CMake 3.0`` it
+doesn't make sense to change ``cmake_minimum_required``.
+
+Keep using old
+~~~~~~~~~~~~~~
+
+Our project works fine with ``CMake 2.8`` however ``CMake 3.0+`` emits
+warning. We don't want to fix the error now but want only to suppress warning
+and explain to CMake that it should behave like ``CMake 2.8``. Let's add
+`cmake_policy <https://cmake.org/cmake/help/latest/command/cmake_policy.html>`__:
+
+.. literalinclude:: /examples/policy-examples/unknown-2.8/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4
+
+Looks good for ``CMake 3.0+``:
+
+.. code-block:: shell
+  :emphasize-lines: 2,4
+
+  [policy-examples]> cmake --version
+  cmake version 3.5.2
+  [policy-examples]> rm -rf _builds
+  [policy-examples]> cmake -Hunknown-2.8 -B_builds
+  -- The C compiler identification is GNU 4.8.4
+  -- The CXX compiler identification is GNU 4.8.4
+  -- Check for working C compiler: /usr/bin/cc
+  -- Check for working C compiler: /usr/bin/cc -- works
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Check for working CXX compiler: /usr/bin/c++
+  -- Check for working CXX compiler: /usr/bin/c++ -- works
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- Configuring done
+  -- Generating done
+
+Are we done? No, ``CMP0038`` is introduced since ``CMake 3.0`` so ``CMake 2.8``
+have no idea what this policy is about:
+
+.. code-block:: shell
+  :emphasize-lines: 2,4,15
+
+  > cmake --version
+  cmake version 2.8.12.2
+  > rm -rf _builds
+  > cmake -Hunknown-2.8 -B_builds
+  -- The C compiler identification is GNU 4.8.4
+  -- The CXX compiler identification is GNU 4.8.4
+  -- Check for working C compiler: /usr/bin/cc
+  -- Check for working C compiler: /usr/bin/cc -- works
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working CXX compiler: /usr/bin/c++
+  -- Check for working CXX compiler: /usr/bin/c++ -- works
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  CMake Error at CMakeLists.txt:4 (cmake_policy):
+    Policy "CMP0038" is not known to this version of CMake.
+
+  -- Configuring incomplete, errors occurred!
+
+We should protect new code with ``if(POLICY CMP0038)`` condition:
+
+.. literalinclude:: /examples/policy-examples/suppress-2.8/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-9
+
+Of course you should find the time, apply real fix and remove policy logic
+since it will be not needed anymore:
+
+.. literalinclude:: /examples/policy-examples/fix-2.8/CMakeLists.txt
+  :diff: /examples/policy-examples/suppress-2.8/CMakeLists.txt
+
+Final version:
+
+.. literalinclude:: /examples/policy-examples/fix-2.8/CMakeLists.txt
+  :language: cmake
+
+Moving to new version
+~~~~~~~~~~~~~~~~~~~~~
+
+With ``cmake_minimum_required`` updated to ``3.0`` warning turns into error.
+To suppress error without doing real fix (temporary solution) you can add
+``cmake_policy`` directive:
+
+.. literalinclude:: /examples/policy-examples/suppress-3.0/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 1,4
+
+.. note::
+
+  We don't need to protect ``cmake_policy`` with ``if(POLICY)``
+  condition since ``cmake_minimum_required(VERSION 3.0)`` guarantee us that
+  we are using ``CMake 3.0+``.
+
+Policy can be removed after real fix applied:
+
+.. literalinclude:: /examples/policy-examples/fix-3.0/CMakeLists.txt
+  :diff: /examples/policy-examples/suppress-3.0/CMakeLists.txt
+
+Final version:
+
+.. literalinclude:: /examples/policy-examples/fix-3.0/CMakeLists.txt
+  :language: cmake
+
+You may notice that final version for both cases differs only in ``cmake_minimum_required``:
+
+.. literalinclude:: /examples/policy-examples/fix-3.0/CMakeLists.txt
+  :diff: /examples/policy-examples/fix-2.8/CMakeLists.txt
+
+It means that there is no much sense in changing ``cmake_minimum_required``
+without using any **new features**.
+
+Summary
+=======
+
+* Policies can be used to control CMake **behaviour**
+* Policies can be used to suppress warnings/errors
+* ``cmake_minimum_required`` describe **features** you use in CMake code
+* For backward compatibility new features can be protected with
+  ``if(CMAKE_VERSION ...)`` directive
