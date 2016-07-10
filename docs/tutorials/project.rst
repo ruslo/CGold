@@ -1,8 +1,8 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
-'project'
----------
+Project declaration
+-------------------
 
 Next must-have command is
 `project <https://cmake.org/cmake/help/latest/command/project.html>`__.
