@@ -13,3 +13,6 @@
 [submodule "docs/examples/project-examples"]
   path = docs/examples/project-examples
   url = https://github.com/cgold-examples/project-examples
+[submodule "docs/examples/usage-of-variables"]
+  path = docs/examples/usage-of-variables
+  url = https://github.com/cgold-examples/usage-of-variables
