@@ -10,7 +10,7 @@ Command ``project(foo)`` will set languages to C and C++ (default),
 declare some ``foo_*`` variables and run build tool checks. If it's sounds
 good for you and you don't want to dive into details, put ``project(foo)``
 **right after** ``cmake_minimum_required`` in top-level CMakeLists.txt and move
-to the :doc:`/tutorials/syntax` section.
+to the :doc:`/tutorials/variables` section.
 
 .. seealso::
 
