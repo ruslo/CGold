@@ -67,9 +67,6 @@ features will look like:
     # Code with 3.0 features
   endif()
 
-For the test or preliminary project you can just set the current version
-you're using.
-
 Command ``cmake_minimum_required`` **must be the first** command in your
 :ref:`CMakeLists.txt <cmakelists.txt>`. If you're planning to support several
 versions of CMake then you need to put the smallest one in
