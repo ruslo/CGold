@@ -7,7 +7,10 @@ Ninja
 * CMake option: ``-G Ninja``
 * `Website <https://ninja-build.org/>`_
 * `Sources on GitHub <https://github.com/ninja-build/ninja>`_
-* `CMake documentation <https://cmake.org/cmake/help/v3.4/generator/Ninja.html>`_
+
+.. admonition:: CMake documentation
+
+  * `Ninja <https://cmake.org/cmake/help/v3.4/generator/Ninja.html>`_
 
 Installation
 ============
