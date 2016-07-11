@@ -193,6 +193,28 @@ tools will not be triggered):
   -- Generating done
   -- Build files have been written to: /.../project-examples/_builds
 
+We can save some time by using special language ``NONE`` when we don't need any
+tools at all:
+
+.. literalinclude:: /examples/project-examples/no-language/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 2
+
+No checks for C or C++ compiler as you can see:
+
+.. code-block:: shell
+
+  [project-examples]> rm -rf _builds
+  [project-examples]> cmake -Hno-language -B_builds
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../project-examples/_builds
+
+.. note::
+
+  Such form will be used widely in examples in cases when we don't need to
+  build targets.
+
 .. admonition:: Stackoverflow
 
   * `Detect project language in cmake <http://stackoverflow.com/a/32390852/2288008>`__
