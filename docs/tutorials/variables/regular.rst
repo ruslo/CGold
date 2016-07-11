@@ -285,6 +285,36 @@ Name of variable may consist of **any** characters:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
+Dereferencing
+=============
+
+Dereferened variable can be used to create new variable value:
+
+.. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6
+
+.. literalinclude:: /examples/usage-of-variables/dereference/configure.log
+  :emphasize-lines: 3
+
+or new variable name:
+
+.. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 7
+
+.. literalinclude:: /examples/usage-of-variables/dereference/configure.log
+  :emphasize-lines: 4
+
+or even both:
+
+.. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 8
+
+.. literalinclude:: /examples/usage-of-variables/dereference/configure.log
+  :emphasize-lines: 5
+
 Nested dereferencing
 ====================
 
