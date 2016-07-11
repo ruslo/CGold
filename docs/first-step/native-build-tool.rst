@@ -36,7 +36,7 @@ family generators not available on ``Linux``). You can get this list by running
   native-build-tool/xcode
   native-build-tool/unix-makefiles
 
-.. seealso::
+.. admonition:: CMake documentation
 
   * `CMake Generators <https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html>`_
 
