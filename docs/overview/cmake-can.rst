@@ -113,7 +113,6 @@ actually make sense to use :ref:`CMake <CMake>` even if development targeted
 only for one platform.
 
 .. admonition:: Stackoverflow
-  :class: tip
 
   * `Git and pbxproj <http://stackoverflow.com/q/1549578/2288008>`__
 

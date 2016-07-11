@@ -42,7 +42,7 @@ power for you :) Also you can discuss this problem in
 `CMake mailing-list <https://cmake.org/mailman/listinfo/cmake-developers>`_
 to see how you can help with improving current state.
 
-.. seealso::
+.. admonition:: CMake mailing list
 
   * `Wrapping CMake functionality with another language <http://www.mail-archive.com/cmake-developers%40cmake.org/msg15199.html>`_
 
@@ -96,11 +96,14 @@ versions of project from one ``CMakeLists.txt`` file: one for shared and one
 for static variant, effectively running generate/build twice. This will be
 covered later in depth.
 
-.. seealso::
+.. admonition:: Stackoverflow
 
-  * `Stackoverflow: build static + shared <http://stackoverflow.com/q/2152077/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/18551243/2288008>`__)
-  * `Stackoverflow: recompiling source twice <http://stackoverflow.com/q/12899582/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/22269819/2288008>`__)
-  * `CMake mailing-list discussion <https://cmake.org/pipermail/cmake/2005-August/007030.html>`__
+  * `Build static + shared <http://stackoverflow.com/q/2152077/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/18551243/2288008>`__)
+  * `Recompiling source twice <http://stackoverflow.com/q/12899582/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/22269819/2288008>`__)
+
+.. admonition:: CMake mailing list
+
+  * `Static & shared library <https://cmake.org/pipermail/cmake/2005-August/007030.html>`__
 
 With ``Visual Studio`` you can have two variants x86 and x64 in one solution
 file. With :ref:`CMake <CMake>` you have to generate project twice:
@@ -130,7 +133,7 @@ should learn tools you've used, if you're working with users then it's your
 responsibility to create user-friendly installers like ``*.msi`` instead of
 projects (will be covered later in this document).
 
-.. seealso::
+.. admonition:: CMake documentation
 
   * `CMAKE_USE_RELATIVE_PATHS removed since CMake 3.4 <https://cmake.org/cmake/help/latest/release/3.4.html#deprecated-and-removed-features>`__
 
