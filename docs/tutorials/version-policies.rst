@@ -36,9 +36,9 @@ and move to the :doc:`project section </tutorials/project>`.
 cmake_minimum_required
 ======================
 
-.. seealso::
+.. admonition:: CMake documentation
 
- * `Official documentation <https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html>`__
+ * `cmake_minimum_required <https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html>`__
 
 What version to put into this command is mostly an executive decision. You
 need to know:
@@ -141,17 +141,17 @@ with no warnings:
   -- Generating done
   -- Build files have been written to: /.../minimum-required-example/_builds/good
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/minimum-required-example>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/minimum-required-example/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/minimum-required-example>`__
+  * `Latest ZIP <https://github.com/cgold-examples/minimum-required-example/archive/master.zip>`__
 
 CMake policies
 ==============
 
-.. seealso::
+.. admonition:: CMake documentation
 
- * `Official documentation <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
+ * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
 
 When new version of CMake released there may be a list of policies describing
 cases when behaviour changed comparing to the previous CMake version.
@@ -165,10 +165,10 @@ which make no sense and definitely **is a bug**:
   :language: cmake
   :emphasize-lines: 6
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/policy-examples>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/policy-examples/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/policy-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/policy-examples/archive/master.zip>`__
 
 Works fine for CMake before ``3.0``:
 

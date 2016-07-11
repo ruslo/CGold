@@ -12,9 +12,9 @@ good for you and you don't want to dive into details, put ``project(foo)``
 **right after** ``cmake_minimum_required`` in top-level CMakeLists.txt and move
 to the :doc:`/tutorials/variables` section.
 
-.. seealso::
+.. admonition:: CMake documentation
 
-  * `Official documentation <https://cmake.org/cmake/help/latest/command/project.html>`__
+  * `project <https://cmake.org/cmake/help/latest/command/project.html>`__
 
 Tools discovering
 =================
@@ -27,10 +27,10 @@ they are defined:
   :language: cmake
   :emphasize-lines: 3-5,9-11
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/project-examples>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/project-examples/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/project-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/project-examples/archive/master.zip>`__
 
 Run test on ``Linux``:
 
@@ -68,7 +68,6 @@ checking of anything before ``project``, place all checks
 **after project declared**.
 
 .. admonition:: Stackoverflow
-  :class: tip
 
   * `Why CMAKE_COMPILER_IS_GNUCXX and CMAKE_CXX_COMPILER_ID are empty? <http://stackoverflow.com/a/20905333/2288008>`__
   * `Why CMAKE_SYSTEM_NAME is blank? <http://stackoverflow.com/a/26437667/2288008>`__
@@ -128,7 +127,6 @@ toolchain.cmake:
   You may notice that toolchain read several times
 
 .. admonition:: Stackoverflow
-  :class: tip
 
   * `In which Order are Files parsed (Cache, Toolchain, …)? <http://stackoverflow.com/q/30503631/2288008>`__
 
@@ -196,7 +194,6 @@ tools will not be triggered):
   -- Build files have been written to: /.../project-examples/_builds
 
 .. admonition:: Stackoverflow
-  :class: tip
 
   * `Detect project language in cmake <http://stackoverflow.com/a/32390852/2288008>`__
 
@@ -338,6 +335,5 @@ Summary
   that variables are declared in such block of CMake code
 
 .. admonition:: Stackoverflow
-  :class: tip
 
   * `What is the project? <http://stackoverflow.com/a/26882812/2288008>`__

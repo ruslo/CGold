@@ -34,10 +34,10 @@ command to the example:
   :language: cmake
   :emphasize-lines: 8
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/minimal-with-message>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/minimal-with-message/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/minimal-with-message>`__
+  * `Latest ZIP <https://github.com/cgold-examples/minimal-with-message/archive/master.zip>`__
 
 Line ``Processing CMakeLists.txt`` will be printed by CMake while parsing
 CMakeLists.txt file, i.e. on configure step. Open CMake-GUI, setup directories

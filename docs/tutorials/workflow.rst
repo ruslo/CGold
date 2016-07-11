@@ -19,10 +19,10 @@ Back to the example with ``message``:
 .. literalinclude:: /examples/minimal-with-message/CMakeLists.txt
   :language: cmake
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/minimal-with-message>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/minimal-with-message/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/minimal-with-message>`__
+  * `Latest ZIP <https://github.com/cgold-examples/minimal-with-message/archive/master.zip>`__
 
 Generate Makefile:
 
