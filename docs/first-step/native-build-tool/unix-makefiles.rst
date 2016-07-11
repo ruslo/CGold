@@ -5,8 +5,14 @@ Unix Makefiles
 --------------
 
 * CMake option: ``-G "Unix Makefiles"``
-* `CMake documenation <https://cmake.org/cmake/help/v3.5/generator/Unix%20Makefiles.html>`_
-* `Make on wikipedia.org <https://en.wikipedia.org/wiki/Make_%28software%29>`_
+
+.. admonition:: CMake documentation
+
+  * `Unix Makefiles <https://cmake.org/cmake/help/v3.5/generator/Unix%20Makefiles.html>`_
+
+.. admonition:: Wikipedia
+
+  * `Make <https://en.wikipedia.org/wiki/Make_%28software%29>`_
 
 Ubuntu Installation
 ===================
