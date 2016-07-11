@@ -16,4 +16,4 @@ Visual Studio
 
 .. admonition:: Wikipedia
 
-  * `Wikipedia about Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_
+  * `Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_
