@@ -6,10 +6,10 @@ Minimal example
 
 Create empty directory and put ``foo.cpp`` and ``CMakeLists.txt`` files into it.
 
-.. seealso::
+.. admonition:: Examples on GitHub
 
-  * `Example on GitHub <https://github.com/cgold-examples/minimal-example>`__
-  * Archive with latest version: `zip <https://github.com/cgold-examples/minimal-example/archive/master.zip>`__
+  * `Repository <https://github.com/cgold-examples/minimal-example>`__
+  * `Latest ZIP <https://github.com/cgold-examples/minimal-example/archive/master.zip>`__
 
 ``foo.cpp`` is a C++ source of our executable:
 
