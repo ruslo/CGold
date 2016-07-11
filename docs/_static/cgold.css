@@ -53,3 +53,17 @@
 .rst-content .admonition-cmake-mailing-list .admonition-title:before {
   content:url('https://docs.hunter.sh/thirdpartylogos/cmake-16x16.png');
 }
+
+/* Wikipedia */
+.rst-content .admonition-wikipedia {
+  background-color: #dbfaf4 !important;
+  padding-bottom: 1px !important;
+}
+
+.rst-content .admonition-wikipedia .admonition-title {
+  background-color: #1abc9c !important;
+}
+
+.rst-content .admonition-wikipedia .admonition-title:before {
+  content:url('https://docs.hunter.sh/thirdpartylogos/wikipedia-16x16.png');
+}

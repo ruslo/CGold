@@ -13,5 +13,7 @@ Visual Studio
 .. seealso::
 
   * `Official site <https://www.visualstudio.com/>`_
-  * `Wikipedia about Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_
 
+.. admonition:: Wikipedia
+
+  * `Wikipedia about Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_

@@ -35,3 +35,7 @@ Templates
 .. admonition:: CMake documentation
 
   * `if <https://cmake.org/cmake/help/latest/command/if.html>`__
+
+.. admonition:: Wikipedia
+
+  * `Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_
