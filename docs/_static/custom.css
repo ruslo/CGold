@@ -1,0 +1,263 @@
+/* CSS Magic from:
+  https://github.com/Microsoft/Office-Online-Test-Tools-and-Documentation/blob/master/docs/_static/custom.css
+*/
+/* override table width restrictions */
+
+.wy-table-responsive table td, .wy-table-responsive table th {
+    /* !important prevents the common CSS stylesheets from
+       overriding this as on RTD they are loaded after this stylesheet */
+    white-space: normal !important;
+}
+
+.wy-table-responsive {
+    overflow: visible !important;
+}
+
+.rst-content .admonition {
+    padding: 12px !important;
+    line-height: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.rst-content .admonition p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.rst-content .admonition.tip .admonition-title:before {
+    content: '\f024';
+}
+
+.rst-content .admonition.warning .admonition-title:before,
+.rst-content .admonition.danger .admonition-title:before{
+    content: '\f071';
+}
+
+/* OneNote Online Note admonition styles */
+.rst-content .admonition-onenote-online-note {
+    background-color: #975d93 !important;
+    color: #fff !important;
+}
+
+.rst-content .admonition-onenote-online-note .admonition-title {
+    background-color: #80397b !important;
+}
+
+.rst-content .admonition-onenote-online-note .admonition-title:before {
+    content:url('images/OneNote-white_16x16x32.png');
+}
+
+.rst-content .admonition-onenote-online-note a:link,
+.rst-content .admonition-onenote-online-note a:visited {
+    color: #d9d9d9 !important;
+}
+
+.rst-content .admonition-onenote-online-note a:hover {
+    color: #fff !important;
+}
+
+/* Excel Online Note admonition styles */
+.rst-content .admonition-excel-online-note {
+    background-color: #d3f0e0 !important;
+}
+
+.rst-content .admonition-excel-online-note .admonition-title {
+    background-color: #207144 !important;
+}
+
+.rst-content .admonition-excel-online-note .admonition-title:before {
+    content:url('images/Excel-white_16x16x32.png');
+}
+
+/* Validator status styles */
+
+.rst-content .admonition-status .admonition-title:before {
+    content: '\f058';
+}
+
+.rst-content .admonition-status .admonition-title {
+    background-color: #207144 !important;
+}
+
+.rst-content .admonition-status:empty {
+    padding-bottom: 0 !important;
+}
+
+.rst-content .admonition-status.error .admonition-title:before {
+    content: '\f06a';
+}
+
+.rst-content .admonition-status.error .admonition-title {
+    background-color: #e74c3c !important;
+}
+
+.rst-content .admonition-status.error {
+    background-color: rgba(0,0,0,0.05) !important;
+}
+
+/* Pre-release Feature admonition styles */
+.rst-content .admonition-pre-release-feature .admonition-title {
+    background-color: #e74c3c !important;
+}
+
+.rst-content .admonition-pre-release-feature {
+    background-color: #faa !important;
+}
+
+/* Office Online Tip admonition styles */
+.rst-content .admonition-wac-tip .admonition-title:before {
+    content: '\f024';
+}
+
+.rst-content .admonition-wac-tip .admonition-title {
+    /*background-color: #4e4a4a;*/
+    background-color: #5bc0de;
+}
+
+.rst-content .admonition-wac-tip {
+    /*background-color: rgba(0,0,0,0.05) !important;*/
+    background-color: rgba(91,192,222,0.25) !important;
+}
+
+.rst-content table.field-list td {
+    padding-top: 8px !important;
+}
+
+span.caption-number {
+    font-weight: bold;
+}
+
+span.caption-number:after {
+    content: "- ";
+}
+
+span.menuselection,
+span.guilabel {
+    font-style: italic;
+}
+
+
+dl.glossary dt a.def-link {
+    font-size: small;
+    font-family: FontAwesome !important;
+    visibility: hidden !important;
+    margin-left: 5px !important;
+}
+
+dl.glossary dt:hover a.def-link,
+dl.glossary dt a.def-link:hover {
+    visibility: visible !important;
+}
+
+div.versionadded,
+div.versionchanged,
+div.deprecated {
+    margin-bottom: 24px;
+}
+
+/* known issue styles */
+#gh_known_issues div:not(:last-child),
+#validator_issues div:not(:last-child) {
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+
+#gh_known_issues hr,
+#validator_issues hr {
+    margin-top: 24px;
+}
+
+#gh_known_issues div.title,
+#validator_issues div.title {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#gh_known_issues div.last_updated,
+#validator_issues div.last_updated {
+    font-style: italic;
+}
+
+.details p:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-title .label {
+    margin-left: 5px;
+}
+
+/* label styles */
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em
+}
+
+a.label:hover, a.label:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.label:empty {
+    display: none
+}
+
+.btn .label {
+    position: relative;
+    top: -1px
+}
+
+.label-default {
+    background-color: #777
+}
+
+.label-default[href]:hover, .label-default[href]:focus {
+    background-color: #5e5e5e
+}
+
+.label-primary {
+    background-color: #337ab7
+}
+
+.label-primary[href]:hover, .label-primary[href]:focus {
+    background-color: #286090
+}
+
+.label-success {
+    background-color: #5cb85c
+}
+
+.label-success[href]:hover, .label-success[href]:focus {
+    background-color: #449d44
+}
+
+.label-info {
+    background-color: #5bc0de
+}
+
+.label-info[href]:hover, .label-info[href]:focus {
+    background-color: #31b0d5
+}
+
+.label-warning {
+    background-color: #f0ad4e
+}
+
+.label-warning[href]:hover, .label-warning[href]:focus {
+    background-color: #ec971f
+}
+
+.label-danger {
+    background-color: #d9534f
+}
+
+.label-danger[href]:hover, .label-danger[href]:focus {
+    background-color: #c9302c
+}
