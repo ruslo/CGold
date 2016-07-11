@@ -9,6 +9,6 @@ CMake variables
 Regular CMake variables. Unlike :ref:`cache variables <cache variables>`
 lifetime of regular variables limited with CMake run.
 
-.. seealso::
+.. admonition:: CMake documentation
 
-  * `CMake variables <https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#variables>`__
+  * `Variables <https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#variables>`__

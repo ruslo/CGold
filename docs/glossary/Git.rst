@@ -15,5 +15,8 @@ other :ref:`VCS's <VCS>` as well.
 
 .. seealso::
 
-  * `Official site <https://git-scm.com/>`_
-  * `Wikipedia about Git <https://en.wikipedia.org/wiki/Git_(software)>`_
+  * `Official site <https://git-scm.com/>`__
+
+.. admonition:: Wikipedia
+
+  * `Git <https://en.wikipedia.org/wiki/Git_(software)>`__

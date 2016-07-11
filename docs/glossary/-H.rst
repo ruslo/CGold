@@ -25,7 +25,10 @@ Use current directory as a source tree (i.e. start with
   * :ref:`-B <-B>`
   * :ref:`Source tree <source tree>`
 
-.. seealso::
+.. admonition:: Stackoverflow
 
   * `Changing CMake files standard location <http://stackoverflow.com/a/13713684/2288008>`__
+
+.. admonition:: CMake mailing list
+
   * `Document -H/-B <http://www.mail-archive.com/cmake-developers@cmake.org/msg16693.html>`__
