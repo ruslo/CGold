@@ -223,7 +223,7 @@ function and not from top level scope:
   -- Generating done
   -- build files have been written to: /.../usage-of-variables/_builds
 
-This will be even more confusing if you run this example on more time without
+This will be even more confusing if you run this example one more time without
 removing cache:
 
 .. code-block:: shell
