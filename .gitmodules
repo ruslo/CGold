@@ -16,3 +16,6 @@
 [submodule "docs/examples/usage-of-variables"]
   path = docs/examples/usage-of-variables
   url = https://github.com/cgold-examples/usage-of-variables
+[submodule "docs/rtfd-css"]
+  path = docs/rtfd-css
+  url = https://github.com/ruslo/rtfd-css
