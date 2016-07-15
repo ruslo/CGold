@@ -115,6 +115,10 @@ toolchains (at least for now) so it's not possible to generate ``Xcode``
 project with ``iOS`` and ``OSX`` targets - again, just generate code for each
 platform independently.
 
+.. admonition:: Stackoverflow
+
+  * `CMake Multiarchitecture Compilation <http://stackoverflow.com/q/5334095/2288008>`__
+
 .. _unrelocatable projects:
 
 Unrelocatable projects
