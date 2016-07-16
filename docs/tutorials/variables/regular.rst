@@ -199,6 +199,8 @@ will remove regular variable with the same name from current scope:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
+.. _cache confusing:
+
 Confusing
 =========
 
