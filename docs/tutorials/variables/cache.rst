@@ -18,7 +18,7 @@ Cache variables saved in :ref:`CMakeCache.txt` file:
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> grep -IR abc _builds/CMakeCache.txt
+  [usage-of-variables]> grep abc _builds/CMakeCache.txt
   abc:STRING=687
 
 Double set
@@ -41,7 +41,7 @@ effect - old variable will be used still:
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> grep -IR abc _builds/CMakeCache.txt
+  [usage-of-variables]> grep abc _builds/CMakeCache.txt
   abc:STRING=123
 
 Update :ref:`CMakeLists.txt <cmakelists.txt>` (don't remove cache!):
@@ -58,7 +58,7 @@ Update :ref:`CMakeLists.txt <cmakelists.txt>` (don't remove cache!):
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> grep -IR abc _builds/CMakeCache.txt
+  [usage-of-variables]> grep abc _builds/CMakeCache.txt
   abc:STRING=123
 
 -D
@@ -76,7 +76,7 @@ priority:
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> grep -IR abc _builds/CMakeCache.txt
+  [usage-of-variables]> grep abc _builds/CMakeCache.txt
   abc:STRING=444
 
 Initial cache
