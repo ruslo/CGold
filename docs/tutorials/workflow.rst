@@ -131,6 +131,8 @@ to reload new configuration:
 .. image:: workflow/windows-screens/02-notify.png
   :align: center
 
+.. _workflow:
+
 UML activity diagram
 ====================
 
