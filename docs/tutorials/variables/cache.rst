@@ -314,7 +314,6 @@ Also such type of variable implies ``FORCE``:
 .. literalinclude:: /examples/usage-of-variables/internal-force/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 4-6, 8-10
-  :linenos:
 
 Variable ``FOO_A`` will be set to ``123`` then rewritten to ``456``, then to
 ``789``, so final result is ``789``. Variable ``FOO_B`` is a cache variable
