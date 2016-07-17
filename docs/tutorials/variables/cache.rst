@@ -90,6 +90,10 @@ it by ``-C``:
   :language: cmake
   :emphasize-lines: 3-5
 
+.. literalinclude:: /examples/usage-of-variables/initial-cache/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6-8
+
 .. code-block:: shell
   :emphasize-lines: 2, 4-6
 
@@ -176,3 +180,95 @@ regular variable with the same name will be unset too each time:
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
+
+Cache type
+==========
+
+Though type of any variable is **always** string you can add some hints which
+will be used by CMake-GUI:
+
+.. literalinclude:: /examples/usage-of-variables/cache-type/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-7
+
+Run configure:
+
+.. image:: cache-gui/01-generate.png
+  :align: center
+
+Variable ``FOO_A`` will be treated as boolean. Uncheck box and run configure:
+
+.. image:: cache-gui/02-bool.png
+  :align: center
+
+Variable ``FOO_B`` will be treated as path to the file. Click on ``...``:
+
+.. image:: cache-gui/03-filepath.png
+  :align: center
+
+Select file:
+
+.. image:: cache-gui/04-change-filepath.png
+  :align: center
+
+Run configure:
+
+.. image:: cache-gui/05-ok-filepath.png
+  :align: center
+
+Variable ``FOO_C`` will be treated as path to directory. Click on ``...``:
+
+.. image:: cache-gui/06-path.png
+  :align: center
+
+Select directory:
+
+.. image:: cache-gui/07-change-path.png
+  :align: center
+
+Run configure:
+
+.. image:: cache-gui/08-ok-path.png
+  :align: center
+
+Variable ``FOO_D`` will be treated as string. Click near variable name and
+edit:
+
+.. image:: cache-gui/09-string.png
+  :align: center
+
+Run configure:
+
+.. image:: cache-gui/10-ok-string.png
+  :align: center
+
+Description of variable:
+
+.. literalinclude:: /examples/usage-of-variables/cache-type/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 7
+
+Will pop-up as a hint for users:
+
+.. image:: cache-gui/11-popup-description.png
+  :align: center
+
+.. admonition:: CMake documentation
+
+  * `Cache entry <https://cmake.org/cmake/help/latest/command/set.html#set-cache-entry>`__
+
+Enumerate
+=========
+
+Selection widget can be created for variable of string type:
+
+.. literalinclude:: /examples/usage-of-variables/cache-enum/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4, 6
+
+.. image:: cache-gui/12-enum.png
+  :align: center
+
+.. admonition:: CMake documentation
+
+  * `STRINGS property <https://cmake.org/cmake/help/latest/prop_cache/STRINGS.html>`__
