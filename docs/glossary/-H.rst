@@ -28,6 +28,7 @@ Use current directory as a source tree (i.e. start with
 .. admonition:: Stackoverflow
 
   * `Changing CMake files standard location <http://stackoverflow.com/a/13713684/2288008>`__
+  * `How to tell CMake where to put build files? <http://stackoverflow.com/a/20611964/2288008>`__
 
 .. admonition:: CMake mailing list
 
