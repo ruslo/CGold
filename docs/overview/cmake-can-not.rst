@@ -119,6 +119,10 @@ platform independently.
 
   * `CMake Multiarchitecture Compilation <http://stackoverflow.com/q/5334095/2288008>`__
 
+.. note::
+
+  * :doc:`Building universal iOS libraries </platforms/ios/universal>`
+
 .. _unrelocatable projects:
 
 Unrelocatable projects
