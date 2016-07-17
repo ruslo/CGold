@@ -21,6 +21,29 @@ Cache variables saved in :ref:`CMakeCache.txt` file:
   [usage-of-variables]> grep abc _builds/CMakeCache.txt
   abc:STRING=687
 
+No scope
+========
+
+Unlike regular CMake variables cache variables have no scope and is set globally:
+
+.. literalinclude:: /examples/usage-of-variables/cache-no-scope/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6, 8
+
+.. literalinclude:: /examples/usage-of-variables/cache-no-scope/boo/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 3
+
+.. code-block:: shell
+  :emphasize-lines: 2-3
+
+  [usage-of-variables]> rm -rf _builds
+  [usage-of-variables]> cmake -Hcache-no-scope -B_builds
+  A: 123
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
 Double set
 ==========
 
@@ -272,3 +295,143 @@ Selection widget can be created for variable of string type:
 .. admonition:: CMake documentation
 
   * `STRINGS property <https://cmake.org/cmake/help/latest/prop_cache/STRINGS.html>`__
+
+Internal
+========
+
+Variable with type ``INTERNAL`` will not be shown in CMake-GUI (again, real type
+is a string still):
+
+.. literalinclude:: /examples/usage-of-variables/internal-gui/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-6
+
+.. image:: cache-gui/13-gui-internal.png
+  :align: center
+
+Also such type of variable implies ``FORCE``:
+
+.. literalinclude:: /examples/usage-of-variables/internal-force/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-6, 8-10
+  :linenos:
+
+Variable ``FOO_A`` will be set to ``123`` then rewritten to ``456``, then to
+``789``, so final result is ``789``. Variable ``FOO_B`` is a cache variable
+with no ``FORCE`` so first ``123`` will be set to cache, then since ``FOO_B``
+is already in cache ``456`` and ``789`` will be ignored, so final
+result is ``123``:
+
+.. code-block:: shell
+  :emphasize-lines: 2-4
+
+  [usage-of-variables]> rm -rf _builds
+  [usage-of-variables]> cmake -Hinternal-force -B_builds
+  FOO_A (internal): 789
+  FOO_B (string): 123
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
+Advanced
+========
+
+If variable is marked as advanced:
+
+.. literalinclude:: /examples/usage-of-variables/advanced-gui/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 5, 8
+
+it will not be shown in CMake-GUI if ``Advanced`` checkbox is not set:
+
+.. image:: cache-gui/14-gui-no-advanced.png
+  :align: center
+
+.. image:: cache-gui/15-gui-advanced.png
+  :align: center
+
+.. admonition:: CMake documentation
+
+  * `mark_as_advanced <https://cmake.org/cmake/help/latest/command/mark_as_advanced.html>`__
+
+Use case
+========
+
+The ability of cache variables respect user's settings fits perfectly for
+creating project's customization option:
+
+.. literalinclude:: /examples/usage-of-variables/project-customization/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-5
+
+Default value:
+
+.. code-block:: shell
+  :emphasize-lines: 2-4
+
+  [usage-of-variables]> rm -rf _builds
+  [usage-of-variables]> cmake -Hproject-customization -B_builds
+  FOO_A: Default value for A
+  FOO_B: Default value for B
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
+User's value:
+
+.. code-block:: shell
+  :emphasize-lines: 1-2
+
+  [usage-of-variables]> cmake -DFOO_A=User -Hproject-customization -B_builds
+  FOO_A: User
+  FOO_B: Default value for B
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
+Note that such approach doesn't work for regular CMake variable ``FOO_B``:
+
+.. code-block:: shell
+  :emphasize-lines: 1, 3
+
+  [usage-of-variables]> cmake -DFOO_B=User -Hproject-customization -B_builds
+  FOO_A: User
+  FOO_B: Default value for B
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
+Option
+======
+
+Command ``option`` can be used for creating boolean cache entry:
+
+.. literalinclude:: /examples/usage-of-variables/option/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-5
+
+.. code-block:: shell
+  :emphasize-lines: 2-4, 9-10
+
+  [usage-of-variables]> rm -rf _builds
+  [usage-of-variables]> cmake -Hoption -B_builds
+  FOO_A: OFF
+  FOO_B: ON
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+  [usage-of-variables]> grep FOO_ _builds/CMakeCache.txt
+  FOO_A:BOOL=OFF
+  FOO_B:BOOL=ON
+
+.. admonition:: CMake documentation
+
+  * `option <https://cmake.org/cmake/help/latest/command/option.html>`__
+
+Summary
+=======
+
+* Use cache to set **global** variables
+* Cache variables fits perfectly for expressing customized options: default
+  value and respect user's value
+* Type of cache variable helps CMake-GUI users
