@@ -31,3 +31,19 @@ and add more features.
   /tutorials/version-policies
   /tutorials/project
   /tutorials/variables
+  /tutorials/cmake-sources
+  /tutorials/control-structures
+  /tutorials/executables
+  /tutorials/tests
+  /tutorials/libraries
+  /tutorials/pseudo-targets
+  /tutorials/collecting-sources
+  /tutorials/usage-requirements
+  /tutorials/build-types
+  /tutorials/configure-file
+  /tutorials/install
+  /tutorials/find-package
+  /tutorials/generator-expressions
+  /tutorials/properties
+  /tutorials/packing
+  /tutorials/continuous-integration
