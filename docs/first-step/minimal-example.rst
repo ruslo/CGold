@@ -37,14 +37,12 @@ First line of ``CMakeLists.txt`` is a comment and will be ignored:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
-  :linenos:
   :emphasize-lines: 1
 
 Next line tell us about ``CMake`` version for which this file is written:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
-  :linenos:
   :emphasize-lines: 3
 
 ``2.8`` means we can use this configuration with ``CMake`` versions like
@@ -56,14 +54,12 @@ have name ``foo.sln``, ``Xcode`` project name will be ``foo.xcodeproj``:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
-  :linenos:
   :emphasize-lines: 4
 
 Adding executable ``foo`` with source ``foo.cpp``:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
-  :linenos:
   :emphasize-lines: 6
 
 :ref:`CMake <CMake>` has some predefined settings so it will figure out next
