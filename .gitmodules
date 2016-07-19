@@ -22,3 +22,6 @@
 [submodule "docs/examples/cmake-sources"]
   path = docs/examples/cmake-sources
   url = https://github.com/cgold-examples/cmake-sources
+[submodule "docs/examples/control-structures"]
+  path = docs/examples/control-structures
+  url = https://github.com/cgold-examples/control-structures
