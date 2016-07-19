@@ -19,3 +19,6 @@
 [submodule "docs/rtfd-css"]
   path = docs/rtfd-css
   url = https://github.com/ruslo/rtfd-css
+[submodule "docs/examples/cmake-sources"]
+  path = docs/examples/cmake-sources
+  url = https://github.com/cgold-examples/cmake-sources
