@@ -77,6 +77,16 @@ Include standard
   -- Generating done
   -- Build files have been written to: /.../cmake-sources/_builds
 
+.. admonition:: CMake documentation
+
+  * `ProcessorCount <https://cmake.org/cmake/help/latest/module/ProcessorCount.html>`__
+
+.. warning::
+
+  Do not include ``Find*.cmake`` modules such way. ``Find*.cmake`` modules
+  designed to be used via
+  `find_package <https://cmake.org/cmake/help/latest/command/find_package.html>`__.
+
 Include custom
 ~~~~~~~~~~~~~~
 
