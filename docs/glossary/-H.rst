@@ -20,6 +20,10 @@ be used with :ref:`-B <-B>` option. Example:
 Use current directory as a source tree (i.e. start with
 ``./CMakeLists.txt``) and put generated files to the ``./_builds`` folder.
 
+Path to this directory will be saved in
+`CMAKE_SOURCE_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_SOURCE_DIR.html>`__
+variable.
+
 .. seealso::
 
   * :ref:`-B <-B>`
