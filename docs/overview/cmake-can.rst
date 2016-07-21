@@ -54,6 +54,12 @@ Same action - adding new target/file, will be done in **one step** now:
 Note that the right part of the diagram **was not changed**. I.e. you still can
 keep using your favorite tools like ``Visual Studio/msbuild``, ``Xcode/xcodebuild`` and ``Makefile/make``!
 
+.. seealso::
+
+  * `KDE moving from autotools to CMake (give up SCons) <http://lwn.net/Articles/188693/>`__
+  * `Visual C++ Team Blog: Support for Android CMake projects in Visual Studio <https://blogs.msdn.microsoft.com/vcblog/2015/12/15/support-for-android-cmake-projects-in-visual-studio/>`__
+
+
 VCS friendly
 ============
 
