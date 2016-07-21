@@ -32,19 +32,21 @@ and returning results is something quite tricky for the beginners.
 :ref:`CMake <CMake>` is definitely not a language you want to try to experiment
 with implementation of red-black tree or processing JSON response from server.
 **But it does** handle regular development very efficiently and it is much better
-then native XML files or autotools configs. Think about it in this way: if you
-want to do some nasty non-standard things probably you should stop. If you think it is
-something important and useful, then it might be quite useful for other
-:ref:`CMake <CMake>` users too. In this case you need to think about
-implementing new feature **in CMake itself**. :ref:`CMake
-<CMake>` is open-source project written in C++, I hope this language has enough
-power for you :) Also you can discuss this problem in
+then native XML files, autotools configs or `JSON-like syntax of GYP`_. Think
+about it in this way: if you want to do some nasty non-standard things probably
+you should stop. If you think it is something important and useful, then it
+might be quite useful for other :ref:`CMake <CMake>` users too. In this case
+you need to think about implementing new feature **in CMake itself**.
+:ref:`CMake <CMake>` is open-source project written in C++, I hope this
+language has enough power for you :) Also you can discuss this problem in
 `CMake mailing-list <https://cmake.org/mailman/listinfo/cmake-developers>`_
 to see how you can help with improving current state.
 
 .. admonition:: CMake mailing list
 
   * `Wrapping CMake functionality with another language <http://www.mail-archive.com/cmake-developers%40cmake.org/msg15199.html>`_
+
+.. _JSON-like syntax of GYP: https://gyp.gsrc.io/docs/LanguageSpecification.md#Example
 
 .. _affecting workflow:
 
