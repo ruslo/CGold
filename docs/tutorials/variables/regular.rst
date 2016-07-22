@@ -297,11 +297,9 @@ it became *unquoted argument* so quote will be treated as part of the string:
 .. literalinclude:: /examples/usage-of-variables/quotes/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 4-6
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 3-8
-  :linenos:
 
   [usage-of-variables]> rm -rf _builds
   [usage-of-variables]> cmake -Hquotes -B_builds
