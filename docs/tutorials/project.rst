@@ -75,12 +75,8 @@ checking of anything before ``project``, place all checks
 
 Also ``project`` is a place where toolchain file will be read.
 
-CMakeLists.txt:
-
 .. literalinclude:: /examples/project-examples/toolchain/CMakeLists.txt
   :language: cmake
-
-toolchain.cmake:
 
 .. literalinclude:: /examples/project-examples/toolchain/toolchain.cmake
   :language: cmake
