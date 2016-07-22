@@ -287,6 +287,42 @@ Name of variable may consist of **any** characters:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
+Quotes
+======
+
+In previous example quote was used to create name with space - this is called
+*quoted argument*. Note that argument should start and end with quote, otherwise
+it became *unquoted argument* so quote will be treated as part of the string:
+
+.. literalinclude:: /examples/usage-of-variables/quotes/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-6
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 3-8
+  :linenos:
+
+  [usage-of-variables]> rm -rf _builds
+  [usage-of-variables]> cmake -Hquotes -B_builds
+  a = 'Quoted argument'
+  b = 'x-"Unquoted argument"'
+  c =
+    'x"a'
+    'b'
+    'c"'
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../usage-of-variables/_builds
+
+As you can see variable ``b`` contains quotes now and for list ``c`` quotes
+are part of the elements: ``x"a``, ``c"``.
+
+.. admonition:: CMake documentation
+
+ * `Quoted argument <https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#quoted-argument>`__
+ * `Unquoted argument <https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#unquoted-argument>`__
+
 Dereferencing
 =============
 
