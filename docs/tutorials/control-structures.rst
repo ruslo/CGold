@@ -122,6 +122,179 @@ Workaround
 Loops
 -----
 
+foreach
+~~~~~~~
+
+.. literalinclude:: /examples/control-structures/foreach/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 5, 11, 16, 22, 27, 33, 39
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 4-6, 8-10, 11, 12, 14, 16-17, 19-24
+  :linenos:
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hforeach -B_builds
+  Explicit list:
+    A
+    B
+    C
+  Dereferenced list:
+    foo
+    boo
+    bar
+  Empty list
+  Dereferenced empty list
+  List with empty element:
+    ''
+  Separate lists:
+    a;b;c
+    x;y;z
+  Combined list:
+    a
+    b
+    c
+    x
+    y
+    z
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+foreach with range
+~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: /examples/control-structures/foreach-range/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 5, 10, 15
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 4-14, 16-21, 23-25
+  :linenos:
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hforeach-range -B_builds
+  Simple range:
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+  Range with limits:
+    3
+    4
+    5
+    6
+    7
+    8
+  Range with step:
+    10
+    12
+    14
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+while
+~~~~~
+
+.. literalinclude:: /examples/control-structures/while/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 8, 17
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 4-8, 10-14
+  :linenos:
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hwhile -B_builds
+  Loop with condition as variable:
+    a = x
+    a = xx
+    a = xxx
+    a = xxxx
+    a = xxxxx
+  Loop with explicit condition:
+    a = x
+    a = xx
+    a = xxx
+    a = xxxx
+    a = xxxxx
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+break
+~~~~~
+
+.. literalinclude:: /examples/control-structures/break/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 11, 19
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 4-6, 8-12
+  :linenos:
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hbreak -B_builds
+  Stop 'while' loop:
+    x
+    xx
+    xxx
+  Stop 'foreach' loop:
+    0
+    1
+    2
+    3
+    4
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+continue
+~~~~~~~~
+
+.. literalinclude:: /examples/control-structures/continue/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 1, 8
+  :linenos:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 6, 9
+  :linenos:
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hcontinue -B_builds
+  Loop with 'continue':
+    process 0
+    process 1
+    skip 2
+    process 3
+    process 4
+    skip 5
+    process 6
+    process 7
+    process 8
+    process 9
+    process 10
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+.. admonition:: CMake documentation
+
+  * `CMake 3.2 release notes <https://cmake.org/cmake/help/v3.2/release/3.2.html#commands>`__
+
 Functions
 ---------
 
