@@ -130,7 +130,7 @@ Languages
 =========
 
 If you don't have or don't need support for one of the default languages you can
-set language explicitly by ``LANGUAGE`` sub-option. This is how to setup
+set language explicitly after name of the project. This is how to setup
 C-only project:
 
 .. literalinclude:: /examples/project-examples/c-compiler/CMakeLists.txt
@@ -164,7 +164,7 @@ is empty now:
 
 Of course you will not be able to build C++ targets anymore. Since CMake
 thinks that ``*.cpp`` extension is for C++ sources (by default) there will
-be error reported if C++ is not listed in ``LANGUAGES`` (discovering of C++
+be error reported if C++ is not listed (discovering of C++
 tools will not be triggered):
 
 .. literalinclude:: /examples/project-examples/cpp-not-found/CMakeLists.txt
@@ -210,6 +210,15 @@ No checks for C or C++ compiler as you can see:
 
   Such form will be used widely in examples in cases when we don't need to
   build targets.
+
+.. note::
+
+  For CMake 3.0+ sub-option ``LANGUAGES`` added, since it will be:
+
+  .. code-block:: cmake
+
+    cmake_minimum_required(VERSION 3.0)
+    project(foo LANGUAGES NONE)
 
 .. admonition:: Stackoverflow
 
