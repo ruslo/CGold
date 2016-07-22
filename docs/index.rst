@@ -4,6 +4,10 @@
 CGold: The Hitchhiker's Guide to the CMake
 ------------------------------------------
 
+.. warning::
+
+  **THIS DOCUMENT IS UNDER CONSTRUCTION! WORK IN PROGRESS!**
+
 Welcome to **CGold**!
 
 This guide will show you how to use :ref:`CMake <CMake>` and helps you to write elegant,
