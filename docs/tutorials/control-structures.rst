@@ -4,6 +4,11 @@
 Control structures
 ==================
 
+.. admonition:: Examples on GitHub
+
+  * `Repository <https://github.com/cgold-examples/control-structures>`__
+  * `Latest ZIP <https://github.com/cgold-examples/control-structures/archive/master.zip>`__
+
 Conditional blocks
 ------------------
 
