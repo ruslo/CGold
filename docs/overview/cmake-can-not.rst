@@ -155,3 +155,7 @@ should still have :ref:`CMake <CMake>` installed since it was used in fact:
 * Obviously in case if you have some custom build steps with ``cmake -E`` (command line mode) or
   ``cmake -P`` (scripting mode)
 * For doing internal stuff like searching for installed dependent packages
+
+.. admonition:: TODO
+
+  Link to relocatable packages
