@@ -17,3 +17,23 @@ Visual Studio
 .. admonition:: Wikipedia
 
   * `Visual Studio <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio>`_
+
+.. _manage visual studio features:
+
+Manage features
+---------------
+
+Installer will offer to manage features you need. Don't forget to add
+:menuselection:`Programming Languages --> Visual C++`:
+
+.. image:: win-screens/visual-cxx.png
+  :align: center
+
+If you already have Visual Studio installed you can go to
+:menuselection:`System --> Apps & features --> Modify`:
+
+.. image:: win-screens/01-modify.png
+  :align: center
+
+.. image:: win-screens/02-modify.png
+  :align: center
