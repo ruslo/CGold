@@ -1,11 +1,10 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
-Platforms
----------
+Android
+-------
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
-  /platforms/ios
-  /platforms/android
+  /platforms/android/windows
