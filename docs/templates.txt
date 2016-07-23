@@ -50,3 +50,6 @@ Templates
 
   [project-examples]> rm -rf _builds
   [project-examples]> cmake -Hset-compiler -B_builds
+
+.. image:: gnu.png
+  :align: center
