@@ -128,11 +128,9 @@ foreach
 .. literalinclude:: /examples/control-structures/foreach/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 5, 11, 16, 22, 27, 33, 39
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 2, 4-6, 8-10, 11, 12, 14, 16-17, 19-24
-  :linenos:
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hforeach -B_builds
@@ -168,11 +166,9 @@ foreach with range
 .. literalinclude:: /examples/control-structures/foreach-range/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 5, 10, 15
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 2, 4-14, 16-21, 23-25
-  :linenos:
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hforeach-range -B_builds
@@ -209,11 +205,9 @@ while
 .. literalinclude:: /examples/control-structures/while/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 8, 17
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 2, 4-8, 10-14
-  :linenos:
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hwhile -B_builds
@@ -239,11 +233,9 @@ break
 .. literalinclude:: /examples/control-structures/break/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 11, 19
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 2, 4-6, 8-12
-  :linenos:
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hbreak -B_builds
@@ -267,11 +259,9 @@ continue
 .. literalinclude:: /examples/control-structures/continue/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 1, 8
-  :linenos:
 
 .. code-block:: shell
   :emphasize-lines: 2, 6, 9
-  :linenos:
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hcontinue -B_builds
@@ -295,8 +285,139 @@ continue
 
   * `CMake 3.2 release notes <https://cmake.org/cmake/help/v3.2/release/3.2.html#commands>`__
 
+.. _cmake functions:
+
 Functions
 ---------
 
-Macro
------
+.. admonition:: CMake documentation
+
+  * `function <https://cmake.org/cmake/help/latest/command/function.html>`__
+
+Simple
+~~~~~~
+
+.. literalinclude:: /examples/control-structures/simple-function/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-6
+
+.. code-block:: shell
+  :emphasize-lines: 3-4
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hsimple-function -B_builds
+  Calling 'foo' function
+  Calling 'foo' function
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+With arguments
+~~~~~~~~~~~~~~
+
+.. literalinclude:: /examples/control-structures/function-args/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4, 11, 19
+
+.. code-block:: shell
+  :emphasize-lines: 4-6, 8-11, 13-14
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hfunction-args -B_builds
+  Calling function 'foo':
+    x = 1
+    y = 2
+    z = 3
+  Calling function 'boo':
+    x = 4
+    y = 5
+    z = 6
+    total = 3
+  Calling function 'bar':
+    All = 7;8;9;10;11
+    Unexpected = 10;11
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+CMake style
+~~~~~~~~~~~
+
+.. literalinclude:: /examples/control-structures/cmake-style/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4, 7-9, 19, 21, 44-46
+
+.. code-block:: shell
+  :emphasize-lines: 4-13, 15-23, 25
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hcmake-style -B_builds
+  *** Run (1) ***
+  FOO: TRUE
+  BOO: FALSE
+  X: value
+  Y:
+  Z:
+  L1:
+    item1
+    item2
+    item3
+  L2:
+  *** Run (2) ***
+  FOO: TRUE
+  BOO: TRUE
+  X:
+  Y: abc
+  Z: 123
+  L1:
+  L2:
+    item1
+    item3
+  *** Run (3) ***
+  { param1, param2 } = { 123, 888 }
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+.. admonition:: CMake documentation
+
+  * `cmake_parse_arguments <https://cmake.org/cmake/help/latest/command/cmake_parse_arguments.html>`__
+
+Return value
+~~~~~~~~~~~~
+
+.. literalinclude:: /examples/control-structures/return-value/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 5, 14
+
+.. code-block:: shell
+  :emphasize-lines: 3-4, 6
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hreturn-value -B_builds
+  Before 'boo': 333
+  After 'boo': 123
+  Calling 'bar' with arguments: '123' 'var_out'
+  Output: ABC-123-XYZ
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+Return
+~~~~~~
+
+.. literalinclude:: /examples/control-structures/return/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 7, 12, 15
+
+.. code-block:: shell
+  :emphasize-lines: 3-5
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hreturn -B_builds
+  Exit on A
+  Exit on B
+  Exit
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
