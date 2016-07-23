@@ -4,6 +4,12 @@
 Variables
 ---------
 
+.. epigraph::
+
+  | *There are only two kinds of languages: the ones people complain about and*
+  | *the ones nobody uses.*
+  | -- `Bjarne Stroustrup <https://en.wikiquote.org/wiki/Bjarne_Stroustrup>`__
+
 We have touched already some simple syntax like dereferencing variable ``A`` by
 ``${A}`` in ``message`` command: ``message("This is A: ${A}")``. Cache variables
 was mentioned in :doc:`CMake stages </tutorials/cmake-stages>`. Here is an
