@@ -25,3 +25,6 @@
 [submodule "docs/examples/control-structures"]
   path = docs/examples/control-structures
   url = https://github.com/cgold-examples/control-structures
+[submodule "docs/examples/platforms-android-on-windows"]
+  path = docs/examples/platforms-android-on-windows
+  url = https://github.com/cgold-examples/platforms-android-on-windows
