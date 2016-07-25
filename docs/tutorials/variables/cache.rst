@@ -315,11 +315,11 @@ Also such type of variable implies ``FORCE``:
   :language: cmake
   :emphasize-lines: 4-6, 8-10
 
-Variable ``FOO_A`` will be set to ``123`` then rewritten to ``456``, then to
-``789``, so final result is ``789``. Variable ``FOO_B`` is a cache variable
-with no ``FORCE`` so first ``123`` will be set to cache, then since ``FOO_B``
-is already in cache ``456`` and ``789`` will be ignored, so final
-result is ``123``:
+Variable ``FOO_A`` will be set to ``123`` then **rewritten** to ``456`` because
+behaviour is similar to variable **with FORCE**, then one more time to ``789``,
+so final result is ``789``. Variable ``FOO_B`` is a cache variable with **no
+FORCE** so first ``123`` will be set to cache, then since ``FOO_B`` is already
+in cache ``456`` and ``789`` **will be ignored**, so final result is ``123``:
 
 .. code-block:: shell
   :emphasize-lines: 2-4
