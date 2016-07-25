@@ -104,7 +104,7 @@ Compiler not found
 ~~~~~~~~~~~~~~~~~~
 
 Check for
-:menuselection:`Cross Platform Mobile Development --> Common Tools and Software Development Kits --> Android Native Development Kit *`:
+:menuselection:`Cross Platform Mobile Development --> Common Tools and Software Development Kits --> Android Native Development Kit *`
 if you see this error:
 
 .. code-block:: shell
