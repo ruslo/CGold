@@ -177,3 +177,7 @@ if you see this error:
 
   CMake Error at CMakeLists.txt:17 (project):
     No CMAKE_CXX_COMPILER could be found.
+
+.. admonition:: Polly
+
+  * `Android toolchains <http://polly.readthedocs.io/en/latest/toolchains/android.html>`__
