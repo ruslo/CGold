@@ -1,6 +1,11 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
+.. spelling::
+
+  diff
+  diffs
+
 What CMake can do
 -----------------
 
@@ -152,6 +157,6 @@ Summary
 
 .. note::
 
-  This section is not intended to cover all funtionality but only give
+  This section is not intended to cover all functionality but only give
   brief review. Testing, packing, installing, distributing, dependency
   discovering, scripting etc. will be described fully in :ref:`Tutorials <tutorials>`.

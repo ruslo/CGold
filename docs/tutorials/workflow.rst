@@ -142,8 +142,8 @@ for workflow described above:
 .. image:: workflow/workflow.png
   :align: center
 
-Suspicious behaviour
-====================
+Suspicious behavior
+===================
 
 If your workflow doesn't match configure-once approach then it may be a
 symptom of wrongly written CMake code. Especially when you have to run

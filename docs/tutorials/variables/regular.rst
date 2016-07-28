@@ -206,7 +206,7 @@ will remove regular variable with the same name from current scope:
 Confusing
 =========
 
-This may lead to quite confusing behaviour:
+This may lead to quite confusing behavior:
 
 .. literalinclude:: /examples/usage-of-variables/cache-confuse/CMakeLists.txt
   :language: cmake

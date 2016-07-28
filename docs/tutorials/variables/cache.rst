@@ -150,7 +150,7 @@ you can add ``FORCE``:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
-This is quite surprising behaviour for user and conflicts with the nature of
+This is quite surprising behavior for user and conflicts with the nature of
 cache variables that designed to store variable once and globally.
 
 .. warning::
@@ -316,7 +316,7 @@ Also such type of variable implies ``FORCE``:
   :emphasize-lines: 4-6, 8-10
 
 Variable ``FOO_A`` will be set to ``123`` then **rewritten** to ``456`` because
-behaviour is similar to variable **with FORCE**, then one more time to ``789``,
+behavior is similar to variable **with FORCE**, then one more time to ``789``,
 so final result is ``789``. Variable ``FOO_B`` is a cache variable with **no
 FORCE** so first ``123`` will be set to cache, then since ``FOO_B`` is already
 in cache ``456`` and ``789`` **will be ignored**, so final result is ``123``:

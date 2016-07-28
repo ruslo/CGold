@@ -15,8 +15,8 @@ and add more features.
   In provided examples:
 
   * CMake will be run in command-line format but CMake-GUI will work in similar
-    way, if behaviour differs it will be noted explicitly
-  * For the host platform ``Linux`` is choosed, use analogous commands
+    way, if behavior differs it will be noted explicitly
+  * For the host platform ``Linux`` is chosen, use analogous commands
     if you use another host. E.g. use ``dir _builds`` on Windows instead of
     ``ls _builds``
   * ``Unix Makefiles`` will be used as a generator. On \*nix platforms this is

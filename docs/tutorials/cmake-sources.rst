@@ -1,6 +1,10 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
+.. spelling::
+
+  cmake
+
 CMake sources
 -------------
 

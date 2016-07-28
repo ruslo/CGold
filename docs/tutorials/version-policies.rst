@@ -1,11 +1,15 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
+.. spelling::
+
+  cmake
+
 Version and policies
 --------------------
 
 Like any other piece of software :ref:`CMake <CMake>` evolves, effectively
-introducing new features and deprecating dangerous or confusing behaviour.
+introducing new features and deprecating dangerous or confusing behavior.
 
 There are two entities that help you to manage difference between old and new
 versions of CMake:
@@ -16,7 +20,7 @@ versions of CMake:
   configuration
 
 * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
-  for fine tuning newly introduced behaviour
+  for fine tuning newly introduced behavior
 
 If you just want to experiment without worrying about backward compatibility,
 policies, warnings, etc. just set **first line** of CMakeLists.txt to
@@ -154,7 +158,7 @@ CMake policies
  * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
 
 When new version of CMake released there may be a list of policies describing
-cases when behaviour changed comparing to the previous CMake version.
+cases when behavior changed comparing to the previous CMake version.
 
 Let's see now it works on practice. In CMake ``3.0`` policy
 `CMP0038 <https://cmake.org/cmake/help/latest/policy/CMP0038.html>`__
@@ -377,7 +381,7 @@ without using any **new features**.
 Summary
 =======
 
-* Policies can be used to control CMake **behaviour**
+* Policies can be used to control CMake **behavior**
 * Policies can be used to suppress warnings/errors
 * ``cmake_minimum_required`` describe **features** you use in CMake code
 * For backward compatibility new features can be protected with
