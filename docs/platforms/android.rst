@@ -7,4 +7,5 @@ Android
 .. toctree::
   :maxdepth: 1
 
+  /platforms/android/prepare-device
   /platforms/android/windows
