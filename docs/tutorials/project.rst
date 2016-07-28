@@ -357,7 +357,7 @@ Summary
 =======
 
 * You must have ``project`` command in your top-level ``CMakeLists.txt``
-* Use ``project`` to declare nondivisible monolithic hierarchy of targets
+* Use ``project`` to declare non divisible monolithic hierarchy of targets
 * Try to minimize the number of instructions before ``project`` and verify
   that variables are declared in such block of CMake code
 

@@ -136,7 +136,7 @@ This helps developers of new IDEs also. Instead of putting your IDE users into
 situations when they have to decide should they use your ``SuperDuperIDE``
 instead of their favorite one and probably writing endless number of
 ``SuperDuperIDE`` <-> ``Xcode``, ``SuperDuperIDE`` <-> ``Visual Studio``, etc.
-convertes, all you have to do is to add new generator ``-G SuperDuperIDE`` to
+converters, all you have to do is to add new generator ``-G SuperDuperIDE`` to
 :ref:`CMake <CMake>`.
 
 Summary

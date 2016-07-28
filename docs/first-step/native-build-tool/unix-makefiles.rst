@@ -36,13 +36,13 @@ Run ``Launchpad``:
 .. image:: osx-screens/dev-tools/01-launchpad.png
   :align: center
 
-Find ``Terminal`` and lauch it:
+Find ``Terminal`` and launch it:
 
 .. image:: osx-screens/dev-tools/02-launchpad-terminal.png
   :align: center
 
-Try to execute ``make`` (or any other commands for development like gcc, git,
-clang, etc.). Dialog window will popup:
+Try to execute ``make`` (or any other commands for development like GCC, git,
+clang, etc.). Popup dialog window will appear:
 
 .. image:: osx-screens/dev-tools/03-developers-tools-pop-up.png
   :align: center

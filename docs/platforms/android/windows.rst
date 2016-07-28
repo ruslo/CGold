@@ -18,7 +18,7 @@ Install :ref:`additional components <manage visual studio features>` first.
 .. image:: win-screens/01-mobile-dev.png
   :align: center
 
-and :menuselection:`Cross Platform Mobile Development --> Common Tools and Software Development Kits --> Android Native Development Kit *`:
+And :menuselection:`Cross Platform Mobile Development --> Common Tools and Software Development Kits --> Android Native Development Kit *`:
 
 .. image:: win-screens/02-android-ndk.png
   :align: center

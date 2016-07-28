@@ -48,7 +48,7 @@ Generate Makefile:
   -- Generating done
   -- Build files have been written to: /.../minimal-with-message/_builds
 
-and run build:
+And run build:
 
 .. code-block:: shell
 

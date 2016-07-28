@@ -4,7 +4,7 @@
 Version and policies
 --------------------
 
-Like any other piece of sofware :ref:`CMake <CMake>` evolves, effectively
+Like any other piece of software :ref:`CMake <CMake>` evolves, effectively
 introducing new features and deprecating dangerous or confusing behaviour.
 
 There are two entities that help you to manage difference between old and new
@@ -16,7 +16,7 @@ versions of CMake:
   configuration
 
 * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
-  for fune tuning newly introduced behaviour
+  for fine tuning newly introduced behaviour
 
 If you just want to experiment without worrying about backward compatibility,
 policies, warnings, etc. just set **first line** of CMakeLists.txt to

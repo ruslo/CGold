@@ -4,7 +4,7 @@
 ExternalProject_Add
 ===================
 
-There will be no hints about writing superbuild project using
+There will be no hints about writing super-build project using
 `ExternalProject`_ because same can be done nicely with
 :ref:`Hunter package manager <Hunter>`.
 

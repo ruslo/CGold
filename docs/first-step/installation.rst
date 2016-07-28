@@ -127,7 +127,7 @@ Start ``Launchpad``:
 .. image:: osx-screens/03-launchpad.png
   :align: center
 
-Find ``CMake`` and lauch it:
+Find ``CMake`` and launch it:
 
 .. image:: osx-screens/04-search-cmake.png
   :align: center

@@ -12,7 +12,7 @@ from top of the source tree. This directory can be set by :ref:`-H <-H>`
 in command line or by ``Browse Source...`` in CMake-GUI.
 
 This directory is mean to be shareable. E.g. probably you should not store
-hardcoded paths specific to your local environment in this code. This is
+hard-coded paths specific to your local environment in this code. This is
 directory that you want to be managed with :ref:`VCS <VCS>`.
 
 .. seealso::

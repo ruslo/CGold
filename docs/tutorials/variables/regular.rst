@@ -20,13 +20,13 @@ If you run configure of next example twice without removing cache:
   :language: shell
   :emphasize-lines: 3,12
 
-you can see that regular CMake variable ``abc`` created from scratch each time
+You can see that regular CMake variable ``abc`` created from scratch each time
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
   :language: shell
   :emphasize-lines: 4,6,13,15
 
-and cache variable ``xyz`` need to be created only once and reused on second run
+And cache variable ``xyz`` need to be created only once and reused on second run
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
   :language: shell
@@ -39,7 +39,7 @@ You can find cache variable ``xyz`` in :ref:`CMakeCache.txt <cmakecache.txt>`:
   [usage-of-variables]> grep xyz _builds/CMakeCache.txt
   xyz:STRING=321
 
-unlike regular ``abc``:
+Unlike regular ``abc``:
 
 .. code-block:: shell
 
@@ -143,19 +143,19 @@ Variable can be set to the parent scope by specifying ``PARENT_SCOPE``:
   :language: cmake
   :emphasize-lines: 8
 
-variable **will only be set to parent** scope:
+Variable **will only be set to parent** scope:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
   :language: cmake
   :emphasize-lines: 4,7
 
-current scope will not be affected:
+Current scope will not be affected:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
   :language: cmake
   :emphasize-lines: 5,6
 
-as well as parent of the parent:
+As well as parent of the parent:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
   :language: cmake
@@ -326,7 +326,7 @@ are part of the elements: ``x"a``, ``c"``.
 Dereferencing
 =============
 
-Dereferened variable can be used to create new variable value:
+Dereferenced variable can be used to create new variable value:
 
 .. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
   :language: cmake
@@ -335,7 +335,7 @@ Dereferened variable can be used to create new variable value:
 .. literalinclude:: /examples/usage-of-variables/dereference/configure.log
   :emphasize-lines: 3
 
-or new variable name:
+Or new variable name:
 
 .. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
   :language: cmake
@@ -344,7 +344,7 @@ or new variable name:
 .. literalinclude:: /examples/usage-of-variables/dereference/configure.log
   :emphasize-lines: 4
 
-or even both:
+Or even both:
 
 .. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
   :language: cmake
@@ -440,7 +440,7 @@ name, etc.:
 Create list
 ===========
 
-Some commands can treat variable as list. In this case string value splitted
+Some commands can treat variable as list. In this case string value split
 into elements separated by ``;``. Command ``set`` can create such lists:
 
 .. literalinclude:: /examples/usage-of-variables/list/CMakeLists.txt
@@ -466,7 +466,7 @@ effect:
   :language: cmake
   :emphasize-lines: 7
 
-we are contatenating **string** ``a`` with **string** ``b;c`` and put
+We are concatenating **string** ``a`` with **string** ``b;c`` and put
 ``;`` between them. Final result is **string** ``a;b;c``, when
 command interpret this string as list, such list has 3 elements.
 Hence **it's not a list** with two elements ``a`` and ``b;c``.

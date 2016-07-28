@@ -5,7 +5,7 @@ Build and run executable
 ------------------------
 
 In this section we will build and run ``foo`` executable. In case if IDE was
-used you can do it by openning project in IDE or using command line (it doesn't
+used you can do it by opening project in IDE or using command line (it doesn't
 matter how project was generated before: using GUI or CLI version of CMake).
 
 .. toctree::

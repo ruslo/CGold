@@ -81,14 +81,14 @@ That said, it's not enough to know that if you want to add new library to your
 
 * :menuselection:`Add --> New Project ... --> Visual C++ --> Static Library`
 
-you have to know that this must be done by adding new
+You have to know that this must be done by adding new
 ``add_library`` command to ``CMakeLists.txt``.
 
 Incomplete functionality coverage
 =================================
 
 There are some missing features in :ref:`CMake <CMake>`. That is, mapping of
-CMake funtionality <-> :ref:`native build tool <Native build tool>` functionality
+CMake functionality <-> :ref:`native build tool <Native build tool>` functionality
 is not always bijective. Often this can be workarounded by generating different
 native tool files from the same CMake code. For example it's possible using
 autotools create two versions of library (shared + static) by one run. However
@@ -134,7 +134,7 @@ Internally :ref:`CMake <CMake>` save full paths to the sources so it's not
 possible to generate project and then share it between several developers.
 It means you can't be CMake-guy who will generate different projects for
 Xcode-guys and VisualStudio-guys. All developers in team at least should be
-awared of how to generate projects using CMake. On practice it means they have
+aware of how to generate projects using CMake. On practice it means they have
 to know CMake arguments to use, literally it's
 ``cmake -H. -B_builds -GXcode``/``cmake -H. -B_builds "-GVisual Studio 12 2013"``,
 plus remember workflow notes from the section above.
