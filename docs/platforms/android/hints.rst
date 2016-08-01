@@ -38,7 +38,7 @@ be able to discover the device:
 Verify
 ======
 
-Verify device is visible by service:
+Connect device with USB and verify it's visible by ``adb`` service:
 
 .. code-block:: shell
   :emphasize-lines: 3
