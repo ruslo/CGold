@@ -45,7 +45,7 @@ Connect device with USB and verify it's visible by ``adb`` service:
 
   > adb devices
   List of devices attached
-  MTPxxx unauthorized
+  MTPxxx device
 
 If service is not started there will be extra messages:
 
@@ -56,7 +56,7 @@ If service is not started there will be extra messages:
   List of devices attached
   * daemon not running. starting it now on port 5037 *
   * daemon started successfully *
-  MTPxxx unauthorized
+  MTPxxx device
 
 Log
 ===
