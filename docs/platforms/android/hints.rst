@@ -26,6 +26,15 @@ tap ``Build number`` seven times:
     ``Android version`` or ``MIUI version`` instead of ``Build number``
     (http://en.miui.com/thread-24025-1-1.html)
 
+Go to ``Developer options`` and turn it ``ON``:
+
+* :menuselection:`Settings --> Developer options --> Developer options`
+
+Also turn ``ON`` debug mode when USB is connected. Otherwise ``adb`` will not
+be able to discover the device:
+
+* :menuselection:`Settings --> Developer options --> USB debugging`
+
 Verify
 ======
 
