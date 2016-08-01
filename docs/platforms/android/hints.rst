@@ -4,6 +4,28 @@
 General Hints
 -------------
 
+Prepare device
+==============
+
+You have to prepare your device for debugging. For Android 4.2+
+tap ``Build number`` seven times:
+
+* :menuselection:`Settings --> About phone --> Build number`
+
+``Developer options`` appears now:
+
+* :menuselection:`Settings --> Developer options`
+
+.. seealso::
+
+  * `Enabling On-device Developer Options <https://developer.android.com/studio/run/device.html#developer-device-options>`__
+
+.. note::
+
+  * On practice instructions may differ for different devices. E.g. it may be
+    ``Android version`` or ``MIUI version`` instead of ``Build number``
+    (http://en.miui.com/thread-24025-1-1.html)
+
 Verify
 ======
 
