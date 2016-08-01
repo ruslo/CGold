@@ -50,7 +50,7 @@ VCS friendly
 Out-of-source build allow you to ignore temporary binaries by just adding
 ``_builds`` directory to the no-tracking-files list:
 
-.. code-block:: ini
+.. code-block:: none
 
   # .gitignore
 
@@ -58,7 +58,7 @@ Out-of-source build allow you to ignore temporary binaries by just adding
 
 compare is with similar file for in-source build:
 
-.. code-block:: ini
+.. code-block:: none
 
   # .gitignore
 

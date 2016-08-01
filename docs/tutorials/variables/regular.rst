@@ -146,19 +146,16 @@ Variable can be set to the parent scope by specifying ``PARENT_SCOPE``:
 Variable **will only be set to parent** scope:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
-  :language: cmake
   :emphasize-lines: 4,7
 
 Current scope will not be affected:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
-  :language: cmake
   :emphasize-lines: 5,6
 
 As well as parent of the parent:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/configure.log
-  :language: cmake
   :emphasize-lines: 3,8
 
 From cache
@@ -450,20 +447,17 @@ into elements separated by ``;``. Command ``set`` can create such lists:
 ``set`` create **string** from elements and put the ``;`` between them:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
-  :language: cmake
   :emphasize-lines: 3
 
 In case you want to add element with space you can protect element by ``"``:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
-  :language: cmake
   :emphasize-lines: 5
 
 As seen with ``l4`` variable protecting ``;`` with ``"`` doesn't have any
 effect:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
-  :language: cmake
   :emphasize-lines: 7
 
 We are concatenating **string** ``a`` with **string** ``b;c`` and put
@@ -478,7 +472,6 @@ them without any separator, hence string ``print by message: abc`` will be
 printed:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
-  :language: cmake
   :emphasize-lines: 8-9
 
 .. admonition:: CMake documentation
