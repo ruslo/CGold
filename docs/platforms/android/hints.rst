@@ -84,6 +84,44 @@ If service is not started there will be extra messages:
   * daemon started successfully *
   MTPxxx device
 
+SDK version on device
+=====================
+
+The needed version of SDK can be get by reading ``ro.build.version.sdk``:
+
+.. code-block:: shell
+
+  > adb -d shell getprop ro.build.version.sdk
+  19
+
+Means you need to use API 19.
+
+.. note::
+
+  * ``-d`` is for real device
+  * ``-e`` is for emulator
+
+.. admonition:: Stackoverflow
+
+  * `Getting Android SDK version of a device from command line <http://stackoverflow.com/questions/8063461/>`__
+
+CPU architecture
+================
+
+Run next command to determine CPU architecture of emulator:
+
+.. code-block:: shell
+
+  > adb -e shell getprop ro.product.cpu.abi
+  x86
+
+And this one for device:
+
+.. code-block:: shell
+
+  > adb -e shell getprop ro.product.cpu.abi
+  armeabi-v7a
+
 Log
 ===
 
