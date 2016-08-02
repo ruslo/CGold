@@ -10,6 +10,7 @@ IDE
 IDEs
 NMake
 OSX
+Screenshot
 Stackoverflow
 Toolchain
 Uncheck
@@ -21,6 +22,7 @@ Xcode
 autotools
 checkbox
 configs
+hacky
 hunterization
 iOS
 showstopper
