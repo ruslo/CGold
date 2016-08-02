@@ -1,6 +1,10 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
+.. spelling::
+
+  logcat
+
 Windows Host
 ------------
 
@@ -181,3 +185,146 @@ if you see this error:
 .. admonition:: Polly
 
   * `Android toolchains <http://polly.readthedocs.io/en/latest/toolchains/android.html>`__
+
+Debugging with Visual Studio
+============================
+
+.. warning::
+
+  * Android with CMake support is in preliminary state so everything
+    looks hacky.
+
+Prepare
+~~~~~~~
+
+Install Polly if not already installed and add to PATH:
+
+.. code-block:: shell
+
+  > git clone https://github.com/ruslo/polly
+  > set PATH=%cd%\polly\bin;%PATH%
+  > where polly.py
+  C:\...\polly\bin\polly.py
+
+Check VC MDD version of CMake used (see notes above):
+
+.. code-block:: shell
+
+  > where cmake
+  C:\...\cmake-3.4.2-win32-x86\bin\cmake.exe
+
+Clone projects:
+
+.. code-block:: shell
+
+  > git clone https://github.com/forexample/android-cmake
+  > cd android-cmake\09-vc-mdd-debug
+  [09-vc-mdd-debug]>
+
+Verify that your device connected and visible, check CPU and API version fit
+toolchain that will be used (see :doc:`General Hints </platforms/android/hints>`).
+
+Android SDK
+~~~~~~~~~~~
+
+Now we will run CMake. This will trigger Hunter instructions that will download
+all dependencies. Do not run build for now and don't open Visual Studio
+project, we are interested in Android SDK path first:
+
+.. code-block:: shell
+  :emphasize-lines: 8
+
+  [09-vc-mdd-debug]> build.py --toolchain android-vc-ndk-r10e-api-19-arm-clang-3-6 --verbose --nobuild
+  ...
+  -- [hunter *** DEBUG *** ...] Package already installed: Android-SDK
+  -- [hunter *** DEBUG *** ...] load: C:/.../cmake/projects/Android-SDK/hunter.cmake ... end
+  -- Path to `android`: C:/.../Install/android-sdk/tools/android
+  -- Path to `emulator`: C:/.../Install/android-sdk/tools/emulator
+  -- Path to `adb`: C:/.../Install/android-sdk/platform-tools/adb
+  -- Tools -> Options -> Cross Platform -> C++ -> Android: C:/.../Install/android-sdk
+  -- [hunter *** DEBUG *** ...] load: C:/.../cmake/projects/Android-Modules/hunter.cmake
+  -- [hunter *** DEBUG *** ...] Android-Modules versions available: [1.0.0]
+
+Copy path ``C:/.../Install/android-sdk`` to clipboard and open Visual Studio.
+There is no way to control Android SDK path by CMake code so we have to
+add this path manually to
+
+* :menuselection:`Tools --> Options --> Cross Platform --> C++ --> Android`
+
+.. image:: visual-studio-screens/01-set-android-sdk.png
+  :align: center
+
+Click OK and exit.
+
+.. note::
+
+  It need to be done only once. Note that this setting is global so it will
+  be used in other Visual Studio projects (they may not use Hunter or CMake).
+
+APK Create
+~~~~~~~~~~
+
+Run CMake again, this time use ``--open`` to open generated
+Visual Studio solution:
+
+.. code-block:: shell
+
+  [09-vc-mdd-debug]> build.py --toolchain android-vc-ndk-r10e-api-19-arm-clang-3-6 --verbose --nobuild --open
+
+Find ``install-simple`` target and build it. This will trigger creating APK
+and installing it on device:
+
+.. image:: visual-studio-screens/02-install.png
+  :align: center
+
+.. warning::
+
+  This step is necessary **always** before running application on device,
+  otherwise old APK will be used and new updates will not be visible!
+
+Breakpoints
+~~~~~~~~~~~
+
+Let's find ``android_main.cpp`` source file, open it and set breakpoint to
+the function ``foo_3`` before printing ``Message 2``:
+
+.. image:: visual-studio-screens/03-breakpoint.png
+  :align: center
+
+APK path
+~~~~~~~~
+
+We have to tell Visual Studio which APK file we are debugging.
+Go to the ``Properties``:
+
+.. image:: visual-studio-screens/04-properties.png
+  :align: center
+
+Find ``Package to Launch`` in ``Debugging``:
+
+.. image:: visual-studio-screens/05-browse-package.png
+  :align: center
+
+And find ``simple-debug.apk`` in ``apk/bin`` folder:
+
+.. image:: visual-studio-screens/06-find-apk.png
+  :align: center
+
+Now set this project as StartUp:
+
+.. image:: visual-studio-screens/07-starup-project.png
+  :align: center
+
+Run
+~~~
+
+We are ready to run!
+
+.. image:: visual-studio-screens/08-run.png
+  :align: center
+
+Debugger stops right after ``Message 1`` and before ``Message 2``.
+Screenshot with call stack, logcat and values of local variables ``a`` and ``b``:
+
+.. image:: visual-studio-screens/09-breakpoint.png
+  :align: center
