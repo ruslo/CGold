@@ -94,6 +94,9 @@ Include standard
 Include custom
 ~~~~~~~~~~~~~~
 
+You can modify ``CMAKE_MODULE_PATH`` variable to add the path with your
+custom CMake modules:
+
 .. literalinclude:: /examples/cmake-sources/include-users/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 6, 8
@@ -103,7 +106,7 @@ Include custom
   :emphasize-lines: 3
 
 .. code-block:: shell
-  :emphasize-lines: 2-3
+  :emphasize-lines: 3
 
   [cmake-sources]> rm -rf _builds
   [cmake-sources]> cmake -Hinclude-users -B_builds
@@ -119,16 +122,24 @@ Include custom
 Modify correct
 ~~~~~~~~~~~~~~
 
+Note that the correct way to set this path is to **append** it to existing
+value:
+
 .. literalinclude:: /examples/cmake-sources/modify-path/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 6, 8, 10
 
+For example when user want to use his own modules instead of standard for
+any reason:
+
 .. literalinclude:: /examples/cmake-sources/modify-path/standard/ProcessorCount.cmake
   :language: cmake
-  :emphasize-lines: 3, 5
+  :emphasize-lines: 4-5
+
+Works fine:
 
 .. code-block:: shell
-  :emphasize-lines: 2, 3
+  :emphasize-lines: 3-4
 
   [cmake-sources]> rm -rf _builds
   [cmake-sources]> cmake -Hmodify-path -B_builds "-DCMAKE_MODULE_PATH=`pwd`/modify-path/standard"
@@ -141,13 +152,19 @@ Modify correct
 Modify incorrect
 ~~~~~~~~~~~~~~~~
 
+It's not correct to set them ignoring current state:
+
 .. literalinclude:: /examples/cmake-sources/modify-incorrect/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 6
 
+In this case if user want to use custom modules:
+
 .. literalinclude:: /examples/cmake-sources/modify-incorrect/standard/ProcessorCount.cmake
   :language: cmake
-  :emphasize-lines: 4
+  :emphasize-lines: 4-5
+
+They will **not** be loaded:
 
 .. code-block:: shell
   :emphasize-lines: 3
