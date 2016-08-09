@@ -37,3 +37,9 @@ If you already have Visual Studio installed you can go to
 
 .. image:: win-screens/02-modify.png
   :align: center
+
+.. seealso::
+
+  * `CMake Tools for Visual Studio <http://cmaketools.codeplex.com/>`__
+  * `VsVim <https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329>`__
+  * `Editor Guidelines <https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459>`__
