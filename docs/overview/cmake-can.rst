@@ -61,7 +61,7 @@ keep using your favorite tools like ``Visual Studio/msbuild``, ``Xcode/xcodebuil
 
 .. seealso::
 
-  * `KDE moving from autotools to CMake (give up SCons) <http://lwn.net/Articles/188693/>`__
+  * `KDE moving from autotools to CMake <http://lwn.net/Articles/188693/>`__
   * `Visual C++ Team Blog: Support for Android CMake projects in Visual Studio <https://blogs.msdn.microsoft.com/vcblog/2015/12/15/support-for-android-cmake-projects-in-visual-studio/>`__
 
 
