@@ -2,6 +2,7 @@ AppVeyor
 CGold
 CMake
 CPack
+CTest
 Config
 Cygwin
 GCC
