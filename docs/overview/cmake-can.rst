@@ -144,6 +144,23 @@ instead of their favorite one and probably writing endless number of
 converters, all you have to do is to add new generator ``-G SuperDuperIDE`` to
 :ref:`CMake <CMake>`.
 
+Family of tools
+===============
+
+CMake is a family of tools that can help you during all stages of
+``sources for developers`` -> ``quality control`` -> ``installers for users``
+stack. Next `activity diagram`_ shows CMake, CTest and CPack connections:
+
+.. image:: images/cmake-environment.png
+  :align: center
+
+.. _activity diagram: http://yed-uml.readthedocs.io/en/latest/activity-diagram.html
+
+
+.. note::
+
+  All stages will be described fully in :ref:`Tutorials <tutorials>`.
+
 Summary
 =======
 
@@ -154,9 +171,3 @@ Summary
 * :ref:`VCS <VCS>` friendly development
 * Easy experimenting
 * Easy development of new IDEs
-
-.. note::
-
-  This section is not intended to cover all functionality but only give
-  brief review. Testing, packing, installing, distributing, dependency
-  discovering, scripting etc. will be described fully in :ref:`Tutorials <tutorials>`.
