@@ -28,3 +28,6 @@
 [submodule "docs/examples/platforms-android-on-windows"]
   path = docs/examples/platforms-android-on-windows
   url = https://github.com/cgold-examples/platforms-android-on-windows
+[submodule "docs/examples/library-examples"]
+  path = docs/examples/library-examples
+  url = https://github.com/cgold-examples/library-examples
