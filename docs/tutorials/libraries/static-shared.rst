@@ -446,7 +446,7 @@ We are linked to the ``libbaz.so`` and we **do linked** to ``libbar_shared.so``
 because it's dependency of ``baz``:
 
 .. code-block:: shell
-  :emphasize-lines: 2, 4-5
+  :emphasize-lines: 1, 3-4
 
   > ldd _builds/foo
     ...
