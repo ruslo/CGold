@@ -96,16 +96,7 @@ this may affect performance or even not possible for other
 platforms (e.g. on Windows). With :ref:`CMake <CMake>` you can generate two
 versions of project from one ``CMakeLists.txt`` file: one for shared and one
 for static variant, effectively running generate/build twice. This will be
-covered later in depth.
-
-.. admonition:: Stackoverflow
-
-  * `Build static + shared <http://stackoverflow.com/q/2152077/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/18551243/2288008>`__)
-  * `Recompiling source twice <http://stackoverflow.com/q/12899582/2288008>`_ (`correct answer in my opinion <http://stackoverflow.com/a/22269819/2288008>`__)
-
-.. admonition:: CMake mailing list
-
-  * `Static & shared library <https://cmake.org/pipermail/cmake/2005-August/007030.html>`__
+covered later :doc:`in depth </tutorials/libraries/static-shared>`.
 
 With ``Visual Studio`` you can have two variants x86 and x64 in one solution
 file. With :ref:`CMake <CMake>` you have to generate project twice:
