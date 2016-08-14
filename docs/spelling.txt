@@ -9,6 +9,7 @@ GCC
 GTest
 IDE
 IDEs
+Makefile
 NMake
 OSX
 Screenshot
@@ -21,13 +22,16 @@ Wikipedia
 Workflow
 Xcode
 autotools
+boolean
 checkbox
 configs
 hacky
 hunterization
 iOS
+namespace
 showstopper
 toolchain
 toolchains
+wiki
 workarounded
 workflow
