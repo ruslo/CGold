@@ -119,6 +119,29 @@ custom CMake modules:
 
   * `CMAKE_MODULE_PATH <https://cmake.org/cmake/help/latest/variable/CMAKE_MODULE_PATH.html>`__
 
+Recommendation
+++++++++++++++
+
+To avoid conflicts of your modules with modules from other projects (if they
+are mixed together by ``add_subdirectory``) do "namespace" their names with the
+project name:
+
+.. code-block:: cmake
+  :emphasize-lines: 6, 8
+
+  cmake_minimum_required(VERSION 2.8)
+  project(foo)
+
+  list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/Modules")
+
+  include(tool_verifier) # BAD! What if parent project already has 'tool_verifier'?
+
+  include(foo_tool_verifier) # Good, includes "./cmake/Modules/foo_tool_verifier.cmake"
+
+.. seealso::
+
+  * `OpenCV modules <https://github.com/opencv/opencv/tree/5f30a0a076e57c412509becd1fb618170cbfa179/cmake>`__
+
 Modify correct
 ~~~~~~~~~~~~~~
 
