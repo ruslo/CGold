@@ -1,7 +1,7 @@
 CGold: The Hitchhiker’s Guide to the CMake
 ------------------------------------------
 
-|build| |license|
+|build| |travis| |license|
 
 **!!! WORK IN PROGRESS !!!**
 
@@ -12,6 +12,9 @@ CGold: The Hitchhiker’s Guide to the CMake
 .. |license| image:: https://img.shields.io/github/license/ruslo/CGold.svg
   :target: https://github.com/ruslo/CGold/blob/master/LICENSE
   :alt: LICENSE
+
+.. |travis| image:: https://travis-ci.org/ruslo/CGold.svg?branch=master
+  :target: https://travis-ci.org/ruslo/CGold/builds
 
 * Sources: `<https://github.com/ruslo/CGold>`_
 * Documentation: `<https://cgold.readthedocs.io>`_
