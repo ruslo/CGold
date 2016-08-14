@@ -41,5 +41,6 @@ install:
 
 script:
   - cd docs
+  - mkdir _static
   - sphinx-build -v -W . _build
   - sphinx-build -b spelling . _spelling
