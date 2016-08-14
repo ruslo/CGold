@@ -28,7 +28,7 @@ install:
   - which pip
   - pip --version
 
-  - pip install --user -r docs/requirements.txt
+  - pip install -r docs/requirements.txt
 
 script:
   - cd docs
