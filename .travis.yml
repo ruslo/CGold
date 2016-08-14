@@ -13,7 +13,15 @@ install:
   # Info about OS
   - uname -a
 
-  # Info about Python
+  # Info about Python tools
+  - which python
+  - python --version
+
+  - which virtualenv
+  - virtualenv --version
+  - virtualenv venv
+  - export PATH="`pwd`/venv/bin:$PATH"
+
   - which python
   - python --version
 
