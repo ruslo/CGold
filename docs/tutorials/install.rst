@@ -4,14 +4,11 @@
 Install
 =======
 
-Install library
----------------
+.. toctree::
+  :maxdepth: 2
 
-Header-only library
--------------------
-
-With dependencies
------------------
-
-Optional dependencies
----------------------
+  install/library
+  install/header-only
+  install/with-dependencies
+  install/optional-dependencies
+  install/rpath
