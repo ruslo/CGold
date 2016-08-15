@@ -160,7 +160,7 @@ CMake policies
 When new version of CMake released there may be a list of policies describing
 cases when behavior changed comparing to the previous CMake version.
 
-Let's see now it works on practice. In CMake ``3.0`` policy
+Let's see how it works on practice. In CMake ``3.0`` policy
 `CMP0038 <https://cmake.org/cmake/help/latest/policy/CMP0038.html>`__
 was introduced. Before version ``3.0`` user can have target linked to itself,
 which make no sense and definitely **is a bug**:
