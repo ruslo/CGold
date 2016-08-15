@@ -147,6 +147,8 @@ converters, all you have to do is to add new generator ``-G SuperDuperIDE`` to
 Family of tools
 ===============
 
+.. _stages diagram:
+
 CMake is a family of tools that can help you during all stages of
 ``sources for developers`` -> ``quality control`` -> ``installers for users``
 stack. Next `activity diagram`_ shows CMake, CTest and CPack connections:
