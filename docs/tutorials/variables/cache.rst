@@ -356,6 +356,8 @@ it will not be shown in CMake-GUI if ``Advanced`` checkbox is not set:
 Use case
 ========
 
+.. _cache use case:
+
 The ability of cache variables respect user's settings fits perfectly for
 creating project's customization option:
 
