@@ -4,6 +4,25 @@
 Install
 =======
 
+The next step in chain of
+:menuselection:`Configure --> Generate --> Build --> Test` stages is
+**install**: final step of development process which often require
+privilege escalation (``make`` vs ``sudo make install``).  Installation is an
+important part of the ecosystem: results of the project installation allows to
+integrate it into another one and unlike ``add_subdirectory`` doesn't pollute
+current scope with unnecessary targets and variables. :doc:`packing` use
+install procedure under the hood.
+
+.. seealso::
+
+  * :doc:`cmake-stages`
+  * :ref:`Stages diagram <stages diagram>`
+
+.. admonition:: Examples on GitHub
+
+  * `Repository <https://github.com/cgold-examples/install-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/install-examples/archive/master.zip>`__
+
 .. toctree::
   :maxdepth: 2
 
@@ -12,3 +31,4 @@ Install
   install/with-dependencies
   install/optional-dependencies
   install/rpath
+  install/install-prefix
