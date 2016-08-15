@@ -31,3 +31,6 @@
 [submodule "docs/examples/library-examples"]
   path = docs/examples/library-examples
   url = https://github.com/cgold-examples/library-examples
+[submodule "docs/examples/install-examples"]
+  path = docs/examples/install-examples
+  url = https://github.com/cgold-examples/install-examples
