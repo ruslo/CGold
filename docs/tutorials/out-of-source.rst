@@ -56,7 +56,7 @@ Out-of-source build allow you to ignore temporary binaries by just adding
 
   _builds
 
-compare is with similar file for in-source build:
+compare it with similar file for in-source build:
 
 .. code-block:: none
 
