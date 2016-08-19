@@ -1,3 +1,4 @@
 docs/examples/docs.rst
 docs/_build/*
 docs/_spelling/*
+docs/_venv/*
