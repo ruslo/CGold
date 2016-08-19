@@ -430,3 +430,20 @@ Return
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
+
+Recommendation
+~~~~~~~~~~~~~~
+
+To avoid function name clashing with functions from another modules do prefix
+name with the project name, just like with the
+:ref:`module names <module name recommendation>`. In case if function name
+will match name of the module you can verify that module used in your code
+just by simple in-file search (and of course delete it if not):
+
+.. code-block:: cmake
+
+  include(foo_my_module_1)
+  include(foo_my_module_2)
+
+  foo_my_module_1(INPUT1 "abc" INPUT2 123 RESULT result)
+  foo_my_module_2(INPUT1 "${result}" INPUT2 "xyz")

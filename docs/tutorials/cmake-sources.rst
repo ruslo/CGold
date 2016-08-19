@@ -119,6 +119,8 @@ custom CMake modules:
 
   * `CMAKE_MODULE_PATH <https://cmake.org/cmake/help/latest/variable/CMAKE_MODULE_PATH.html>`__
 
+.. _module name recommendation:
+
 Recommendation
 ++++++++++++++
 
