@@ -27,20 +27,7 @@ install:
 
   - which virtualenv
   - virtualenv --version
-  - virtualenv venv
-  - export PATH="`pwd`/venv/bin:$PATH"
-
-  - which python
-  - python --version
-
-  - which pip
-  - pip --version
-
-  - pip install -U pip
-  - pip install -r docs/requirements.txt
 
 script:
   - cd docs
-  - mkdir _static
-  - sphinx-build -v -W . _build
-  - sphinx-build -b spelling . _spelling
+  - ./jenkins.sh
