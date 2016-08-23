@@ -23,6 +23,7 @@ Enjoy!
 
 .. toctree::
   :maxdepth: 2
+  :numbered:
 
   /overview
   /first-step
