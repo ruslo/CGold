@@ -431,6 +431,47 @@ Return
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
+CMAKE_CURRENT_LIST_DIR
+~~~~~~~~~~~~~~~~~~~~~~
+
+Value of ``CMAKE_CURRENT_LIST_FILE`` and ``CMAKE_CURRENT_LIST_DIR`` is set
+to the file/directory from where function **is called**, not the file where
+function **is defined**:
+
+.. literalinclude:: /examples/control-structures/function-location/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 8,10,12
+
+.. literalinclude:: /examples/control-structures/function-location/boo/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 3
+
+.. literalinclude:: /examples/control-structures/function-location/cmake/Modules/foo_run.cmake
+  :language: cmake
+  :emphasize-lines: 3-4, 9-11
+
+.. code-block:: shell
+  :emphasize-lines: 2, 4-6, 8-10
+
+  [control-structures]> rm -rf _builds
+  [control-structures]> cmake -Hfunction-location -B_builds
+  foo_run(123)
+  Called from: /.../control-structures/function-location
+  Defined in file: /.../control-structures/function-location/cmake/Modules/foo_run.cmake
+  Defined in directory: /.../control-structures/function-location/cmake/Modules
+  foo_run(abc)
+  Called from: /.../control-structures/function-location/boo
+  Defined in file: /.../control-structures/function-location/cmake/Modules/foo_run.cmake
+  Defined in directory: /.../control-structures/function-location/cmake/Modules
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../control-structures/_builds
+
+.. admonition:: CMake documentation
+
+  * `CMAKE_CURRENT_LIST_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_DIR.html>`__
+  * `CMAKE_CURRENT_LIST_FILE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_FILE.html>`__
+
 Recommendation
 ~~~~~~~~~~~~~~
 
