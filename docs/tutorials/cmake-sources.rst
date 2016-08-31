@@ -144,6 +144,11 @@ project name:
 
   * `OpenCV modules <https://github.com/opencv/opencv/tree/5f30a0a076e57c412509becd1fb618170cbfa179/cmake>`__
 
+.. seealso::
+
+  * :ref:`Function names <function name recommendation>`
+  * :ref:`Cache names <cache name recommendation>`
+
 Modify correct
 ~~~~~~~~~~~~~~
 

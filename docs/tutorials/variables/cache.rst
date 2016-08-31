@@ -429,6 +429,46 @@ Command ``option`` can be used for creating boolean cache entry:
 
   * `option <https://cmake.org/cmake/help/latest/command/option.html>`__
 
+.. _cache name recommendation:
+
+Recommendation
+==============
+
+Because of the global nature of cache variables and options
+(well it's cache too) you should do prefix it with the name of the project to
+avoid clashing in case several projects mixed are together by
+``add_subdirectory``:
+
+.. code-block:: cmake
+
+  # top-level CMakeLists.txt
+
+  add_subdirectory(foo)
+  add_subdirectory(boo)
+
+.. code-block:: cmake
+
+  # foo/CMakeLists.txt
+
+  project(foo)
+
+  option(FOO_FEATURE_1 "Enable feature 1" OFF)
+  option(FOO_FEATURE_2 "Enable feature 2" OFF)
+
+.. code-block:: cmake
+
+  # boo/CMakeLists.txt
+
+  project(boo)
+
+  option(BOO_FEATURE_1 "Enable feature 1" ON)
+  option(BOO_FEATURE_2 "Enable feature 2" ON)
+
+.. seealso::
+
+  * :ref:`Module names <module name recommendation>`
+  * :ref:`Function names <function name recommendation>`
+
 Summary
 =======
 

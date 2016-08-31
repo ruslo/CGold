@@ -472,12 +472,13 @@ function **is defined**:
   * `CMAKE_CURRENT_LIST_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_DIR.html>`__
   * `CMAKE_CURRENT_LIST_FILE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_FILE.html>`__
 
+.. _function name recommendation:
+
 Recommendation
 ~~~~~~~~~~~~~~
 
 To avoid function name clashing with functions from another modules do prefix
-name with the project name, just like with the
-:ref:`module names <module name recommendation>`. In case if function name
+name with the project name. In case if function name
 will match name of the module you can verify that module used in your code
 just by simple in-file search (and of course delete it if not):
 
@@ -488,3 +489,8 @@ just by simple in-file search (and of course delete it if not):
 
   foo_my_module_1(INPUT1 "abc" INPUT2 123 RESULT result)
   foo_my_module_2(INPUT1 "${result}" INPUT2 "xyz")
+
+.. seealso::
+
+  * :ref:`Module names <module name recommendation>`
+  * :ref:`Cache names <cache name recommendation>`
