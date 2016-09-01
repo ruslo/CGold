@@ -436,38 +436,31 @@ Recommendation
 
 Because of the global nature of cache variables and options
 (well it's cache too) you should do prefix it with the name of the project to
-avoid clashing in case several projects mixed are together by
+avoid clashing in case several projects are mixed together by
 ``add_subdirectory``:
 
-.. code-block:: cmake
+.. literalinclude:: /examples/usage-of-variables/grouped-options/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6-7
 
-  # top-level CMakeLists.txt
+.. literalinclude:: /examples/usage-of-variables/grouped-options/foo/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6-7
 
-  add_subdirectory(foo)
-  add_subdirectory(boo)
-
-.. code-block:: cmake
-
-  # foo/CMakeLists.txt
-
-  project(foo)
-
-  option(FOO_FEATURE_1 "Enable feature 1" OFF)
-  option(FOO_FEATURE_2 "Enable feature 2" OFF)
-
-.. code-block:: cmake
-
-  # boo/CMakeLists.txt
-
-  project(boo)
-
-  option(BOO_FEATURE_1 "Enable feature 1" ON)
-  option(BOO_FEATURE_2 "Enable feature 2" ON)
+.. literalinclude:: /examples/usage-of-variables/grouped-options/boo/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 6-7
 
 .. seealso::
 
   * :ref:`Module names <module name recommendation>`
   * :ref:`Function names <function name recommendation>`
+
+Besides the fact that both features can be set independently now also CMake-GUI
+will group them nicely:
+
+.. image:: cache-gui/grouped.png
+  :align: center
 
 Summary
 =======
@@ -476,3 +469,4 @@ Summary
 * Cache variables fits perfectly for expressing customized options: default
   value and respect user's value
 * Type of cache variable helps CMake-GUI users
+* Because of the global nature of cache variables to avoid clashing use prefixes
