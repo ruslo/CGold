@@ -429,6 +429,44 @@ Command ``option`` can be used for creating boolean cache entry:
 
   * `option <https://cmake.org/cmake/help/latest/command/option.html>`__
 
+Unset
+=====
+
+If you want to remove variable ``X`` from cache you need to use
+``unset(X CACHE)``. Note that ``unset(X)`` will remove regular variable from
+current scope and have no effect on cache:
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 4-5, 8, 11
+
+When we have both cache and regular ``X`` variables regular variable has
+higher priority and will be printed:
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/configure.log
+  :emphasize-lines: 3
+
+Command ``unset(X)`` will remove regular variable so cache variable will be
+printed:
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/configure.log
+  :emphasize-lines: 4
+
+Command ``unset(X CACHE)`` will remove cache variable too. Now no variables
+left:
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/configure.log
+  :emphasize-lines: 5
+
+Since ``option`` do modify cache same logic applied here:
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 18, 21, 14-15
+
+.. literalinclude:: /examples/usage-of-variables/unset-cache/configure.log
+  :emphasize-lines: 6-8
+
 .. _cache name recommendation:
 
 Recommendation
