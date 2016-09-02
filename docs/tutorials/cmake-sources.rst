@@ -61,6 +61,13 @@ Subdirectories
   * `CMAKE_CURRENT_SOURCE_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_SOURCE_DIR.html>`__
   * `CMAKE_CURRENT_BINARY_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_BINARY_DIR.html>`__
 
+.. seealso::
+
+  * :ref:`-H <-H>`
+  * :ref:`-B <-B>`
+
+.. _include modules:
+
 Include modules
 ===============
 
