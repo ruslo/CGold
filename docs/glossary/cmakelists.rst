@@ -6,13 +6,15 @@
 CMakeLists.txt
 --------------
 
-File with :ref:`CMake <CMake>` code. CMake processing will start from top level
+CMakeLists.txt is a :ref:`listfile <listfile>` which plays the role of entry
+point for current source directory. CMake processing will start from top level
 ``CMakeLists.txt`` in :ref:`source tree <source tree>` and continue with other
-dependent ``CMakeLists.txt`` files added by
-`add_subdirectory`_ directive or any kind of CMake files
-added by `include`_. In latter case file name may differs from
-``CMakeLists.txt``. In general in this document by ``CMakeLists.txt`` meant
-any file with CMake code.
+dependent ``CMakeLists.txt`` files added by `add_subdirectory`_ directive.
+Each ``add_subdirectory`` will create new node in the source/binary tree
+hierarchy and introduce new scope for variables.
+
+.. admonition:: CMake documentation
+
+  * `Directories <https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#directories>`__
 
 .. _add_subdirectory: https://cmake.org/cmake/help/latest/command/add_subdirectory.html
-.. _include: https://cmake.org/cmake/help/latest/command/include.html
