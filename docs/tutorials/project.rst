@@ -224,6 +224,8 @@ No checks for C or C++ compiler as you can see:
 
   * `Detect project language in cmake <http://stackoverflow.com/a/32390852/2288008>`__
 
+.. _project variables:
+
 Variables
 =========
 

@@ -431,6 +431,8 @@ Return
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
+.. _function list dir:
+
 CMAKE_CURRENT_LIST_DIR
 ~~~~~~~~~~~~~~~~~~~~~~
 
