@@ -39,6 +39,8 @@ executables
 hacky
 hunterization
 iOS
+listfile
+listfiles
 namespace
 showstopper
 toolchain
