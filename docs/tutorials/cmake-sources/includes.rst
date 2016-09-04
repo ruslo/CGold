@@ -299,8 +299,8 @@ Use ``CMAKE_CURRENT_BINARY_DIR`` for storing manually generated files.
   Do not use ``CMAKE_CURRENT_BINARY_DIR`` for figuring out the full path
   to objects that was build by native tool, e.g. using
   ``${CMAKE_CURRENT_BINARY_DIR}/foo.exe`` is a bad idea since for Linux
-  executable will be named ``${CMAKE_CURRENT_BINARY_DIR}/foo`` and for multi
-  configuration generators it will be like
+  executable will be named ``${CMAKE_CURRENT_BINARY_DIR}/foo`` and for multi-configuration
+  generators it will be like
   ``${CMAKE_CURRENT_BINARY_DIR}/Debug/foo.exe`` and really should be determined
   on a build step instead of generate step. In such cases
   :doc:`generator expressions </tutorials/generator-expressions>` is helpful.

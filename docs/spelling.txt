@@ -20,6 +20,7 @@ OSX
 Screenshot
 Stackoverflow
 Subdirectories
+Subdirectory
 Toolchain
 Uncheck
 Uninstall
@@ -43,6 +44,7 @@ listfile
 listfiles
 namespace
 showstopper
+subproject
 toolchain
 toolchains
 wiki
