@@ -1,8 +1,8 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
-CMake sources
--------------
+CMake listfiles
+---------------
 
 .. admonition:: Examples on GitHub
 
