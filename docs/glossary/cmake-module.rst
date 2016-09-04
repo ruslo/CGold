@@ -10,7 +10,7 @@ CMake module
 `CMAKE_MODULE_PATH <https://cmake.org/cmake/help/latest/variable/CMAKE_MODULE_PATH.html>`__
 and having extension ``.cmake`` called **modules**. They can be loaded by
 ``include`` command. Unlike ``add_subdirectory`` command
-``include(<modulename>)`` don't create new node in a source/binary tree
+``include(<modulename>)`` doesn't create new node in a source/binary tree
 hierarchies and doesn't introduce new scope for variables.
 
 .. note::
