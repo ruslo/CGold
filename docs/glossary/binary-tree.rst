@@ -6,7 +6,7 @@
 Binary tree
 -----------
 
-This is directory where :ref:`CMake <CMake>` will store generated files and
+This is hierarchy of directories where :ref:`CMake <CMake>` will store generated files and
 where :ref:`native build tool <native build tool>` will store it's temporary
 files. Directory will contain variables/paths which are specific to your
 environment so they doesn't mean to be shareable. E.g. you **should never**
