@@ -42,6 +42,7 @@ hunterization
 iOS
 listfile
 listfiles
+multi
 namespace
 showstopper
 subproject
