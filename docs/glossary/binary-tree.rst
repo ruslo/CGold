@@ -1,16 +1,16 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
-.. _build tree:
+.. _binary tree:
 
-Build tree
-----------
+Binary tree
+-----------
 
 This is directory where :ref:`CMake <CMake>` will store generated files and
 where :ref:`native build tool <native build tool>` will store it's temporary
 files. Directory will contain variables/paths which are specific to your
 environment so they doesn't mean to be shareable. E.g. you **should never**
-store files from this directory to :ref:`VCS <VCS>`. Keeping build tree
+store files from this directory to :ref:`VCS <VCS>`. Keeping binary tree
 in a separate directory from :ref:`source tree <source tree>` is a good practice
 and called :ref:`out-of-source build <out-of-source>`.
 

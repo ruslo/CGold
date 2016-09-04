@@ -18,6 +18,6 @@ directory that you want to be managed with :ref:`VCS <VCS>`.
 .. seealso::
 
   * :ref:`-H <-H>`
-  * :ref:`Build tree <build tree>`
+  * :ref:`Binary tree <binary tree>`
   * :doc:`GUI + Visual Studio </first-step/generate-native-tool/gui-visual-studio>`
   * :doc:`GUI + Xcode </first-step/generate-native-tool/gui-xcode>`

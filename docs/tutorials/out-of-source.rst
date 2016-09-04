@@ -8,7 +8,7 @@ Out-of-source build
 
 The next important term is "out-of-source build". "Out-of-source build" is a
 good practice of keeping separately generated files from
-:ref:`build tree <build tree>` and source files from
+:ref:`binary tree <binary tree>` and source files from
 :ref:`source tree <source tree>`. CMake do support contrary "in-source build"
 layout but such approach has no real benefits and unrecommended.
 
@@ -92,4 +92,4 @@ Another note is that out-of-source mean not only set ``cmake -B_builds`` but
 also remember to put any kind of automatically generated files to ``_builds``.
 E.g. if you have C++ template ``myproject.h.in`` which is used to generate
 ``myproject.h``, then you need to keep ``myproject.h.in`` in source tree and put
-``myproject.h`` to the build tree.
+``myproject.h`` to the binary tree.
