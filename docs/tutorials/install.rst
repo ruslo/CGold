@@ -32,3 +32,4 @@ install procedure under the hood.
   install/optional-dependencies
   install/rpath
   install/install-prefix
+  install/layout
