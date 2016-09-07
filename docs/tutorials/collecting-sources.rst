@@ -3,3 +3,10 @@
 
 Collecting sources
 ==================
+
+.. toctree::
+  :maxdepth: 2
+  :numbered:
+
+  collecting-sources/avoid-globbing
+  collecting-sources/project-layout
