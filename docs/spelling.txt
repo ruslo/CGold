@@ -37,6 +37,7 @@ configs
 dereferenced
 dereferencing
 executables
+globbing
 hacky
 hunterization
 iOS
