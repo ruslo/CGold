@@ -32,3 +32,32 @@ Layout
 .. seealso::
 
   * :ref:`Project layout <project layout>`
+
+Linux layout after installation of
+`example project <https://github.com/cgold-examples/fruits>`__:
+
+.. code-block:: none
+
+  ├── bin/
+  │   ├── fruits_breakfast*
+  │   └── fruits_dinner*
+  ├── include/
+  │   └── fruits/
+  │       ├── fruits.hpp
+  │       ├── rosaceae/
+  │       │   ├── Pear.hpp
+  │       │   ├── Plum.hpp
+  │       │   └── rosaceae.hpp
+  │       └── tropical/
+  │           ├── Avocado.hpp
+  │           ├── Pineapple.hpp
+  │           └── tropical.hpp
+  └── lib/
+      ├── cmake/
+      │   └── fruits/
+      │       ├── fruitsConfig.cmake
+      │       ├── fruitsConfigVersion.cmake
+      │       ├── fruitsTargets.cmake
+      │       └── fruitsTargets-release.cmake
+      ├── libfruits_rosaceae.a
+      └── libfruits_tropical.a
