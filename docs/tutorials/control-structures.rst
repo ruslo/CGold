@@ -354,10 +354,10 @@ CMake style
 
 .. literalinclude:: /examples/control-structures/cmake-style/CMakeLists.txt
   :language: cmake
-  :emphasize-lines: 4, 7-9, 19, 21, 44-46
+  :emphasize-lines: 4, 7-9, 19, 21, 44-46, 62, 65, 68, 71
 
 .. code-block:: shell
-  :emphasize-lines: 4-13, 15-23, 25
+  :emphasize-lines: 4-13, 15-23, 30-33, 36
 
   [control-structures]> rm -rf _builds
   [control-structures]> cmake -Hcmake-style -B_builds
@@ -383,6 +383,17 @@ CMake style
     item1
     item3
   *** Run (3) ***
+  FOO: FALSE
+  BOO: FALSE
+  X:
+  Y:
+  Z:
+  L1:
+    item1
+    item2
+    item3
+  L2:
+  *** Run (4) ***
   { param1, param2 } = { 123, 888 }
   -- Configuring done
   -- Generating done
