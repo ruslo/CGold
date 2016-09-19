@@ -8,9 +8,10 @@ Regular vs cache
 ================
 
 Unlike :ref:`cache variables <cache variables>` regular (normal) CMake variables
-have scope and doesn't outlive CMake runs.
+have scope and don't outlive CMake runs.
 
-If you run configure of next example twice without removing cache:
+If in the next example you run the CMake configure step twice, without removing
+the cache:
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/CMakeLists.txt
   :language: cmake
@@ -20,13 +21,14 @@ If you run configure of next example twice without removing cache:
   :language: shell
   :emphasize-lines: 3,12
 
-You can see that regular CMake variable ``abc`` created from scratch each time
+You can see that the regular CMake variable ``abc`` is created from scratch
+each time
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
   :language: shell
   :emphasize-lines: 4,6,13,15
 
-And cache variable ``xyz`` need to be created only once and reused on second run
+And the cache variable ``xyz`` is created only once and reused on second run
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
   :language: shell
@@ -50,7 +52,7 @@ Unlike regular ``abc``:
 Scope of variable
 =================
 
-Each variable linked to the scope where it was defined. Commands
+Each variable is linked to the scope where it was defined. Commands
 `add_subdirectory <https://cmake.org/cmake/help/latest/command/add_subdirectory.html>`__
 and
 `function <https://cmake.org/cmake/help/latest/command/function.html>`__
@@ -82,10 +84,10 @@ in scope of ``boo`` directory:
 New scope
 =========
 
-When new scope created it will be initialized with the variables of parent
+When a new scope is created it will be initialized with the variables of the parent
 scope. Command `unset <https://cmake.org/cmake/help/latest/command/unset.html>`__
-can remove variable from current scope. If variable not found in current scope
-it will be dereferenced to empty string:
+can remove a variable from the current scope. If a variable is not found in
+the current scope it will be dereferenced to an empty string:
 
 .. literalinclude:: /examples/usage-of-variables/take-from-parent-scope/CMakeLists.txt
   :language: cmake
@@ -110,8 +112,8 @@ it will be dereferenced to empty string:
 Same scope
 ==========
 
-``include`` and ``macro`` doesn't introduce new scope so such commands
-like ``set`` and ``unset`` will affect current scope:
+``include`` and ``macro`` don't introduce a new scope, so commands
+like ``set`` and ``unset`` will affect the current scope:
 
 .. literalinclude:: /examples/usage-of-variables/same-scope/CMakeLists.txt
   :language: cmake
@@ -137,7 +139,7 @@ like ``set`` and ``unset`` will affect current scope:
 Parent scope
 ============
 
-Variable can be set to the parent scope by specifying ``PARENT_SCOPE``:
+A variable can be set to the parent scope by specifying ``PARENT_SCOPE``:
 
 .. literalinclude:: /examples/usage-of-variables/parent-scope/CMakeLists.txt
   :language: cmake
@@ -161,7 +163,8 @@ As well as parent of the parent:
 From cache
 ==========
 
-If variable not found in current scope it will be taken from cache:
+If a variable is not found in the current scope, it will be taken from
+the cache:
 
 .. literalinclude:: /examples/usage-of-variables/from-cache/CMakeLists.txt
   :language: cmake
@@ -182,7 +185,7 @@ Cache unset regular
 ===================
 
 Note that the order of commands is important because ``set(... CACHE ...)``
-will remove regular variable with the same name from current scope:
+will remove the regular variable with the same name from current scope:
 
 .. literalinclude:: /examples/usage-of-variables/cache-remove-regular/CMakeLists.txt
   :language: cmake
@@ -203,7 +206,7 @@ will remove regular variable with the same name from current scope:
 Confusing
 =========
 
-This may lead to quite confusing behavior:
+This may lead to a quite confusing behavior:
 
 .. literalinclude:: /examples/usage-of-variables/cache-confuse/CMakeLists.txt
   :language: cmake
@@ -289,9 +292,10 @@ Name of variable may consist of **any** characters:
 Quotes
 ======
 
-In previous example quote was used to create name with space - this is called
-*quoted argument*. Note that argument should start and end with quote, otherwise
-it became *unquoted argument* so quote will be treated as part of the string:
+In the previous example, the quote character `"` was used to create a name containing 
+a space - this is called *quoted argument*. Note that the argument must start and end
+with a quote character, otherwise it becomes an *unquoted argument*. In this case, the
+quote character will be treated as part of the string:
 
 .. literalinclude:: /examples/usage-of-variables/quotes/CMakeLists.txt
   :language: cmake
@@ -312,7 +316,7 @@ it became *unquoted argument* so quote will be treated as part of the string:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
-As you can see variable ``b`` contains quotes now and for list ``c`` quotes
+As you can see the variable ``b`` contains quotes now and for list ``c`` quotes
 are part of the elements: ``x"a``, ``c"``.
 
 .. admonition:: CMake documentation
@@ -353,7 +357,7 @@ Or even both:
 Nested dereferencing
 ====================
 
-Dereferencing of variable by ``${...}`` will happens as much times as needed:
+Dereferencing of variable by ``${...}`` will happens as many times as needed:
 
 .. literalinclude:: /examples/usage-of-variables/nested-dereference/CMakeLists.txt
   :language: cmake
@@ -396,7 +400,7 @@ Types of variable
 =================
 
 Variables always have type string but some commands can interpret them
-differently.  E.g. command ``if`` can treat strings as boolean, path, target
+differently.  For example the command ``if`` can treat strings as boolean, path, target
 name, etc.:
 
 .. literalinclude:: /examples/usage-of-variables/types-of-variable/CMakeLists.txt
@@ -437,19 +441,21 @@ name, etc.:
 Create list
 ===========
 
-Some commands can treat variable as list. In this case string value split
-into elements separated by ``;``. Command ``set`` can create such lists:
+Some commands can treat a variable as list. In this case the string
+value is split into elements separated by ``;``.
+The command ``set`` can create such lists:
 
 .. literalinclude:: /examples/usage-of-variables/list/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 4-8
 
-``set`` create **string** from elements and put the ``;`` between them:
+``set`` creates **string** from elements and puts the ``;`` between them:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
   :emphasize-lines: 3
 
-In case you want to add element with space you can protect element by ``"``:
+In case you want to add an element with space you can protect the element
+with ``"``:
 
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
   :emphasize-lines: 5
@@ -460,14 +466,14 @@ effect:
 .. literalinclude:: /examples/usage-of-variables/list/configure.log
   :emphasize-lines: 7
 
-We are concatenating **string** ``a`` with **string** ``b;c`` and put
-``;`` between them. Final result is **string** ``a;b;c``, when
-command interpret this string as list, such list has 3 elements.
+We are concatenating **string** ``a`` with **string** ``b;c`` and putting
+``;`` between them. Final result is the **string** ``a;b;c``.  When
+a command interprets this string as list, such list has 3 elements.
 Hence **it's not a list** with two elements ``a`` and ``b;c``.
 
-Command ``message`` interpret ``l3`` as list with 3 elements, so in the end
+The command ``message`` interprets ``l3`` as list with 3 elements, so in the end
 4 arguments (value of type string) passed as input:
-``print by message:_``, ``a``, ``b``, ``c``. Command message will concatenate
+``print by message:_``, ``a``, ``b``, ``c``. Command ``message`` will concatenate
 them without any separator, hence string ``print by message: abc`` will be
 printed:
 
@@ -481,7 +487,7 @@ printed:
 Operations with list
 ====================
 
-Command ``list`` can be used to calculate length of list, get element by index,
+The ``list`` command can be used to calculate length of list, get element by index,
 remove elements by index, etc.:
 
 .. literalinclude:: /examples/usage-of-variables/list-operations/CMakeLists.txt
