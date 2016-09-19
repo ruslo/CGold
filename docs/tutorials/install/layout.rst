@@ -67,26 +67,26 @@ Windows layout after installation of
 
 .. code-block:: none
 
-├── bin/
-│   ├── fruits_breakfast.exe
-│   └── fruits_dinner.exe
-├── include/
-│   └── fruits/
-│       ├── fruits.hpp
-│       ├── rosaceae/
-│       │   ├── Pear.hpp
-│       │   ├── Plum.hpp
-│       │   └── rosaceae.hpp
-│       └── tropical/
-│           ├── Avocado.hpp
-│           ├── Pineapple.hpp
-│           └── tropical.hpp
-└── lib/
-    ├── cmake/
-    │   └── fruits/
-    │       ├── fruitsConfig.cmake
-    │       ├── fruitsConfigVersion.cmake
-    │       ├── fruitsTargets.cmake
-    │       └── fruitsTargets-release.cmake
-    ├── fruits_rosaceae.lib
-    └── fruits_tropical.lib
+  ├── bin/
+  │   ├── fruits_breakfast.exe
+  │   └── fruits_dinner.exe
+  ├── include/
+  │   └── fruits/
+  │       ├── fruits.hpp
+  │       ├── rosaceae/
+  │       │   ├── Pear.hpp
+  │       │   ├── Plum.hpp
+  │       │   └── rosaceae.hpp
+  │       └── tropical/
+  │           ├── Avocado.hpp
+  │           ├── Pineapple.hpp
+  │           └── tropical.hpp
+  └── lib/
+      ├── cmake/
+      │   └── fruits/
+      │       ├── fruitsConfig.cmake
+      │       ├── fruitsConfigVersion.cmake
+      │       ├── fruitsTargets.cmake
+      │       └── fruitsTargets-release.cmake
+      ├── fruits_rosaceae.lib
+      └── fruits_tropical.lib
