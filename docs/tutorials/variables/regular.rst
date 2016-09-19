@@ -10,7 +10,7 @@ Regular vs cache
 Unlike :ref:`cache variables <cache variables>` regular (normal) CMake variables
 have scope and don't outlive CMake runs.
 
-If in the next example you run the cmake configure step twice, without removing
+If in the next example you run the CMake configure step twice, without removing
 the cache:
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/CMakeLists.txt
@@ -294,7 +294,7 @@ Quotes
 
 In the previous example, the quote character `"` was used to create a name containing 
 a space - this is called *quoted argument*. Note that the argument must start and end
-with a quote character, otherwise it becames an *unquoted argument*. In this case, the
+with a quote character, otherwise it becomes an *unquoted argument*. In this case, the
 quote character will be treated as part of the string:
 
 .. literalinclude:: /examples/usage-of-variables/quotes/CMakeLists.txt
