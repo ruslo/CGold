@@ -61,3 +61,32 @@ Linux layout after installation of
       │       └── fruitsTargets-release.cmake
       ├── libfruits_rosaceae.a
       └── libfruits_tropical.a
+
+Windows layout after installation of
+`example project <https://github.com/cgold-examples/fruits>`__:
+
+.. code-block:: none
+
+  ├── bin/
+  │   ├── fruits_breakfast.exe
+  │   └── fruits_dinner.exe
+  ├── include/
+  │   └── fruits/
+  │       ├── fruits.hpp
+  │       ├── rosaceae/
+  │       │   ├── Pear.hpp
+  │       │   ├── Plum.hpp
+  │       │   └── rosaceae.hpp
+  │       └── tropical/
+  │           ├── Avocado.hpp
+  │           ├── Pineapple.hpp
+  │           └── tropical.hpp
+  └── lib/
+      ├── cmake/
+      │   └── fruits/
+      │       ├── fruitsConfig.cmake
+      │       ├── fruitsConfigVersion.cmake
+      │       ├── fruitsTargets.cmake
+      │       └── fruitsTargets-release.cmake
+      ├── fruits_rosaceae.lib
+      └── fruits_tropical.lib
