@@ -292,7 +292,7 @@ Name of variable may consist of **any** characters:
 Quotes
 ======
 
-In the previous example, the quote character `"` was used to create a name containing 
+In the previous example, the quote character ``"`` was used to create a name containing 
 a space - this is called *quoted argument*. Note that the argument must start and end
 with a quote character, otherwise it becomes an *unquoted argument*. In this case, the
 quote character will be treated as part of the string:
