@@ -10,3 +10,4 @@ Libraries
   /tutorials/libraries/static
   /tutorials/libraries/shared
   /tutorials/libraries/static-shared
+  /tutorials/libraries/symbols
