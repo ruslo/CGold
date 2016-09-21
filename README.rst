@@ -3,7 +3,7 @@ CGold: The Hitchhiker’s Guide to the CMake
 
 |build| |travis| |license|
 
-**!!! WORK IN PROGRESS !!!**
+\:fire: :fire: :fire: **WORK IN PROGRESS!** :fire: :fire: :fire:
 
 .. |build| image:: https://readthedocs.org/projects/cgold/badge/?version=latest
   :target: https://cgold.readthedocs.io/en/latest/?badge=latest
