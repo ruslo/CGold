@@ -5,7 +5,7 @@ Symbols
 =======
 
 In case of diagnosing linker errors or hiding some functions from public usage
-it may be useful to know the table of symbols of library.
+it may be helpful to know the table of symbols of library.
 
 .. toctree::
   :maxdepth: 2
