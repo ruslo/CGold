@@ -144,7 +144,18 @@ Filter only Info (``I``) messages from ``SimpleApp``, ignore others and exit:
 .. code-block:: shell
   :emphasize-lines: 4
 
-  > adb logcat -d SimpleApp:I *:S
+  > adb logcat -d SimpleApp:I '*:S'
+  --------- beginning of /dev/log/main
+  --------- beginning of /dev/log/system
+  I/SimpleApp( 9015): Hello from Android! (Not debug)
+  >
+
+Any messages from ``SimpleApp``, ignore others:
+
+.. code-block:: shell
+  :emphasize-lines: 1
+
+  > adb logcat -d 'SimpleApp:*' '*:S'
   --------- beginning of /dev/log/main
   --------- beginning of /dev/log/system
   I/SimpleApp( 9015): Hello from Android! (Not debug)
