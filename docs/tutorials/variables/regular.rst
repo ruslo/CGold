@@ -513,6 +513,81 @@ remove elements by index, etc.:
 
   * `list <https://cmake.org/cmake/help/latest/command/list.html>`__
 
+Recommendation
+==============
+
+Use **short laconic lower-case** names (``a``, ``i``, ``mylist``, ``objects``,
+etc.) for local variables that used **only by the current scope**. Use **long
+detailed upper-case** names (``FOO_FEATURE``, ``BOO_ENABLE_SOMETHING``, etc.)
+for variables that used by **several scopes**.
+
+For example it make no sense to use long names in function since function
+has it's own scope:
+
+.. code-block:: cmake
+
+  function(foo_something)
+    set(FOO_SOMETHING_A 1)
+    # ...
+  endfunction()
+
+Using just ``a`` will be fine:
+
+.. code-block:: cmake
+
+  function(foo_something)
+    set(a 1)
+    # ...
+  endfunction()
+
+Same with scope of :ref:`CMakeLists.txt <cmakelists.txt>`:
+
+.. code-block:: cmake
+
+  # Foo/CMakeLists.txt
+
+  message("Files:")
+  foreach(FOO_FILES_ITERATOR ${files})
+    message("  ${FOO_FILES_ITERATOR}")
+  endforeach()
+
+Prefer instead:
+
+.. code-block:: cmake
+
+  # Foo/CMakeLists.txt
+
+  message("Files:")
+  foreach(x ${files})
+    message("  ${x}")
+  endforeach()
+
+.. seealso::
+
+  * :ref:`Cache names <cache name recommendation>`
+
+Compare it with C++ code:
+
+.. code-block:: cpp
+
+  // pretty bad idea
+  #define a
+
+  // good one
+  #define MYPROJECT_ENABLE_A
+
+.. code-block:: cpp
+
+  // does it make sense?
+  for (int array_iterator = 0; array_iterator < array.size(); ++array_iterator) {
+    // use 'array_iterator'
+  }
+
+  // good one
+  for (int i = 0; i < array.size(); ++i) {
+    // use 'i'
+  }
+
 Summary
 =======
 
