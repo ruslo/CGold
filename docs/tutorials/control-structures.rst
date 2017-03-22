@@ -46,7 +46,7 @@ Simple examples
   Condition 1
   Condition 4
   Condition 6
-  Condition 7
+  Condition 10
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
