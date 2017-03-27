@@ -178,6 +178,8 @@ Information about any kind of listfile can be taken from
   -- Generating done
   -- Build files have been written to: /.../cmake-sources/_builds
 
+.. _cmake_current_list_dir vs cmake_current_source_dir:
+
 CMAKE_CURRENT_LIST_DIR vs CMAKE_CURRENT_SOURCE_DIR
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 

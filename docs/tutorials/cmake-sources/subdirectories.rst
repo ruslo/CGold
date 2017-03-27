@@ -183,3 +183,7 @@ chapter for details.
   * `CMAKE_CURRENT_LIST_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_DIR.html>`__
   * `CMAKE_CURRENT_LIST_FILE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_FILE.html>`__
   * `CMAKE_CURRENT_LIST_LINE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_LINE.html>`__
+
+.. seealso::
+
+  * :ref:`CMAKE_CURRENT_LIST_DIR vs CMAKE_CURRENT_SOURCE_DIR <cmake_current_list_dir vs cmake_current_source_dir>`
