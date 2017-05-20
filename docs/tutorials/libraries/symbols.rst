@@ -11,3 +11,6 @@ it may be helpful to know the table of symbols of library.
   :maxdepth: 2
 
   symbols/tools
+  symbols/simple
+  symbols/odr-local
+  symbols/odr-global
