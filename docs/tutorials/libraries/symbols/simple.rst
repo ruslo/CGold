@@ -4,6 +4,11 @@
 Simple error
 ------------
 
+.. admonition:: Examples on GitHub
+
+  * `Repository <https://github.com/cgold-examples/library-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/library-examples/archive/master.zip>`__
+
 Here is an example of trivial "undefined reference" error with diagnostic and,
 of course, fix instructions.
 

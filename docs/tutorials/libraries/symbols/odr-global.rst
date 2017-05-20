@@ -4,6 +4,11 @@
 ODR violation (global)
 ----------------------
 
+.. admonition:: Examples on GitHub
+
+  * `Repository <https://github.com/cgold-examples/library-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/library-examples/archive/master.zip>`__
+
 Next code shows the ODR violation example based on the same ``#ifdef``
 technique but the reason and solution will be different.
 

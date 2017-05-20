@@ -4,6 +4,11 @@
 ODR violation (local)
 ---------------------
 
+.. admonition:: Examples on GitHub
+
+  * `Repository <https://github.com/cgold-examples/library-examples>`__
+  * `Latest ZIP <https://github.com/cgold-examples/library-examples/archive/master.zip>`__
+
 The next example is about scenario when badly written CMake code leads to
 :ref:`ODR <odr>` violation.
 
