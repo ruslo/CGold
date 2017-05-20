@@ -55,3 +55,7 @@ Templates
   :align: center
 
 :menuselection:`Add --> New Project ... --> Visual C++ --> Static Library`
+
+.. spelling::
+
+  some
