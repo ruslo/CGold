@@ -60,10 +60,12 @@ C++11 flags while building ``boo`` library but using C++11 flags while building
 both targets:
 
 .. code-block:: none
-  :emphasize-lines: 6
+  :emphasize-lines: 8
 
   [examples]> rm -rf _builds
   [examples]> cmake -Hlibrary-examples/link-error-odr-global -B_builds
+  ...
+  [examples]> cmake --build _builds
   ...
   [100%] Linking CXX executable baz
   foo/libfoo.a(Foo.cpp.o): In function `Foo::foo()':
