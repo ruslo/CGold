@@ -1,4 +1,4 @@
-.. Copyright (c) 2016, Ruslan Baratov
+.. Copyright (c) 2016-2017, Ruslan Baratov
 .. All rights reserved.
 
 What can't be done with CMake
@@ -10,43 +10,42 @@ What can't be done with CMake
   | *Experience comes from bad judgement.*
   | *-- Mulla Nasrudin* (`? <https://en.wikiquote.org/wiki/Jim_Horning>`_)
 
-.. Can't find good reference. Let me know if you've found a better link.
+.. Can't find good reference. Let me know if can find a better link (Ruslo)
 
-Like any kind of software (well, like anything in human life) :ref:`CMake <CMake>`
-is not something perfect and has it's strengths and weaknesses. Before we
-start I want to mention that **nothing in this list** is a showstopper for me.
-Though I think some limitations should be fixed, some I'll be happy to see
-improved. Most of the drawbacks can be kind of workarounded by using approaches
-that may differs from your normal workflow but reach the end goal. Try to look
-at them from another angle, think of the picture in a whole and remember
-that advantages definitely outweigh the disadvantages :)
+:ref:`CMake <CMake>` has it's strengths and weaknesses. Most of the drawbacks
+mentioned here can be workarounded by using approaches that may differs from
+your normal workflow but reach the end goal. Try to look at them from another
+angle, think of the picture in a whole and remember that advantages definitely
+outweigh the disadvantages.
 
 Language/syntax
 ===============
 
-That is probably the first thing you will hit with, you need to accept syntax
-and live with it. :ref:`CMake <CMake>` language is not something you can
-compare with what you have probably used before. There are no classes, no
-maps, no virtual functions or lambdas. Even parsing functions input arguments
-and returning results is something quite tricky for the beginners.
-:ref:`CMake <CMake>` is definitely not a language you want to try to experiment
-with implementation of red-black tree or processing JSON response from server.
-**But it does** handle regular development very efficiently and it is much better
-then native XML files, autotools configs or `JSON-like syntax of GYP`_. Think
-about it in this way: if you want to do some nasty non-standard things probably
-you should stop. If you think it is something important and useful, then it
-might be quite useful for other :ref:`CMake <CMake>` users too. In this case
-you need to think about implementing new feature **in CMake itself**.
-:ref:`CMake <CMake>` is open-source project written in C++, I hope this
-language has enough power for you :) Also you can discuss this problem in
-`CMake mailing-list <https://cmake.org/mailman/listinfo/cmake-developers>`_
-to see how you can help with improving current state.
+This is probably the first thing you will hit with. :ref:`CMake <CMake>`
+language is not something you can compare with what you have likely used
+before. There are no classes, no maps, no virtual functions or lambdas. Even
+parsing functions input arguments and returning results is something quite
+tricky for the beginners.  :ref:`CMake <CMake>` is definitely not a language
+you want to try to experiment with implementation of red-black tree or
+processing JSON response from server.  **But it does** handle regular
+development very efficiently and you probably will find it more attractive than
+XML files, autotools configs or `JSON-like syntax`_.
+
+Think about it in this
+way: if you want to do some nasty non-standard thing then probably you should
+stop.  If you think it is something important and useful, then it might be
+quite useful for other :ref:`CMake <CMake>` users too. In this case you need to
+think about implementing new feature **in CMake itself**.  :ref:`CMake <CMake>`
+is open-source project written in C++, I hope this language has enough power
+for you :) Also you can discuss this problem in `CMake mailing-list
+<https://cmake.org/mailman/listinfo/cmake-developers>`_ to see how you can help
+with improving current state.
 
 .. admonition:: CMake mailing list
 
   * `Wrapping CMake functionality with another language <http://www.mail-archive.com/cmake-developers%40cmake.org/msg15199.html>`_
 
-.. _JSON-like syntax of GYP: https://gyp.gsrc.io/docs/LanguageSpecification.md#Example
+.. _JSON-like syntax: https://gyp.gsrc.io/docs/LanguageSpecification.md#Example
 
 .. _affecting workflow:
 
@@ -56,15 +55,18 @@ Affecting workflow
 This might sounds contradictory to the statement that you can
 :ref:`keep using your favorite tools <keep using your favorite tools>` but it's
 not. Yes, you still can work with your favorite IDE but you must remember that
-:ref:`CMake <CMake>` now in charge. Imagine you have C++ header ``version.h``
+:ref:`CMake <CMake>` now is in charge.
+
+Imagine you have C++ header ``version.h``
 generated automatically by some script from template ``version.h.in``. You see
 ``version.h`` file in your IDE, you can update it and run build and new variables
 from ``version.h`` will be used in binary, but you **should never** do it since
-you know that source is ``version.h.in`` in fact. Quite the same happens when
-you use :ref:`CMake <CMake>` - you should never update build configuration in
-IDE as you usually do, you have to remember that IDE files generated
-from ``CMakeLists.txt`` and all your updates will be lost next time you run
-:ref:`CMake <CMake>`.
+you know that source is ``version.h.in`` in fact.
+
+Quite the same happens when you use :ref:`CMake <CMake>` - you should never
+update build configuration in IDE as you usually do, you have to remember that
+IDE files generated from ``CMakeLists.txt`` and all your updates will be lost
+next time you run :ref:`CMake <CMake>`.
 
 Wrong workflow:
 
@@ -87,16 +89,16 @@ You have to know that this must be done by adding new
 Incomplete functionality coverage
 =================================
 
-There are some missing features in :ref:`CMake <CMake>`. That is, mapping of
+There are some missing features in :ref:`CMake <CMake>`. Mapping of
 CMake functionality <-> :ref:`native build tool <Native build tool>` functionality
 is not always bijective. Often this can be workarounded by generating different
 native tool files from the same CMake code. For example it's possible using
-autotools create two versions of library (shared + static) by one run. However
-this may affect performance or even not possible for other
-platforms (e.g. on Windows). With :ref:`CMake <CMake>` you can generate two
-versions of project from one ``CMakeLists.txt`` file: one for shared and one
-for static variant, effectively running generate/build twice. This will be
-covered later :doc:`in depth </tutorials/libraries/static-shared>`.
+autotools create two versions of library
+(:doc:`shared + static </tutorials/libraries/static-shared>`) by one run.
+However this may affect performance or even not possible for other platforms
+(e.g. on Windows). With :ref:`CMake <CMake>` you can generate two versions of
+project from one ``CMakeLists.txt`` file: one for shared and one for static
+variant, effectively running generate/build twice.
 
 With ``Visual Studio`` you can have two variants x86 and x64 in one solution
 file. With :ref:`CMake <CMake>` you have to generate project twice:
@@ -132,7 +134,7 @@ plus remember workflow notes from the section above.
 Next logic can be applied here: if you're working with developer then developer
 should learn tools you've used, if you're working with users then it's your
 responsibility to create user-friendly installers like ``*.msi`` instead of
-projects (will be covered later in this document).
+projects.
 
 .. admonition:: CMake documentation
 
