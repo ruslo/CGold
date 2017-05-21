@@ -6,7 +6,7 @@ CLI: Visual Studio
 
 Run ``cmd.exe`` and go to the directory with sources:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd C:\cgold-example
 
@@ -19,7 +19,8 @@ Generate Visual Studio solution using CMake. Use
 :ref:`-H. <-H>` :ref:`-B_builds <-B>` for specifying paths
 and ``-G "Visual Studio 14 2015 Win64"`` for the generator:
 
-.. code-block:: shell
+.. code-block:: none
+  :emphasize-lines: 1, 16
 
   [cgold-example]> cmake -H. -B_builds -G "Visual Studio 14 2015 Win64"
   -- The C compiler identification is MSVC 19.0.23918.0

@@ -55,7 +55,7 @@ message when finished:
   :align: center
 
 For now there was no native build tool files generated, on this step user
-is able to do additional tuning of project. We don't want such tuning now so
+is able to do additional tuning of the project. We don't want such tuning now so
 will run ``Generate``:
 
 .. image:: xcode-screens/10-generate-done.png

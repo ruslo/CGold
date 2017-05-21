@@ -6,19 +6,18 @@ CLI: Xcode
 
 Open terminal and go to the directory with sources:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd cgold-example
-
   [cgold-example]> ls
-
   CMakeLists.txt foo.cpp
 
 Generate Xcode project using CMake. Use
 :ref:`-H. <-H>` :ref:`-B_builds <-B>` for specifying paths
 and ``-GXcode`` for the generator:
 
-.. code-block:: shell
+.. code-block:: none
+  :emphasize-lines: 1, 18
 
   [cgold-example]> cmake -H. -B_builds -GXcode
   -- The C compiler identification is AppleClang 7.3.0.7030031

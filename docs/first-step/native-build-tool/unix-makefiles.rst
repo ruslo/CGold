@@ -60,7 +60,7 @@ Click ``Install`` wait until it finished with successful message:
 
 Check ``make`` location and version:
 
-.. code-block:: bash
+.. code-block:: none
 
   > which make
   /usr/bin/make
@@ -76,7 +76,7 @@ Check ``make`` location and version:
 
 ``Clang`` will be installed too:
 
-.. code-block:: bash
+.. code-block:: none
 
   > which clang
   /usr/bin/clang
@@ -88,7 +88,7 @@ Check ``make`` location and version:
 
 As well as ``GCC``:
 
-.. code-block:: bash
+.. code-block:: none
 
   > which gcc
   /usr/bin/gcc

@@ -6,13 +6,13 @@ Ubuntu GCC
 
 ``GCC`` compiler usually used on ``Linux OS``. To install it on ``Ubuntu`` run:
 
-.. code-block:: bash
+.. code-block:: none
 
   > sudo apt-get install -y gcc
 
 Check location and version
 
-.. code-block:: bash
+.. code-block:: none
 
   > which gcc
   /usr/bin/gcc

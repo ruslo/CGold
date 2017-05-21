@@ -16,7 +16,7 @@ List of available `generators`_ depends on the host OS (e.g. ``Visual Studio``
 family generators not available on ``Linux``). You can get this list by running
 ``cmake --help``:
 
-.. code-block:: bash
+.. code-block:: none
 
   > cmake --help
   ...

@@ -7,7 +7,7 @@ CLI: Make
 Instructions are the same for both ``Linux`` and ``OSX``. Open terminal and go
 to the directory with sources:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd cgold-example
 
@@ -20,7 +20,7 @@ specifying paths and ``-G "Unix Makefiles"`` for the generator (note that
 ``Unix Makefiles`` is usually the default generator so ``-G`` probably not
 needed at all):
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> cmake -H. -B_builds -G "Unix Makefiles"
   -- The C compiler identification is GNU 4.8.4
@@ -43,7 +43,7 @@ needed at all):
 
 Generated ``Makefile`` can be found in ``_builds`` directory:
 
-.. code-block:: shell
+.. code-block:: none
 
   > ls _builds/Makefile
   _builds/Makefile

@@ -35,7 +35,7 @@ Libraries should be installed to separate directories. So there
 will be **two builds** and **two root directories**.
 :ref:`Out of source <out-of-source>` will kindly help us:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3, 11, 13, 21
 
   > cd library-examples
@@ -66,7 +66,7 @@ Autotools two builds
 Note that autotools do build library twice too under the hood, so performance
 is the same:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 6, 9-10
 
   > mkdir temp
@@ -118,7 +118,7 @@ Configs
 
 Even if libraries doesn't conflict on file level their **configs** will conflict:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 5-7
 
   > cd library-examples
@@ -131,7 +131,7 @@ Even if libraries doesn't conflict on file level their **configs** will conflict
 
 Config for static variant will have the same ``barTargets-release.cmake`` name:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-5
 
   [library-examples]> cmake -Hbar -B_builds/static -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
@@ -143,7 +143,7 @@ Config for static variant will have the same ``barTargets-release.cmake`` name:
 Now since configuration files for shared variant are overwritten there is
 no way to load ``libbar.so`` using ``find_package(bar CONFIG REQUIRED)``.
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> grep lib/libbar.so -IR _install
   [library-examples]> echo $?
@@ -198,7 +198,7 @@ abstraction used on practice. Let's run this example on OSX:
 
 By default we will build executable and static library:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd library-examples
   [library-examples]> rm -rf _builds
@@ -210,7 +210,7 @@ By default we will build executable and static library:
 
 But we are free to switch to shared library:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hcustom -B_builds -DBUILD_SHARED_LIBS=ON
@@ -221,7 +221,7 @@ But we are free to switch to shared library:
 
 Create bundle:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hcustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON
@@ -232,7 +232,7 @@ Create bundle:
 
 Or do the both:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hcustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON -DBUILD_SHARED_LIBS=ON
@@ -261,7 +261,7 @@ Targets defined in directory ``boo``:
 User builds library and link by default static ``libboo.a`` to ``foo``
 executable:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd library-examples
   [library-examples]> rm -rf _builds
@@ -273,14 +273,14 @@ executable:
 User knows that there is ``BUILD_SHARED_LIBS`` variable that change type of
 library, so he expects shared in next configuration:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hsurprise -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON -DBUILD_SHARED_LIBS=ON
 
 But of course he still got static because type of library is forced:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> cmake --build _builds
   /usr/bin/c++ -o foo ... boo/libboo.a
@@ -292,7 +292,7 @@ Note that in previous example time of compilation of ``boo`` library
 is **doubled**. We are building ``boo.cpp`` **twice** even if we are not
 planning to use one of the variants:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 5, 13
 
   [library-examples]> rm -rf _builds
@@ -436,7 +436,7 @@ preferable for any reason:
 
 Let's build it:
 
-.. code-block:: shell
+.. code-block:: none
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hdup -B_builds
@@ -445,7 +445,7 @@ Let's build it:
 We are linked to the ``libbaz.so`` and we **do linked** to ``libbar_shared.so``
 because it's dependency of ``baz``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 3-4
 
   > ldd _builds/foo
@@ -455,7 +455,7 @@ because it's dependency of ``baz``:
 
 At the same time we have ``bar`` linked statically:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 5
 
   > objdump -d _builds/foo | grep -A5 'barv.*:'
@@ -469,7 +469,7 @@ At the same time we have ``bar`` linked statically:
 So effectively code of function ``bar`` present in our dependencies twice!
 First time in executable and second time in linked shared library:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 5
 
   > objdump -d _builds/bar/libbar_shared.so | grep -A5 'barv.*:'
