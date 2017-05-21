@@ -10,14 +10,14 @@ CGold: The Hitchhiker's Guide to the CMake
 
 Welcome to **CGold**!
 
-This guide will show you how to use :ref:`CMake <CMake>` and help you to write
-elegant, correct and scalable projects. We'll start from the simple cases and
-add more features one by one. This tutorial covers only part of
-CMake capabilities - some topics are skipped intentionally in favor of better
-modern approaches [1]_. Document designed to be a good tutorial for the very
-beginners but touches some aspects which may be interested to advanced
-developers too. Look at it as a skeleton/starting point for further
-:ref:`CMake <CMake>` learning.
+This guide will show you how to use :ref:`CMake <CMake>` and will help you to
+write elegant, correct and scalable projects. We'll start from the simple cases
+and add more features one by one. This tutorial covers only part of CMake
+capabilities - some topics are skipped intentionally in favor of better modern
+approaches [1]_. Document designed to be a good tutorial for the very beginners
+but touches some aspects which advanced developers may be interested in too.
+Look at this document as it's a skeleton/starting point for further :ref:`CMake
+<CMake>` learning.
 
 Enjoy!
 
