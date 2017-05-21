@@ -12,7 +12,9 @@ CMake Installation
   | |-- Whale|_
 
 .. |-- Whale| replace:: *-- Whale*
-.. _-- Whale: https://www.youtube.com/watch?v=GOyalYaBlpU
+.. _-- Whale: https://www.youtube.com/watch?v=h02a2HSB58M
+
+.. https://www.youtube.com/watch?v=GOyalYaBlpU Dead now :(
 
 Obviously to use some tool you need to install it first. CMake can be installed
 using default system package manager or by getting binaries from
