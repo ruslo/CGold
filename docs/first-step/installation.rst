@@ -25,7 +25,7 @@ Ubuntu
 
 CMake can be installed by ``apt-get``:
 
-.. code-block:: bash
+.. code-block:: none
 
   > sudo apt-get -y install cmake
   > which cmake
@@ -35,7 +35,7 @@ CMake can be installed by ``apt-get``:
 
 Installing CMake GUI is similar:
 
-.. code-block:: bash
+.. code-block:: none
 
   > sudo apt-get -y install cmake-qt-gui
   > which cmake-gui
@@ -45,7 +45,7 @@ Installing CMake GUI is similar:
 
 Binaries can be downloaded and unpacked manually to any location:
 
-.. code-block:: bash
+.. code-block:: none
 
   > wget https://cmake.org/files/v3.4/cmake-3.4.1-Linux-x86_64.tar.gz
   > tar xf cmake-3.4.1-Linux-x86_64.tar.gz
@@ -57,7 +57,7 @@ Binaries can be downloaded and unpacked manually to any location:
 
 Version:
 
-.. code-block:: bash
+.. code-block:: none
 
   > cmake --version
   cmake version 3.4.1
@@ -73,7 +73,7 @@ OS X
 
 CMake can be installed on Mac using `brew <http://brew.sh>`_:
 
-.. code-block:: bash
+.. code-block:: none
 
   > brew install cmake
   > which cmake
@@ -85,7 +85,7 @@ CMake can be installed on Mac using `brew <http://brew.sh>`_:
 
 Binaries can be downloaded and unpacked manually to any location:
 
-.. code-block:: bash
+.. code-block:: none
 
   > wget https://cmake.org/files/v3.4/cmake-3.4.1-Darwin-x86_64.tar.gz
   > tar xf cmake-3.4.1-Darwin-x86_64.tar.gz
@@ -97,7 +97,7 @@ Binaries can be downloaded and unpacked manually to any location:
 
 Version:
 
-.. code-block:: bash
+.. code-block:: none
 
   > cmake --version
   cmake version 3.4.1

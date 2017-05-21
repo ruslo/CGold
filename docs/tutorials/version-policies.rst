@@ -123,7 +123,7 @@ Fixed version:
 
 with no warnings:
 
-.. code-block:: bash
+.. code-block:: none
 
   [minimum-required-example]> cmake -Hgood -B_builds/good
   -- The C compiler identification is GNU 4.9.3

@@ -21,7 +21,7 @@ Unix Makefiles
 Ubuntu Installation
 ===================
 
-.. code-block:: bash
+.. code-block:: none
 
   > sudo apt-get -y install make
   > make -v

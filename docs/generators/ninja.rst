@@ -18,7 +18,7 @@ Installation
 Ubuntu
 ++++++
 
-.. code-block:: bash
+.. code-block:: none
 
   > sudo apt-get install ninja-build
   > ninja -h
