@@ -104,10 +104,10 @@ Makefile example
 Example of generating Makefile on Linux:
 
 .. code-block:: none
+  :emphasize-lines: 2, 17
 
   [minimal-with-message-master]> rm -rf _builds
   [minimal-with-message-master]> cmake -H. -B_builds
-
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -139,9 +139,10 @@ Verify Makefile generated:
   _builds/Makefile
 
 If you run configure again CMakeLists.txt will be parsed one more time and
-``Processing CMakeLists.txt`` will be in output:
+``Processing CMakeLists.txt`` will be issued:
 
 .. code-block:: none
+  :emphasize-lines: 2
 
   [minimal-with-message-master]> cmake -H. -B_builds
   Processing CMakeLists.txt
@@ -163,6 +164,7 @@ Xcode example
 Run native tool build:
 
 .. code-block:: none
+  :emphasize-lines: 13, 19
 
   [minimal-with-message-master]> cmake --build _builds
 
