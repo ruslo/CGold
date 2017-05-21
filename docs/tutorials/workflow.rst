@@ -27,6 +27,7 @@ Back to the example with ``message``:
 Generate Makefile:
 
 .. code-block:: none
+  :emphasize-lines: 1, 16
 
   [minimal-with-message]> cmake -H. -B_builds
   -- The C compiler identification is GNU 4.8.4
@@ -58,7 +59,7 @@ And run build:
   [100%] Linking CXX executable foo
   [100%] Built target foo
 
-Executable ``foo`` created from ``foo.cpp`` source. Make tool know that if
+Executable ``foo`` created from ``foo.cpp`` source. Make tool knows that if
 there are no changes in ``foo.cpp`` then no need to build and link executable.
 If you run build again there will be no compile and link stage:
 
@@ -86,6 +87,7 @@ again? The answer is NO - just keep using ``cmake --build _builds``.
 CMakeLists.txt added as dependent file to the Makefile:
 
 .. code-block:: none
+  :emphasize-lines: 1, 3
 
   [minimal-with-message]> touch CMakeLists.txt
   [minimal-with-message]> cmake --build _builds
@@ -104,6 +106,7 @@ If you "modify" both CMake and C++ code you will see the full
 configure/generate/build stack of commands:
 
 .. code-block:: none
+  :emphasize-lines: 1, 3
 
   [minimal-with-message]> touch CMakeLists.txt foo.cpp
   [minimal-with-message]> cmake --build _builds

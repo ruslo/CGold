@@ -15,11 +15,11 @@ There are two entities that help you to manage difference between old and new
 versions of CMake:
 
 * Command
-  `cmake_minimum_required <https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html>`__
+  `cmake_minimum_required <https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html>`__:
   for checking what minimum version of CMake user should have to run your
   configuration
 
-* `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
+* `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__:
   for fine tuning newly introduced behavior
 
 If you just want to experiment without worrying about backward compatibility,
@@ -34,8 +34,6 @@ of CMake you're using:
 
   > cat CMakeLists.txt
   cmake_minimum_required(VERSION 3.5.2)
-
-and move to the :doc:`project section </tutorials/project>`.
 
 cmake_minimum_required
 ======================
@@ -88,6 +86,7 @@ toolchain is loaded. If you run this example on ``Cygwin`` platform:
 CMake will think that you're running code with old policies and warns you:
 
 .. code-block:: none
+  :emphasize-lines: 4-5
 
   [minimum-required-example]> cmake -Hbad -B_builds/bad
   -- The C compiler identification is GNU 4.9.3
@@ -256,9 +255,9 @@ warning turns into error:
   [policy-examples]> echo $?
   1
 
-In further two cases will be shown. In first case we want to keep support of old
+Two cases will be shown below. In first case we want to keep support of old
 version (``2.8`` for now) so it will work with both ``CMake 2.8`` and
-``CMake 3.0+`` in second case we decide to drop support of old version and move
+``CMake 3.0+``. In second case we decide to drop support of old version and move
 to ``CMake 3.0+``. We'll see how it will affect policies. It will be shown in
 the end that in fact without **using new features** from ``CMake 3.0`` it
 doesn't make sense to change ``cmake_minimum_required``.
@@ -268,7 +267,19 @@ Keep using old
 
 Our project works fine with ``CMake 2.8`` however ``CMake 3.0+`` emits
 warning. We don't want to fix the error now but want only to suppress warning
-and explain to CMake that it should behave like ``CMake 2.8``. Let's add
+and explain to CMake that it should behaves like ``CMake 2.8``.
+
+.. note::
+
+  This approach described in
+  `documentation <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html#introduction>`__:
+
+  .. code-block:: none
+
+    It is possible to disable the warning by explicitly requesting the OLD, or
+    backward compatible behavior using the cmake_policy() command
+
+Let's add
 `cmake_policy <https://cmake.org/cmake/help/latest/command/cmake_policy.html>`__:
 
 .. literalinclude:: /examples/policy-examples/unknown-2.8/CMakeLists.txt
@@ -333,7 +344,7 @@ We should protect new code with ``if(POLICY CMP0038)`` condition:
   :emphasize-lines: 4-9
 
 Of course you should find the time, apply real fix and remove policy logic
-since it will be not needed anymore:
+since it will not be needed anymore:
 
 .. literalinclude:: /examples/policy-examples/fix-2.8/CMakeLists.txt
   :diff: /examples/policy-examples/suppress-2.8/CMakeLists.txt
