@@ -69,7 +69,7 @@ Example
 
 Generate:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 5, 11
 
   [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
@@ -94,7 +94,7 @@ Generate:
 
 Build:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 12, 14-19, 21
 
   [platforms-android-on-windows]> cmake --build _builds --config Debug
@@ -138,7 +138,7 @@ Platform not found
 
 If you see error like that:
 
-.. code-block:: shell
+.. code-block:: none
 
   [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
   CMake Error at CMakeLists.txt:7 (message):
@@ -157,7 +157,7 @@ If you haven't install
 :menuselection:`Cross Platform Mobile Development --> Visual C++ Mobile Development`
 you will see this error:
 
-.. code-block:: shell
+.. code-block:: none
 
   [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
   CMake Error at CMakeLists.txt:17 (project):
@@ -171,7 +171,7 @@ Check for
 :menuselection:`Cross Platform Mobile Development --> Common Tools and Software Development Kits --> Android Native Development Kit *`
 if you see this error:
 
-.. code-block:: shell
+.. code-block:: none
 
   [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
   -- The C compiler identification is unknown
@@ -199,7 +199,7 @@ Prepare
 
 Install Polly if not already installed and add to PATH:
 
-.. code-block:: shell
+.. code-block:: none
 
   > git clone https://github.com/ruslo/polly
   > set PATH=%cd%\polly\bin;%PATH%
@@ -208,14 +208,14 @@ Install Polly if not already installed and add to PATH:
 
 Check VC MDD version of CMake used (see notes above):
 
-.. code-block:: shell
+.. code-block:: none
 
   > where cmake
   C:\...\cmake-3.4.2-win32-x86\bin\cmake.exe
 
 Clone projects:
 
-.. code-block:: shell
+.. code-block:: none
 
   > git clone https://github.com/forexample/android-cmake
   > cd android-cmake\09-vc-mdd-debug
@@ -231,7 +231,7 @@ Now we will run CMake. This will trigger Hunter instructions that will download
 all dependencies. Do not run build for now and don't open Visual Studio
 project, we are interested in Android SDK path first:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 8
 
   [09-vc-mdd-debug]> build.py --toolchain android-vc-ndk-r10e-api-19-arm-clang-3-6 --verbose --nobuild
@@ -267,7 +267,7 @@ APK Create
 Run CMake again, this time use ``--open`` to open generated
 Visual Studio solution:
 
-.. code-block:: shell
+.. code-block:: none
 
   [09-vc-mdd-debug]> build.py --toolchain android-vc-ndk-r10e-api-19-arm-clang-3-6 --verbose --nobuild --open
 

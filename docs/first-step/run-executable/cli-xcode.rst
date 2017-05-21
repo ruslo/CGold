@@ -7,14 +7,14 @@ CLI: Xcode
 To build Xcode project from command line ``xcodebuild`` can be used.
 Check it can be found:
 
-.. code-block:: shell
+.. code-block:: none
 
   > which xcodebuild
   /usr/bin/xcodebuild
 
 Go to the ``_builds`` directory and run build:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd _builds
   [cgold-example/_builds]> xcodebuild
@@ -27,7 +27,7 @@ Go to the ``_builds`` directory and run build:
 
 But CMake offer cross-tool way to do exactly the same by ``cmake --build _builds``:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> cmake --build _builds
   ...
@@ -39,7 +39,7 @@ But CMake offer cross-tool way to do exactly the same by ``cmake --build _builds
 
 By default Debug variant of ``foo`` will be build, you can run it by:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> ./_builds/Debug/foo
   Hello from CGold!

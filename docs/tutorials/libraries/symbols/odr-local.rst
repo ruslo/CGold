@@ -52,7 +52,7 @@ And final executable ``baz``:
 
 Let's build the project now:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-5
 
   [library-examples]> rm -rf _builds

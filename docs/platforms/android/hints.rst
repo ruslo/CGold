@@ -70,7 +70,7 @@ Verify
 
 Connect device with USB and verify it's visible by ``adb`` service:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3
 
   > adb devices
@@ -79,7 +79,7 @@ Connect device with USB and verify it's visible by ``adb`` service:
 
 If service is not started there will be extra messages:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-4
 
   > adb devices
@@ -93,7 +93,7 @@ SDK version on device
 
 The needed version of SDK can be get by reading ``ro.build.version.sdk``:
 
-.. code-block:: shell
+.. code-block:: none
 
   > adb -d shell getprop ro.build.version.sdk
   19
@@ -114,14 +114,14 @@ CPU architecture
 
 Run next command to determine CPU architecture of emulator:
 
-.. code-block:: shell
+.. code-block:: none
 
   > adb -e shell getprop ro.product.cpu.abi
   x86
 
 And this one for device:
 
-.. code-block:: shell
+.. code-block:: none
 
   > adb -e shell getprop ro.product.cpu.abi
   armeabi-v7a
@@ -135,13 +135,13 @@ Log
 
 Clear log:
 
-.. code-block:: shell
+.. code-block:: none
 
   > adb logcat -c
 
 Filter only Info (``I``) messages from ``SimpleApp``, ignore others and exit:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4
 
   > adb logcat -d SimpleApp:I '*:S'
@@ -152,7 +152,7 @@ Filter only Info (``I``) messages from ``SimpleApp``, ignore others and exit:
 
 Any messages from ``SimpleApp``, ignore others:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1
 
   > adb logcat -d 'SimpleApp:*' '*:S'

@@ -7,7 +7,7 @@ CLI: Make
 Usually to build executable with Make you need to find directory with ``Makefile``
 and run ``make`` in it:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cd _builds
   [cgold-example/_builds]> make
@@ -18,7 +18,7 @@ and run ``make`` in it:
 
 But CMake offer cross-tool way to do exactly the same by ``cmake --build _builds``:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> cmake --build _builds
   Scanning dependencies of target foo
@@ -28,7 +28,7 @@ But CMake offer cross-tool way to do exactly the same by ``cmake --build _builds
 
 Run ``foo``:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> ./_builds/foo
   Hello from CGold!

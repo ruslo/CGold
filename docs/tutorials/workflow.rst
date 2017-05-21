@@ -26,7 +26,7 @@ Back to the example with ``message``:
 
 Generate Makefile:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> cmake -H. -B_builds
   -- The C compiler identification is GNU 4.8.4
@@ -50,7 +50,7 @@ Generate Makefile:
 
 And run build:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> cmake --build _builds
   Scanning dependencies of target foo
@@ -62,14 +62,14 @@ Executable ``foo`` created from ``foo.cpp`` source. Make tool know that if
 there are no changes in ``foo.cpp`` then no need to build and link executable.
 If you run build again there will be no compile and link stage:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> cmake --build _builds
   [100%] Built target foo
 
 Let's "modify" ``foo.cpp`` source:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> touch foo.cpp
   [minimal-with-message]> cmake --build _builds
@@ -85,7 +85,7 @@ Now let's "change" CMakeLists.txt. Do we need to run ``cmake -H. -B_builds``
 again? The answer is NO - just keep using ``cmake --build _builds``.
 CMakeLists.txt added as dependent file to the Makefile:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> touch CMakeLists.txt
   [minimal-with-message]> cmake --build _builds
@@ -103,7 +103,7 @@ new build flags or compile definitions) there is no compile/link stages.
 If you "modify" both CMake and C++ code you will see the full
 configure/generate/build stack of commands:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimal-with-message]> touch CMakeLists.txt foo.cpp
   [minimal-with-message]> cmake --build _builds

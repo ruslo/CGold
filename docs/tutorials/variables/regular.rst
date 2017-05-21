@@ -36,14 +36,14 @@ And the cache variable ``xyz`` is created only once and reused on second run
 
 You can find cache variable ``xyz`` in :ref:`CMakeCache.txt <cmakecache.txt>`:
 
-.. code-block:: shell
+.. code-block:: none
 
   [usage-of-variables]> grep xyz _builds/CMakeCache.txt
   xyz:STRING=321
 
 Unlike regular ``abc``:
 
-.. code-block:: shell
+.. code-block:: none
 
   [usage-of-variables]> grep abc _builds/CMakeCache.txt
   [usage-of-variables]> echo $?
@@ -69,7 +69,7 @@ introduce their own scopes:
 There are two variables ``abc`` defined. One in top level scope and another
 in scope of ``boo`` directory:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-5
 
   [usage-of-variables]> rm -rf _builds
@@ -93,7 +93,7 @@ the current scope it will be dereferenced to an empty string:
   :language: cmake
   :emphasize-lines: 6,12,17,18
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-7
 
   [usage-of-variables]> rm -rf _builds
@@ -123,7 +123,7 @@ like ``set`` and ``unset`` will affect the current scope:
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-6
 
   [usage-of-variables]> rm -rf _builds
@@ -170,7 +170,7 @@ the cache:
   :language: cmake
   :emphasize-lines: 4,5,9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
@@ -191,7 +191,7 @@ will remove the regular variable with the same name from current scope:
   :language: cmake
   :emphasize-lines: 4,5,9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,3
 
   [usage-of-variables]> rm -rf _builds
@@ -215,7 +215,7 @@ This may lead to a quite confusing behavior:
 In this example ``set(... CACHE ...)`` will remove ``abc`` only from scope of
 function and not from top level scope:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-5
 
   [usage-of-variables]> rm -rf _builds
@@ -230,7 +230,7 @@ function and not from top level scope:
 This will be even more confusing if you run this example one more time without
 removing cache:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1-4
 
   [usage-of-variables]> cmake -Hcache-confuse -B_builds
@@ -253,7 +253,7 @@ Variable names are case-sensitive:
   :language: cmake
   :emphasize-lines: 4-6, 8-10
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds
@@ -274,7 +274,7 @@ Name of variable may consist of **any** characters:
   :language: cmake
   :emphasize-lines: 4-9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds
@@ -301,7 +301,7 @@ quote character will be treated as part of the string:
   :language: cmake
   :emphasize-lines: 4-6
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-8
 
   [usage-of-variables]> rm -rf _builds
@@ -363,7 +363,7 @@ Dereferencing of variable by ``${...}`` will happens as many times as needed:
   :language: cmake
   :emphasize-lines: 5,7
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,17-26
 
   [usage-of-variables]> rm -rf _builds
@@ -407,7 +407,7 @@ name, etc.:
   :language: cmake
   :emphasize-lines: 4,5,7,9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,17-20
 
   [usage-of-variables]> rm -rf _builds
@@ -494,7 +494,7 @@ remove elements by index, etc.:
   :language: cmake
   :emphasize-lines: 4-6, 8-10, 16, 20
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds

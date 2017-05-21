@@ -18,7 +18,7 @@ CMake comes with set of
   :language: cmake
   :emphasize-lines: 4, 6
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 3
 
   [cmake-sources]> rm -rf _builds
@@ -52,7 +52,7 @@ custom CMake modules:
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3
 
   [cmake-sources]> rm -rf _builds
@@ -115,7 +115,7 @@ any reason:
 
 Works fine:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-4
 
   [cmake-sources]> rm -rf _builds
@@ -143,7 +143,7 @@ In this case if user want to use custom modules:
 
 They will **not** be loaded:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3
 
   [cmake-sources]> rm -rf _builds
@@ -167,7 +167,7 @@ Information about any kind of listfile can be taken from
   :language: cmake
   :emphasize-lines: 3-4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-4
 
   [cmake-sources]> rm -rf _builds
@@ -252,7 +252,7 @@ Subdirectory ``boo`` use those module:
   :language: cmake
   :emphasize-lines: 8
 
-.. code-block:: shell
+.. code-block:: none
 
   [cmake-sources]> rm -rf _builds
   [cmake-sources]> cmake -Hwith-external-module/example -B_builds -DCMAKE_MODULE_PATH=`pwd`/with-external-module/external
@@ -267,7 +267,7 @@ Subdirectory ``boo`` use those module:
 
 Check ``sha1`` file created by module:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4
 
   [cmake-sources]> cat _builds/boo/sha1
@@ -277,7 +277,7 @@ Check ``sha1`` file created by module:
 
 Verify value manually:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2
 
   [cmake-sources]> openssl sha1 with-external-module/example/boo/CMakeLists.txt
@@ -349,7 +349,7 @@ And call ``mymodule`` function instead of including module:
 
 Effect is the same:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cmake-sources]> cat _builds/boo/sha1
   Message from external module

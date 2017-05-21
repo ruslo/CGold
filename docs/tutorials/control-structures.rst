@@ -23,7 +23,7 @@ Simple examples
   :language: cmake
   :emphasize-lines: 4, 8, 15, 19
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
@@ -38,7 +38,7 @@ Simple examples
   :language: cmake
   :emphasize-lines: 9, 15, 24, 35
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-6
 
   [control-structures]> rm -rf _builds
@@ -58,7 +58,7 @@ CMP0054
   :language: cmake
   :emphasize-lines: 7, 10
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
@@ -76,7 +76,7 @@ Try fix
   :language: cmake
   :emphasize-lines: 13, 17, 21
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-6
 
   [control-structures]> rm -rf _builds
@@ -96,7 +96,7 @@ Fix
   :language: cmake
   :emphasize-lines: 1
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3
 
   [control-structures]> rm -rf _builds
@@ -113,7 +113,7 @@ Workaround
   :language: cmake
   :emphasize-lines: 13
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
@@ -138,7 +138,7 @@ foreach
   :language: cmake
   :emphasize-lines: 5, 11, 16, 22, 27, 33, 39
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-6, 8-10, 11, 12, 14, 16-17, 19-24
 
   [control-structures]> rm -rf _builds
@@ -176,7 +176,7 @@ foreach with range
   :language: cmake
   :emphasize-lines: 5, 10, 15
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-14, 16-21, 23-25
 
   [control-structures]> rm -rf _builds
@@ -215,7 +215,7 @@ while
   :language: cmake
   :emphasize-lines: 8, 17
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-8, 10-14
 
   [control-structures]> rm -rf _builds
@@ -243,7 +243,7 @@ break
   :language: cmake
   :emphasize-lines: 11, 19
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-6, 8-12
 
   [control-structures]> rm -rf _builds
@@ -269,7 +269,7 @@ continue
   :language: cmake
   :emphasize-lines: 1, 8
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 6, 9
 
   [control-structures]> rm -rf _builds
@@ -310,7 +310,7 @@ Simple
   :language: cmake
   :emphasize-lines: 4-6
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-4
 
   [control-structures]> rm -rf _builds
@@ -328,7 +328,7 @@ With arguments
   :language: cmake
   :emphasize-lines: 4, 11, 19
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4-6, 8-11, 13-14
 
   [control-structures]> rm -rf _builds
@@ -356,7 +356,7 @@ CMake style
   :language: cmake
   :emphasize-lines: 4, 7-9, 19, 21, 44-46, 62, 65, 68, 71
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4-13, 15-23, 30-33, 36
 
   [control-structures]> rm -rf _builds
@@ -410,7 +410,7 @@ Return value
   :language: cmake
   :emphasize-lines: 5, 14
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-4, 6
 
   [control-structures]> rm -rf _builds
@@ -430,7 +430,7 @@ Return
   :language: cmake
   :emphasize-lines: 7, 12, 15
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-5
 
   [control-structures]> rm -rf _builds
@@ -463,7 +463,7 @@ function **is defined**:
   :language: cmake
   :emphasize-lines: 3-4, 9-11
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-6, 8-10
 
   [control-structures]> rm -rf _builds

@@ -13,7 +13,7 @@ Environment variable can be read by using ``$ENV{...}`` syntax:
   :language: cmake
   :emphasize-lines: 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 5-6
 
   [usage-of-variables]> rm -rf _builds
@@ -35,7 +35,7 @@ By using ``set(ENV{...})`` syntax CMake can set environment variable:
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 5-6
 
   [usage-of-variables]> rm -rf _builds
@@ -57,7 +57,7 @@ Unset environment variable:
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 5-6
 
   [usage-of-variables]> rm -rf _builds
@@ -87,7 +87,7 @@ Child process will inherit environment variables of parent:
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 3, 7
 
   [usage-of-variables]> rm -rf _builds
@@ -114,7 +114,7 @@ Note that in previous examples variable was set on
   :language: cmake
   :emphasize-lines: 4, 6
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 3
 
   [usage-of-variables]> rm -rf _builds
@@ -134,7 +134,7 @@ But environment variable remains the same on :ref:`build step <build>`:
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3
 
   [usage-of-variables]> cmake --build _builds
@@ -157,7 +157,7 @@ time it will break normal :ref:`workflow <workflow>`:
 
   Do not write code like that!
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 25
 
   [usage-of-variables]> rm -rf _builds
@@ -188,14 +188,14 @@ time it will break normal :ref:`workflow <workflow>`:
 
 Let's update environment variable:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1
 
   [usage-of-variables]> export ABC=123
 
 Name of the target **was not changed**:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2
 
   [usage-of-variables]> cmake --build _builds
@@ -203,7 +203,7 @@ Name of the target **was not changed**:
 
 You have to run configure manually yourself:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 9
 
   [usage-of-variables]> cmake -Henv-depends -B_builds

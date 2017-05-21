@@ -14,7 +14,7 @@ of install procedure:
 .. literalinclude:: /examples/install-examples/simple/CMakeLists.txt
   :language: cmake
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 10, 12, 17
 
   [install-examples]> rm -rf _builds
@@ -45,7 +45,7 @@ code!
   :language: cmake
   :emphasize-lines: 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds
@@ -70,7 +70,7 @@ code!
 
 Library unexpectedly installed to ``3rdparty/root`` instead of ``_install``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 8
 
   [install-examples]> cmake --build _builds --target install
@@ -91,7 +91,7 @@ On the fly
 
 ``Make`` do support changing of install directory on the fly by ``DESTDIR``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3, 7, 10, 14
 
   [install-examples]> rm -rf _builds
@@ -125,7 +125,7 @@ User may not want to install such project at all, so copying of file to root
 is something unintended and quite surprising. If you're lucky you will get
 problems with permissions on configure step instead of a silent copy:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 17-20
 
   [install-examples]> rm -rf _builds
@@ -155,7 +155,7 @@ problems with permissions on configure step instead of a silent copy:
 CPack will use separate directory for install so ``README`` will not be included
 in archive:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3, 11, 12
 
   [install-examples]> rm -rf _builds _install
@@ -181,7 +181,7 @@ All work should be delegated to ``install`` command instead, in such case
   :language: cmake
   :emphasize-lines: 7
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds _install
@@ -206,7 +206,7 @@ All work should be delegated to ``install`` command instead, in such case
 
 Correct install directory:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 8-9
 
   [install-examples]> cmake --build _builds --target install
@@ -221,7 +221,7 @@ Correct install directory:
 
 Correct packing:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 9-11
 
   [install-examples]> (cd _builds && cpack -G TGZ)
@@ -252,7 +252,7 @@ by ``configure_file`` command:
 
 Configure for ``DESTDIR`` usage:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds _install foo-0.1.1-Linux
@@ -277,7 +277,7 @@ Configure for ``DESTDIR`` usage:
 
 ``DESTDIR`` read correctly:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 5-6, 8-9
 
   [install-examples]> make DESTDIR="`pwd`/_install/config-A" -C _builds install
@@ -292,7 +292,7 @@ Configure for ``DESTDIR`` usage:
 
 Changing directory on the fly:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 5-6, 8-9
 
   [install-examples]> make DESTDIR="`pwd`/_install/config-B" -C _builds install
@@ -307,7 +307,7 @@ Changing directory on the fly:
 
 Regular install:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 20, 23-26
 
   [install-examples]> rm -rf _builds _install
@@ -339,7 +339,7 @@ Regular install:
 
 Packing:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 6-7, 11-12
 
   [install-examples]> (cd _builds && cpack -G TGZ)

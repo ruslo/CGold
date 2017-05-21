@@ -56,7 +56,7 @@ it manually from `Apple Developers site <https://developer.apple.com/download/mo
 
 For example:
 
-.. code-block:: shell
+.. code-block:: none
 
   > ls /Applications/develop/ide/xcode
   4.6.3/
@@ -69,7 +69,7 @@ For example:
 
 Default directory and version can be checked by ``xcode-select``/``xcodebuild`` tools:
 
-.. code-block:: shell
+.. code-block:: none
 
   > xcode-select --print-path
   /Applications/develop/ide/xcode/7.3.1/Xcode.app/Contents/Developer
@@ -80,7 +80,7 @@ Default directory and version can be checked by ``xcode-select``/``xcodebuild`` 
 
 Default version can be changed by ``xcode-select -switch``:
 
-.. code-block:: shell
+.. code-block:: none
 
   > sudo xcode-select -switch /Applications/develop/ide/xcode/7.2/Xcode.app/Contents/Developer
 
@@ -90,7 +90,7 @@ Default version can be changed by ``xcode-select -switch``:
 
 Or using environment variable ``DEVELOPER_DIR``:
 
-.. code-block:: shell
+.. code-block:: none
 
   > export DEVELOPER_DIR=/Applications/develop/ide/xcode/7.3.1/Xcode.app/Contents/Developer
   > xcodebuild -version

@@ -19,7 +19,7 @@ Example
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4, 6
 
   [cmake-sources]> rm -f Hello.txt
@@ -36,7 +36,7 @@ Minimum required (bad)
   :language: cmake
   :emphasize-lines: 6, 9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 2, 14
 
   [cmake-sources]> cmake -P minimum-required-bad/script.cmake
@@ -61,7 +61,7 @@ Minimum required (good)
   :language: cmake
   :emphasize-lines: 8, 11
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 2
 
   [cmake-sources]> cmake -P minimum-required-good/script.cmake

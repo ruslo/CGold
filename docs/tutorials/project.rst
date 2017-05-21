@@ -34,7 +34,7 @@ they are defined:
 
 Run test on ``Linux``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-5, 9, 15, 21-22
 
   [project-examples]> rm -rf _builds
@@ -81,7 +81,7 @@ Also ``project`` is a place where toolchain file will be read.
 .. literalinclude:: /examples/project-examples/toolchain/toolchain.cmake
   :language: cmake
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-5, 9, 12, 15-17, 20, 23, 26-28, 30
 
   [project-examples]> rm -rf _builds
@@ -140,7 +140,7 @@ C-only project:
 There is no checks for C++ compiler and variable with path to C++ compiler
 is empty now:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 8, 15
 
   [project-examples]> rm -rf _builds
@@ -171,7 +171,7 @@ tools will not be triggered):
   :language: cmake
   :emphasize-lines: 2, 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 11-12
 
   [project-examples]> rm -rf _builds
@@ -198,7 +198,7 @@ tools at all:
 
 No checks for C or C++ compiler as you can see:
 
-.. code-block:: shell
+.. code-block:: none
 
   [project-examples]> rm -rf _builds
   [project-examples]> cmake -Hno-language -B_builds
@@ -237,7 +237,7 @@ Command ``project`` declare ``*_{SOURCE,BINARY}_DIR`` variables. Since version
   :language: cmake
   :emphasize-lines: 1, 9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-7, 23-26
 
   [project-examples]> rm -rf _builds
@@ -282,7 +282,7 @@ when you have hierarchy of projects:
   :language: cmake
   :emphasize-lines: 6-9
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 22
 
   [project-examples]> rm -rf _builds
@@ -331,7 +331,7 @@ before any other commands. It means that ``project`` will be called **before**
 .. literalinclude:: /examples/project-examples/not-declared/boo/CMakeLists.txt
   :language: cmake
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 17
 
   [project-examples]> rm -rf _builds

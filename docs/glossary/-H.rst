@@ -13,7 +13,7 @@ There must be no spaces between ``-H`` and ``<path-to-source-tree>``
 (otherwise option will be interpreted as synonym to ``--help``). Always must
 be used with :ref:`-B <-B>` option. Example:
 
-.. code-block:: shell
+.. code-block:: none
 
   cmake -H. -B_builds
 

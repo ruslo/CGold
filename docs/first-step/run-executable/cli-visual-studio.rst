@@ -12,7 +12,7 @@ Prompt instead of ``cmd.exe`` (run ``where msbuild`` to check)  and run
 But CMake offer cross-tool way to do exactly the same: ``cmake --build _builds``
 (no need to have ``MSBuild.exe`` in PATH).
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> cmake --build _builds
 
@@ -26,7 +26,7 @@ But CMake offer cross-tool way to do exactly the same: ``cmake --build _builds``
 
 By default Debug variant of ``foo.exe`` will be build, you can run it by:
 
-.. code-block:: shell
+.. code-block:: none
 
   [cgold-example]> .\_builds\Debug\foo.exe
   Hello from CGold!

@@ -45,7 +45,7 @@ Templates
   :emphasize-lines: 3-5,9-11
   :linenos:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-5, 9, 15, 21-22
 
   [project-examples]> rm -rf _builds

@@ -30,7 +30,7 @@ creates node in a source tree:
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 3-7
 
   [cmake-sources]> rm -rf _builds
@@ -74,7 +74,7 @@ processed node. Root of the tree is always available in
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4-5, 7-8, 10-11, 13-14, 16-17
 
   [cmake-sources]> rm -rf _builds
@@ -130,7 +130,7 @@ Information can be taken from ``CMAKE_BINARY_DIR`` (see :ref:`-B <-B>`) and
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 4-5, 7-8, 10-11, 13-14, 16-17
 
   [cmake-sources]> rm -rf _builds

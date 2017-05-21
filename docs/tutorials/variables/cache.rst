@@ -10,7 +10,7 @@ Cache variables saved in :ref:`CMakeCache.txt` file:
   :language: cmake
   :emphasize-lines: 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 7
 
   [usage-of-variables]> rm -rf _builds
@@ -34,7 +34,7 @@ Unlike regular CMake variables cache variables have no scope and is set globally
   :language: cmake
   :emphasize-lines: 3
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3
 
   [usage-of-variables]> rm -rf _builds
@@ -54,7 +54,7 @@ effect - old variable will be used still:
   :language: cmake
   :emphasize-lines: 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 3-4, 9
 
   [usage-of-variables]> rm -rf _builds
@@ -72,7 +72,7 @@ Update :ref:`CMakeLists.txt <cmakelists.txt>` (don't remove cache!):
 .. literalinclude:: /examples/usage-of-variables/double-set/2/CMakeLists.txt
   :diff: /examples/usage-of-variables/double-set/1/CMakeLists.txt
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 8
 
   [usage-of-variables]> cp double-set/2/CMakeLists.txt double-set/
@@ -91,7 +91,7 @@ Cache variable can be set by ``-D`` command line option. Unlike
 ``set(... CACHE ...)`` command, variable that set by ``-D`` option take
 priority:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1-2, 7
 
   [usage-of-variables]> cmake -Dabc=444 -Hdouble-set -B_builds
@@ -117,7 +117,7 @@ it by ``-C``:
   :language: cmake
   :emphasize-lines: 6-8
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2, 4-6
 
   [usage-of-variables]> rm -rf _builds
@@ -140,7 +140,7 @@ you can add ``FORCE``:
   :language: cmake
   :emphasize-lines: 4
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3
 
   [usage-of-variables]> rm -rf _builds
@@ -167,7 +167,7 @@ Force as a workaround
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 7-8
 
   [usage-of-variables]> rm -rf _builds
@@ -189,7 +189,7 @@ regular variable with the same name will be unset too each time:
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-3, 7-8
 
   [usage-of-variables]> rm -rf _builds
@@ -321,7 +321,7 @@ so final result is ``789``. Variable ``FOO_B`` is a cache variable with **no
 FORCE** so first ``123`` will be set to cache, then since ``FOO_B`` is already
 in cache ``456`` and ``789`` **will be ignored**, so final result is ``123``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
@@ -367,7 +367,7 @@ creating project's customization option:
 
 Default value:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
@@ -380,7 +380,7 @@ Default value:
 
 User's value:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1-2
 
   [usage-of-variables]> cmake -DFOO_A=User -Hproject-customization -B_builds
@@ -392,7 +392,7 @@ User's value:
 
 Note that such approach doesn't work for regular CMake variable ``FOO_B``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 1, 3
 
   [usage-of-variables]> cmake -DFOO_B=User -Hproject-customization -B_builds
@@ -411,7 +411,7 @@ Command ``option`` can be used for creating boolean cache entry:
   :language: cmake
   :emphasize-lines: 4-5
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2-4, 9-10
 
   [usage-of-variables]> rm -rf _builds

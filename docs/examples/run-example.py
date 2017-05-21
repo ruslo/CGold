@@ -64,7 +64,7 @@ else:
     'cmake -H{} -B_builds'.format(relative_example_dir)
   ]
 
-doc_file.write('.. code-block:: shell\n')
+doc_file.write('.. code-block:: none\n')
 doc_file.write('  :emphasize-lines: 2, 4-5\n')
 doc_file.write('  :linenos:\n\n')
 

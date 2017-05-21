@@ -27,7 +27,7 @@ policies, warnings, etc. just set **first line** of CMakeLists.txt to
 ``cmake_minimum_required(VERSION a.b.c)`` where ``a.b.c`` is a current version
 of CMake you're using:
 
-.. code-block:: shell
+.. code-block:: none
 
   > cmake --version
   cmake version 3.5.2
@@ -87,7 +87,7 @@ toolchain is loaded. If you run this example on ``Cygwin`` platform:
 
 CMake will think that you're running code with old policies and warns you:
 
-.. code-block:: shell
+.. code-block:: none
 
   [minimum-required-example]> cmake -Hbad -B_builds/bad
   -- The C compiler identification is GNU 4.9.3
@@ -176,7 +176,7 @@ which make no sense and definitely **is a bug**:
 
 Works fine for CMake before ``3.0``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,4
 
   [policy-examples]> cmake --version
@@ -199,7 +199,7 @@ Works fine for CMake before ``3.0``:
 
 For CMake version ``>= 3.0`` warning will be reported:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,4,7
 
   [policy-examples]> cmake --version
@@ -227,7 +227,7 @@ Assume you want to drop the support of old version and more to some new
 
 warning turns into error:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,18
 
   [policy-examples]> rm -rf _builds
@@ -277,7 +277,7 @@ and explain to CMake that it should behave like ``CMake 2.8``. Let's add
 
 Looks good for ``CMake 3.0+``:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,4
 
   [policy-examples]> cmake --version
@@ -304,7 +304,7 @@ Looks good for ``CMake 3.0+``:
 Are we done? No, ``CMP0038`` is introduced since ``CMake 3.0`` so ``CMake 2.8``
 have no idea what this policy is about:
 
-.. code-block:: shell
+.. code-block:: none
   :emphasize-lines: 2,4,15
 
   > cmake --version
