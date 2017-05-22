@@ -1,4 +1,4 @@
-.. Copyright (c) 2016, Ruslan Baratov
+.. Copyright (c) 2016-2017, Ruslan Baratov
 .. All rights reserved.
 
 .. _-H:
@@ -23,6 +23,15 @@ Use current directory as a source tree (i.e. start with
 Path to this directory will be saved in
 `CMAKE_SOURCE_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_SOURCE_DIR.html>`__
 variable.
+
+.. warning::
+
+  Powershell will modify arguments and put the space between ``-H`` and ``.``.
+  You can protect argument by quoting it:
+
+  .. code-block:: none
+
+    cmake '-H.' -B_builds
 
 .. seealso::
 
