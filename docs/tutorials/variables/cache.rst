@@ -24,7 +24,8 @@ Cache variables saved in :ref:`CMakeCache.txt` file:
 No scope
 ========
 
-Unlike regular CMake variables cache variables have no scope and is set globally:
+Unlike regular variables CMake cache variables have no scope and
+are set globally:
 
 .. literalinclude:: /examples/usage-of-variables/cache-no-scope/CMakeLists.txt
   :language: cmake
@@ -87,9 +88,8 @@ Update :ref:`CMakeLists.txt <cmakelists.txt>` (don't remove cache!):
 -D
 ==
 
-Cache variable can be set by ``-D`` command line option. Unlike
-``set(... CACHE ...)`` command, variable that set by ``-D`` option take
-priority:
+Cache variable can be set by ``-D`` command line option.  Variable that set by
+``-D`` option take priority over ``set(... CACHE ...)`` command.
 
 .. code-block:: none
   :emphasize-lines: 1-2, 7
@@ -151,7 +151,7 @@ you can add ``FORCE``:
   -- Build files have been written to: /.../usage-of-variables/_builds
 
 This is quite surprising behavior for user and conflicts with the nature of
-cache variables that designed to store variable once and globally.
+cache variables that was designed to store variable once and globally.
 
 .. warning::
 
@@ -507,4 +507,5 @@ Summary
 * Cache variables fits perfectly for expressing customized options: default
   value and respect user's value
 * Type of cache variable helps CMake-GUI users
-* Because of the global nature of cache variables to avoid clashing use prefixes
+* Prefixes should be used to avoid clashing because of the global nature of
+  cache variables

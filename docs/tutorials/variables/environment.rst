@@ -222,5 +222,5 @@ Summary
 * CMake can set, unset and read environment variables
 * Check carefully configure-build steps where you set environment variables
 * Child processes will inherit environment variables of parent
-* Do not make your CMake code depend on environment variable if that
+* Do not make your CMake code depends on environment variable if that
   variable may change

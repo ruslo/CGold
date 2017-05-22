@@ -18,20 +18,20 @@ the cache:
   :emphasize-lines: 7-8
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
-  :language: shell
+  :language: none
   :emphasize-lines: 3,12
 
 You can see that the regular CMake variable ``abc`` is created from scratch
 each time
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
-  :language: shell
+  :language: none
   :emphasize-lines: 4,6,13,15
 
 And the cache variable ``xyz`` is created only once and reused on second run
 
 .. literalinclude:: /examples/usage-of-variables/cache-vs-regular/configure.log
-  :language: shell
+  :language: none
   :emphasize-lines: 5,7,14,16
 
 You can find cache variable ``xyz`` in :ref:`CMakeCache.txt <cmakecache.txt>`:
@@ -163,7 +163,7 @@ As well as parent of the parent:
 From cache
 ==========
 
-If a variable is not found in the current scope, it will be taken from
+If variable is not found in the current scope, it will be taken from
 the cache:
 
 .. literalinclude:: /examples/usage-of-variables/from-cache/CMakeLists.txt
@@ -327,7 +327,7 @@ are part of the elements: ``x"a``, ``c"``.
 Dereferencing
 =============
 
-Dereferenced variable can be used to create new variable value:
+Dereferenced variable can be used in creation of new variable:
 
 .. literalinclude:: /examples/usage-of-variables/dereference/CMakeLists.txt
   :language: cmake
@@ -357,7 +357,7 @@ Or even both:
 Nested dereferencing
 ====================
 
-Dereferencing of variable by ``${...}`` will happens as many times as needed:
+Dereferencing of variable by ``${...}`` will happen as many times as needed:
 
 .. literalinclude:: /examples/usage-of-variables/nested-dereference/CMakeLists.txt
   :language: cmake
