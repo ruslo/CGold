@@ -1,6 +1,10 @@
 .. Copyright (c) 2016-2017, Ruslan Baratov
 .. All rights reserved.
 
+.. spelling::
+
+  PowerShell
+
 .. _-H:
 
 -H
@@ -26,7 +30,7 @@ variable.
 
 .. warning::
 
-  Powershell will modify arguments and put the space between ``-H`` and ``.``.
+  PowerShell will modify arguments and put the space between ``-H`` and ``.``.
   You can protect argument by quoting it:
 
   .. code-block:: none
