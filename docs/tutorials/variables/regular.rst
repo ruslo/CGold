@@ -136,6 +136,8 @@ like ``set`` and ``unset`` will affect the current scope:
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
 
+.. _parent scope:
+
 Parent scope
 ============
 

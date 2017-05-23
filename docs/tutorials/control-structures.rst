@@ -19,6 +19,9 @@ Conditional blocks
 Simple examples
 ~~~~~~~~~~~~~~~
 
+Example of using ``if`` command with ``NO``/``YES`` constants and variables
+with ``NO``/``YES`` values:
+
 .. literalinclude:: /examples/control-structures/if-simple/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 4, 8, 15, 19
@@ -33,6 +36,8 @@ Simple examples
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
+
+Adding ``else``/``elseif``:
 
 .. literalinclude:: /examples/control-structures/if-else/CMakeLists.txt
   :language: cmake
@@ -54,6 +59,43 @@ Simple examples
 CMP0054
 ~~~~~~~
 
+Some of the ``if`` commands accept ``<variable|string>`` arguments. This may
+lead to quite surprising behavior.
+
+For example if we have variable ``A`` and it is set to empty string we can
+check it with:
+
+.. code-block:: cmake
+
+  set(A "")
+  if(A STREQUAL "")
+    message("Value of A is empty string")
+  endif()
+
+You can save the name of variable in another variable and do the same:
+
+.. code-block:: cmake
+
+  set(A "")
+  set(B "A") # save name of the variable
+  if(${B} STREQUAL "")
+    message("Value of ${B} is empty string")
+  endif()
+
+If CMake policy ``CMP0054`` is set to ``OLD`` or not present at all
+(before CMake 3.1), this operation ignore quotes:
+
+.. code-block:: cmake
+
+  set(A "")
+  set(B "A") # save name of the variable
+  if("${B}" STREQUAL "") # same as 'if(${B} STREQUAL "")'
+    message("Value of ${B} is empty string")
+  endif()
+
+It means operation depends on the context: do variable with name ``${B}``
+present in current scope or not?
+
 .. literalinclude:: /examples/control-structures/cmp0054-confuse/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 7, 10
@@ -71,6 +113,9 @@ CMP0054
 
 Try fix
 ~~~~~~~
+
+Since CMake accepts any names of the variables you can't filter out
+``<variable>`` from ``<variable|string>`` by adding "reserved" symbols:
 
 .. literalinclude:: /examples/control-structures/try-fix/CMakeLists.txt
   :language: cmake
@@ -92,6 +137,8 @@ Try fix
 Fix
 ~~~
 
+To avoid such issues you should use CMake 3.1 and ``CMP0054`` policy:
+
 .. literalinclude:: /examples/control-structures/cmp0054-fix/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 1
@@ -108,6 +155,9 @@ Fix
 
 Workaround
 ~~~~~~~~~~
+
+For CMake before 3.1 as a workaround you can use ``string(... STREQUAL ...)``
+command:
 
 .. literalinclude:: /examples/control-structures/cmp0054-workaround/CMakeLists.txt
   :language: cmake
@@ -133,6 +183,12 @@ Loops
 
 foreach
 ~~~~~~~
+
+.. admonition:: CMake documentation
+
+  * `foreach <https://cmake.org/cmake/help/latest/command/foreach.html>`__
+
+Example of ``foreach(<variable> <list>)`` command:
 
 .. literalinclude:: /examples/control-structures/foreach/CMakeLists.txt
   :language: cmake
@@ -169,8 +225,16 @@ foreach
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
+As you may notice ``foreach(x "${mylist}" "x;y;z")`` is not treated as a
+single list but as a list with two elements: ``${mylist}`` and ``x;y;z``.
+If you want to merge two lists you should do it explicitly
+``set(combined_list "${mylist}" "x;y;z")`` or use
+``foreach(x ${mylist} x y z)`` form.
+
 foreach with range
 ~~~~~~~~~~~~~~~~~~
+
+Example of usage ``foreach(... RANGE ...)`` command:
 
 .. literalinclude:: /examples/control-structures/foreach-range/CMakeLists.txt
   :language: cmake
@@ -211,6 +275,8 @@ foreach with range
 while
 ~~~~~
 
+Example of usage ``while`` command:
+
 .. literalinclude:: /examples/control-structures/while/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 8, 17
@@ -239,6 +305,12 @@ while
 break
 ~~~~~
 
+.. admonition:: CMake documentation
+
+  * `break <https://cmake.org/cmake/help/latest/command/break.html>`__
+
+Exit from loop with ``break`` command:
+
 .. literalinclude:: /examples/control-structures/break/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 11, 19
@@ -264,6 +336,8 @@ break
 
 continue
 ~~~~~~~~
+
+Since CMake 3.2 it's possible to continue the loop:
 
 .. literalinclude:: /examples/control-structures/continue/CMakeLists.txt
   :language: cmake
@@ -306,6 +380,8 @@ Functions
 Simple
 ~~~~~~
 
+Function without arguments:
+
 .. literalinclude:: /examples/control-structures/simple-function/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 4-6
@@ -323,6 +399,8 @@ Simple
 
 With arguments
 ~~~~~~~~~~~~~~
+
+Function with arguments and example of ``ARGV*``, ``ARGC``, ``ARGN`` usage:
 
 .. literalinclude:: /examples/control-structures/function-args/CMakeLists.txt
   :language: cmake
@@ -351,6 +429,12 @@ With arguments
 
 CMake style
 ~~~~~~~~~~~
+
+.. admonition:: CMake documentation
+
+  * `CMakeParseArguments <https://cmake.org/cmake/help/latest/module/CMakeParseArguments.html>`__
+
+``cmake_parse_arguments`` function can be used for parsing:
 
 .. literalinclude:: /examples/control-structures/cmake-style/CMakeLists.txt
   :language: cmake
@@ -399,12 +483,11 @@ CMake style
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
-.. admonition:: CMake documentation
-
-  * `cmake_parse_arguments <https://cmake.org/cmake/help/latest/command/cmake_parse_arguments.html>`__
-
 Return value
 ~~~~~~~~~~~~
+
+There is no special command to return value from function. You can set
+variable to the :ref:`parent scope <parent scope>` instead:
 
 .. literalinclude:: /examples/control-structures/return-value/CMakeLists.txt
   :language: cmake
@@ -425,6 +508,12 @@ Return value
 
 Return
 ~~~~~~
+
+.. admonition:: CMake documentation
+
+  * `return <https://cmake.org/cmake/help/latest/command/return.html>`__
+
+You can exit from function using ``return`` command:
 
 .. literalinclude:: /examples/control-structures/return/CMakeLists.txt
   :language: cmake

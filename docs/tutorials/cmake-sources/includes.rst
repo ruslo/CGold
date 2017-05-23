@@ -283,7 +283,7 @@ Verify value manually:
   [cmake-sources]> openssl sha1 with-external-module/example/boo/CMakeLists.txt
   SHA1(with-external-module/example/boo/CMakeLists.txt)= 9f0ceda4ca514a074589fc7591aad0635b6565eb
 
-Here is diagram that will make everything clear:
+This diagram will make everything clear:
 
 .. image:: images/with-external-module.png
   :align: center
@@ -291,9 +291,16 @@ Here is diagram that will make everything clear:
 Recommendation
 ++++++++++++++
 
-Use ``CMAKE_CURRENT_LIST_DIR`` variable for navigation. Note that in function
-this variable is set to the directory where function **used**, not where
+Instead of keeping in head all this information you can remember just two
+variables:
+
+* ``CMAKE_CURRENT_LIST_DIR``
+* ``CMAKE_CURRENT_BINARY_DIR``
+
+Note that in function ``CMAKE_CURRENT_LIST_DIR`` variable is set to the
+directory where function **used**, not where
 function **defined** (see :ref:`function <function list dir>` for details).
+
 Use ``CMAKE_CURRENT_BINARY_DIR`` for storing manually generated files.
 
 .. warning::
@@ -309,21 +316,22 @@ Use ``CMAKE_CURRENT_BINARY_DIR`` for storing manually generated files.
   For example
   `$<TARGET_FILE:tgt> <https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html#informational-expressions>`__.
 
-Make sure you **totally** understand what each variable mean in other scenarios:
+Make sure you **totally** understand what each variable means in other scenarios:
 
 * ``CMAKE_SOURCE_DIR``/``CMAKE_BINARY_DIR`` these variables point to the root
-  of the source/binary trees. Paths that use such variables will change their
-  location if your project will be used as a subproject. They will point to the
-  **parent** project, not yours.
+  of the source/binary trees. If your project will be added to another project
+  as a subproject by ``add_subdirectory``, the locations like
+  ``${CMAKE_SOURCE_DIR}/my-resource.txt`` will point to
+  ``<top-level>/my-resource.txt`` instead of ``<my-project>/my-resource.txt``
 
 * ``PROJECT_SOURCE_DIR``/``PROJECT_BINARY_DIR`` these variables are better
-  then previous but still kind of a global nature. You should change all paths
-  related to ``PROJECT_SOURCE_DIR`` if you decide to move declaration of
-  your project or decide to detach some part of the code and add new ``project``
-  command in the middle of the source tree. Consider using extra variable
-  with clean separate purpose for such job
-  ``set(FOO_MY_RESOURCES "${CMAKE_CURRENT_LIST_DIR}/resources")``
-  instead of referring to ``${PROJECT_SOURCE_DIR}/resources``.
+  then previous but still have kind of a global nature. You should change all
+  paths related to ``PROJECT_SOURCE_DIR`` if you decide to move declaration of
+  your project or decide to detach some part of the code and add new
+  ``project`` command in the middle of the source tree. Consider using extra
+  variable with clean separate purpose for such job
+  ``set(FOO_MY_RESOURCES "${CMAKE_CURRENT_LIST_DIR}/resources")`` instead of
+  referring to ``${PROJECT_SOURCE_DIR}/resources``.
 
 * ``CMAKE_CURRENT_SOURCE_DIR`` this is a directory with ``CMakeLists.txt``.
   If you're using this variable internally you can substitute is with
@@ -350,10 +358,11 @@ And call ``mymodule`` function instead of including module:
 Effect is the same:
 
 .. code-block:: none
+  :emphasize-lines: 3, 6
 
   [cmake-sources]> cat _builds/boo/sha1
   Message from external module
-
   sha1(CMakeLists.txt) = 36bcbf5f2f23995661ca4e6349e781160910b71f
+
   [cmake-sources]> openssl sha1 with-external-module-good/example/boo/CMakeLists.txt
   SHA1(with-external-module-good/example/boo/CMakeLists.txt)= 36bcbf5f2f23995661ca4e6349e781160910b71f

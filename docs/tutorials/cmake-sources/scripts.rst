@@ -8,6 +8,8 @@
 Scripts
 =======
 
+CMake can be used as a cross-platform scripting language.
+
 .. admonition:: CMake documentation
 
   * `CMake options <https://cmake.org/cmake/help/latest/manual/cmake.1.html#options>`__
@@ -15,9 +17,13 @@ Scripts
 Example
 ~~~~~~~
 
+Script for creating file:
+
 .. literalinclude:: /examples/cmake-sources/script/create-file.cmake
   :language: cmake
   :emphasize-lines: 3
+
+Run script by ``cmake -P``:
 
 .. code-block:: none
   :emphasize-lines: 2, 4, 6
@@ -31,6 +37,10 @@ Example
 
 Minimum required (bad)
 ~~~~~~~~~~~~~~~~~~~~~~
+
+We should use ``cmake_minimum_required`` as the first command in script just
+like with the :doc:`regular CMakeLists.txt </tutorials/version-policies>`.
+Lack of ``cmake_minimum_required`` may lead to problems:
 
 .. literalinclude:: /examples/cmake-sources/minimum-required-bad/script.cmake
   :language: cmake
@@ -57,6 +67,9 @@ Minimum required (bad)
 Minimum required (good)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+Same example with ``cmake_minimum_required`` works correctly and without
+warning:
+
 .. literalinclude:: /examples/cmake-sources/minimum-required-good/script.cmake
   :language: cmake
   :emphasize-lines: 8, 11
@@ -70,6 +83,9 @@ Minimum required (good)
 cmake -E
 ~~~~~~~~
 
+Example of using ``cmake -E remove_directory`` instead of native
+``rm``/``rmdir`` commands:
+
 .. admonition:: CMake documentation
 
   * `Command-Line Tool Mode <https://cmake.org/cmake/help/latest/manual/cmake.1.html#command-line-tool-mode>`__
@@ -78,6 +94,12 @@ cmake -E
   :language: cmake
   :emphasize-lines: 13, 20
 
+Same code with ``cmake -E``:
+
 .. literalinclude:: /examples/cmake-sources/command-line/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 5
+
+.. note::
+
+  It's easier to use ``file(REMOVE_RECURSE ...)`` in this particular example
