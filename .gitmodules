@@ -37,3 +37,6 @@
 [submodule "docs/examples/executable-examples"]
   path = docs/examples/executable-examples
   url = https://github.com/cgold-examples/executable-examples
+[submodule "docs/examples/test-examples"]
+  path = docs/examples/test-examples
+  url = https://github.com/cgold-examples/test-examples
