@@ -12,6 +12,8 @@ good practice of keeping separately generated files from
 :ref:`source tree <source tree>`. CMake do support contrary "in-source build"
 layout but such approach has no real benefits and unrecommended.
 
+.. _out-of-source-config:
+
 Multiple configurations
 -----------------------
 
