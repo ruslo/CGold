@@ -152,3 +152,7 @@ If your workflow doesn't match configure-once approach then it may be a
 symptom of wrongly written CMake code. Especially when you have to run
 ``cmake -H. -B_builds`` twice or when ``cmake --build _builds`` doesn't catch
 updates from CMake code.
+
+.. admonition:: CMake issue
+
+  * `XCode: Real targets do not depend on ZERO_CHECK <https://gitlab.kitware.com/cmake/cmake/issues/14297>`__
