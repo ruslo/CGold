@@ -8,7 +8,9 @@ There are no instructions for writing ``FindXXX.cmake`` files like
 `FindZLIB.cmake`_ because it's easier to add some code to generate
 `ZLIBConfig.cmake`_ automatically.
 
-Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__::
+Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__:
+
+.. code-block:: none
 
   If creating a Find* module for a library that already uses CMake as its build
   system, please create a *Config.cmake instead, and submit it upstream. This
