@@ -36,6 +36,7 @@ Enjoy!
   :hidden:
   :maxdepth: 1
 
+  /donations
   /rejected
   /glossary
 
