@@ -131,6 +131,6 @@ put the code under ``if`` condition:
 
   if(NOT EXISTS "${CMAKE_TOOLCHAIN_FILE}")
     set(CMAKE_CXX_STANDARD 11)
-    set_target_properties(boo PROPERTIES CXX_STANDARD 14)
+    set_target_properties(boo PROPERTIES CXX_STANDARD 11)
     # ...
   endif()
