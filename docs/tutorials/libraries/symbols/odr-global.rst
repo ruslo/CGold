@@ -125,12 +125,13 @@ global nature, it might be helpful to set all such properties/flags in one
 place - :doc:`toolchain </tutorials/toolchain>`.
 
 If you still want to set global flags locally for any reason then at least
-put the code under ``if`` condition:
+put the code under ``if`` condition. For example let's set C++11 for
+all targets in the project and C++14 for target ``boo``:
 
 .. code-block:: cmake
 
   if(NOT EXISTS "${CMAKE_TOOLCHAIN_FILE}")
-    set(CMAKE_CXX_STANDARD 11)
-    set_target_properties(boo PROPERTIES CXX_STANDARD 14)
+    set(CMAKE_CXX_STANDARD 11) # set a global minimum standard
+    set_target_properties(boo PROPERTIES CXX_STANDARD 14) # set a standard for a target
     # ...
   endif()
