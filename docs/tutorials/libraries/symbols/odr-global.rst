@@ -125,7 +125,8 @@ global nature, it might be helpful to set all such properties/flags in one
 place - :doc:`toolchain </tutorials/toolchain>`.
 
 If you still want to set global flags locally for any reason then at least
-put the code under ``if`` condition:
+put the code under ``if`` condition. For example let's set C++11 for
+all targets in the project and C++14 for target ``boo``:
 
 .. code-block:: cmake
 
