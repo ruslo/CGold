@@ -130,7 +130,7 @@ put the code under ``if`` condition:
 .. code-block:: cmake
 
   if(NOT EXISTS "${CMAKE_TOOLCHAIN_FILE}")
-    set(CMAKE_CXX_STANDARD 11)
-    set_target_properties(boo PROPERTIES CXX_STANDARD 11)
+    set(CMAKE_CXX_STANDARD 11) # set a global minimum standard
+    set_target_properties(boo PROPERTIES CXX_STANDARD 14) # set a standard for a target
     # ...
   endif()
