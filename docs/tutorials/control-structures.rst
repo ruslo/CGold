@@ -156,7 +156,7 @@ To avoid such issues you should use CMake 3.1 and ``CMP0054`` policy:
 Workaround
 ~~~~~~~~~~
 
-For CMake before 3.1 as a workaround you can use ``string(... STREQUAL ...)``
+For CMake before 3.1 as a workaround you can use ``string(COMPARE EQUAL ...)``
 command:
 
 .. literalinclude:: /examples/control-structures/cmp0054-workaround/CMakeLists.txt
