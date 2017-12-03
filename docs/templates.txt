@@ -53,6 +53,7 @@ Templates
 
 .. image:: gnu.png
   :align: center
+  :alt: Image description
 
 :menuselection:`Add --> New Project ... --> Visual C++ --> Static Library`
 
