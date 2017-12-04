@@ -40,3 +40,6 @@
 [submodule "docs/examples/test-examples"]
   path = docs/examples/test-examples
   url = https://github.com/cgold-examples/test-examples
+[submodule "docs/examples/toolchain-usage-examples"]
+	path = docs/examples/toolchain-usage-examples
+	url = https://github.com/cgold-examples/toolchain-usage-examples
