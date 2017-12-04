@@ -16,6 +16,8 @@ declare some ``foo_*`` variables and run basic build tool checks.
 Tools discovering
 =================
 
+.. _project tools discovering:
+
 By default on calling ``project`` command CMake will try to detect compilers
 for default languages: C and C++. Let's add some variables and check where
 they are defined:
