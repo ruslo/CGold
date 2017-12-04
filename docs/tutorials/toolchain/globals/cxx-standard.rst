@@ -63,7 +63,7 @@ Overview:
 
 Imagine that ``baz`` for the long time relies only on ``boo``, it's important
 to keep this functionality even for old C++98 configuration. But there is
-``foo`` library that use C++11 and allow us to introduce some optimizations.
+``foo`` library that use C++11 and allow us to introduce some optimization.
 
 We want:
 
