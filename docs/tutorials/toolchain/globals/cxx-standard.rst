@@ -2,7 +2,7 @@
 .. All rights reserved.
 
 C++ standard
-============
+~~~~~~~~~~~~
 
 C++ standard flags should be set globally. You should avoid using any commands
 that set it locally for target or project.
