@@ -45,7 +45,3 @@ Similar test on regular Command Prompt ``cmd.exe``:
 
   * :doc:`Visual Studio </first-step/native-build-tool/visual-studio>`
   * `Developer Command Prompt for Visual Studio <https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx>`__
-
-.. admonition:: Stackoverflow
-
-  * `Where is Developer Command Prompt for VS2013? <http://stackoverflow.com/q/21476588/2288008>`__

@@ -37,7 +37,3 @@ when it's no so easy to detect such kind of errors, e.g. see examples from
 .. seealso::
 
   * `One Definition Rule <http://en.cppreference.com/w/cpp/language/definition>`__
-
-.. admonition:: Stackoverflow
-
-  * `Library headers and #define <http://stackoverflow.com/q/20833226/2288008>`__

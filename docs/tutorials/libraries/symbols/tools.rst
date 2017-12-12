@@ -113,10 +113,6 @@ Add ``--demangle`` to beautify output:
                    U __stack_chk_fail
                    U Foo::foo(char, double)
 
-.. admonition:: Stackoverflow
-
-  * `How do I list the symbols in a .so file <http://stackoverflow.com/q/34732/2288008>`__
-
 OSX
 ---
 
@@ -153,10 +149,6 @@ Undefined symbols:
   _builds/libboo.a(Boo.cpp.o):
   Foo::foo(char, double)
 
-.. admonition:: Stackoverflow
-
-  * `Unmangling C++ names on Mac 10.5 <http://stackoverflow.com/q/2424576/2288008>`__
-
 Windows
 -------
 
@@ -190,10 +182,6 @@ Undefined by ``External`` + ``UNDEF``:
   00E 00000000 UNDEF  notype ()    External     | __RTC_InitBase
   00F 00000000 UNDEF  notype ()    External     | __RTC_Shutdown
   019 00000000 UNDEF  notype       External     | __fltused
-
-.. admonition:: Stackoverflow
-
-  * `How to See the Contents of Windows library <http://stackoverflow.com/q/305287/2288008>`__
 
 .. seealso::
 

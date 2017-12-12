@@ -122,10 +122,6 @@ What a relief! Having such human-readable form of build system commands
 actually making :ref:`CMake <CMake>` a convenient tool for development even
 if you're using only one platform.
 
-.. admonition:: Stackoverflow
-
-  * `Git and pbxproj <http://stackoverflow.com/q/1549578/2288008>`__
-
 Experimenting
 =============
 

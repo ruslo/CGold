@@ -20,10 +20,6 @@ Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__
 
   * `Creating packages <https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#creating-packages>`__
 
-.. admonition:: Stackoverflow
-
-  * `MODULE vs CONFIG <http://stackoverflow.com/a/20857070/2288008>`__
-
 .. admonition:: Examples on GitHub
 
   * `Package example <https://github.com/forexample/package-example>`__

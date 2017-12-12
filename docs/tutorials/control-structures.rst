@@ -174,10 +174,6 @@ command:
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
-.. admonition:: Stackoverflow
-
-  * `CMake compare to empty string with STREQUAL failed <http://stackoverflow.com/questions/19982340>`__
-
 Loops
 -----
 

@@ -66,12 +66,6 @@ CMake will run tests for other tools as well, so try to avoid
 checking of anything before ``project``, place all checks
 **after project declared**.
 
-.. admonition:: Stackoverflow
-
-  * `Why CMAKE_COMPILER_IS_GNUCXX and CMAKE_CXX_COMPILER_ID are empty? <http://stackoverflow.com/a/20905333/2288008>`__
-  * `Why CMAKE_SYSTEM_NAME is blank? <http://stackoverflow.com/a/26437667/2288008>`__
-  * `Why MSVC is empty? <http://stackoverflow.com/a/31152886/2288008>`__
-
 Also ``project`` is a place where toolchain file will be read.
 
 .. literalinclude:: /examples/project-examples/toolchain/CMakeLists.txt
@@ -120,10 +114,6 @@ Also ``project`` is a place where toolchain file will be read.
 .. note::
 
   You may notice that toolchain read several times
-
-.. admonition:: Stackoverflow
-
-  * `In which Order are Files parsed (Cache, Toolchain, …)? <http://stackoverflow.com/q/30503631/2288008>`__
 
 Languages
 =========
@@ -218,10 +208,6 @@ No checks for C or C++ compiler as you can see:
 
     cmake_minimum_required(VERSION 3.0)
     project(foo LANGUAGES NONE)
-
-.. admonition:: Stackoverflow
-
-  * `Detect project language in cmake <http://stackoverflow.com/a/32390852/2288008>`__
 
 .. _project variables:
 
@@ -361,7 +347,3 @@ Summary
 * Use ``project`` to declare non divisible monolithic hierarchy of targets
 * Try to minimize the number of instructions before ``project`` and verify
   that variables are declared in such block of CMake code
-
-.. admonition:: Stackoverflow
-
-  * `What is the project? <http://stackoverflow.com/a/26882812/2288008>`__

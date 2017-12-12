@@ -349,10 +349,6 @@ in fact **we don't really interested in**:
   Such issue **can't be solved** by library usage requirements since library
   ``bar`` don't know a priory will it be linked to shared library or not.
 
-.. admonition:: Stackoverflow
-
-  * `Why isn't all code compiled position independent? <http://stackoverflow.com/q/813980/2288008>`__
-
 Scalability
 ~~~~~~~~~~~
 
@@ -488,11 +484,6 @@ Summary
 * Use **no specifiers** if library designed to be used as static or shared.
   Respect ``BUILD_SHARED_LIBS`` variable
 * Install static and shared libraries to **separate directories**
-
-.. admonition:: Stackoverflow
-
-  * `Build static + shared <http://stackoverflow.com/a/18551243/2288008>`__
-  * `Recompiling source twice <http://stackoverflow.com/a/22269819/2288008>`__
 
 .. admonition:: CMake mailing list
 

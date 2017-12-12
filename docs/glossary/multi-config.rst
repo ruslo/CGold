@@ -37,7 +37,3 @@ Multi-configuration generators:
 .. admonition:: CGold
 
   * :doc:`Single-configuration generator </glossary/single-config>`
-
-.. admonition:: Stackoverflow
-
-  * `CMAKE_BUILD_TYPE not being used in CMakeLists.txt <https://stackoverflow.com/a/24470998/2288008>`__

@@ -42,11 +42,6 @@ variable.
   * :ref:`-B <-B>`
   * :ref:`Source tree <source tree>`
 
-.. admonition:: Stackoverflow
-
-  * `Changing CMake files standard location <http://stackoverflow.com/a/13713684/2288008>`__
-  * `How to tell CMake where to put build files? <http://stackoverflow.com/a/20611964/2288008>`__
-
 .. admonition:: CMake mailing list
 
   * `Document -H/-B <http://www.mail-archive.com/cmake-developers@cmake.org/msg16693.html>`__

@@ -105,10 +105,6 @@ Means you need to use API 19.
   * ``-d`` is for real device
   * ``-e`` is for emulator
 
-.. admonition:: Stackoverflow
-
-  * `Getting Android SDK version of a device from command line <http://stackoverflow.com/questions/8063461/>`__
-
 CPU architecture
 ================
 

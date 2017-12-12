@@ -213,10 +213,6 @@ variables:
 * **CMAKE_CURRENT_LIST_DIR**
 * CMAKE_PARENT_LIST_FILE
 
-.. admonition:: Stackoverflow
-
-  * `What is the difference between CMAKE_CURRENT_SOURCE_DIR and CMAKE_CURRENT_LIST_DIR? <http://stackoverflow.com/q/15662497/2288008>`__
-
 Example
 +++++++
 

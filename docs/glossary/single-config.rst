@@ -24,7 +24,3 @@ All generators that are not
 Typical example of such generator is a
 `Unix Makefiles <https://cmake.org/cmake/help/latest/generator/Unix%20Makefiles.html>`__
 generator.
-
-.. admonition:: Stackoverflow
-
-  * `CMAKE_BUILD_TYPE not being used in CMakeLists.txt <https://stackoverflow.com/a/24470998/2288008>`__

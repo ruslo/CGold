@@ -23,10 +23,6 @@ Templates
 
   This is danger
 
-.. admonition:: Stackoverflow
-
-  * `Missing iOS Distribution signing identity for <username> <http://stackoverflow.com/questions/32821189>`_
-
 .. admonition:: Examples on GitHub
 
   * `Repository <https://github.com/cgold-examples/foo>`__
