@@ -228,3 +228,20 @@ No warnings or build errors but when you will try to test it:
 .. note::
 
   As a workaround you can add dummy source file to the executable.
+
+Name conflict
+~~~~~~~~~~~~~
+
+You can't have two source files with the same names even if they are located
+in different directories. This code will not work with Xcode generator:
+
+.. code-block:: cmake
+  :emphasize-lines: 6
+
+  # CMakeLists.txt
+
+  cmake_minimum_required(VERSION 3.2)
+  project(foo)
+
+  add_library(boo OBJECT x.cpp boo/x.cpp)
+  add_executable(foo foo.cpp $<TARGET_OBJECTS:boo>)
