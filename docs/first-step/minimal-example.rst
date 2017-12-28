@@ -52,7 +52,6 @@ Next line tell us about ``CMake`` version for which this file is written:
 
 ``2.8`` means we can use this configuration with ``CMake`` versions like
 ``2.8``, ``2.8.7``, ``3.0``, ``3.5.1``, etc. but not with ``2.6.0`` or ``2.4.2``.
-Check that your version fits and move on.
 
 Declaration of the project ``foo``, e.g. ``Visual Studio`` solution will
 have name ``foo.sln``, ``Xcode`` project name will be ``foo.xcodeproj``:
