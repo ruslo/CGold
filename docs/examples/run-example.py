@@ -45,7 +45,7 @@ doc_file = open(doc_rst, 'w')
 
 for x in sources_list:
   doc_file.write(
-      '.. literalinclude:: /examples/{}/{}\n'.format(
+      '.. literalinclude:: /{}/{}\n'.format(
           last_dir, os.path.relpath(x, current_dir)
       )
   )
@@ -71,12 +71,17 @@ doc_file.write('  :linenos:\n\n')
 for x in commands:
   print('Executing command: {}'.format(x))
   doc_file.write('  [{}]> {}\n'.format(last_dir, x))
-  to_log = subprocess.check_output(
-      x,
-      shell=True,
-      universal_newlines=True,
-      stderr=subprocess.STDOUT
-  )
+
+  try:
+    to_log = subprocess.check_output(
+        x,
+        shell=True,
+        universal_newlines=True,
+        stderr=subprocess.STDOUT
+    )
+  except subprocess.CalledProcessError as e:
+    to_log = e.output
+
   print('== OUTPUT BEGIN ==\n"{}"\n== OUTPUT END =='.format(to_log))
   to_log.rstrip('\n')
   log_lines = to_log.split('\n')
