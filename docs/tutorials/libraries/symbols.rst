@@ -14,3 +14,4 @@ it may be helpful to know the table of symbols of library.
   symbols/simple
   symbols/odr-local
   symbols/odr-global
+  symbols/link-order
