@@ -198,7 +198,7 @@ control the right order of files:
   make[2]: Leaving directory '/.../examples/_builds'
   [100%] Built target foo
   make[1]: Leaving directory '/.../examples/_builds'
-  /home/ruslo/work/_ci/cmake/bin/cmake -E cmake_progress_start /.../examples/_builds/CMakeFiles 0
+  /.../bin/cmake -E cmake_progress_start /.../examples/_builds/CMakeFiles 0
 
 Summary
 =======
