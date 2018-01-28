@@ -42,7 +42,6 @@ and add more features.
   /tutorials/build-types
   /tutorials/configure-file
   /tutorials/install
-  /tutorials/find-package
   /tutorials/toolchain
   /tutorials/generator-expressions
   /tutorials/properties
