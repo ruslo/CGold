@@ -3,3 +3,7 @@
 
 Header-only library
 -------------------
+
+.. admonition:: TODO
+
+  INTERFACE

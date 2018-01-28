@@ -3,3 +3,7 @@
 
 Optional dependencies
 ---------------------
+
+.. admonition:: TODO
+
+  ``find_dependency(baz CONFIG)`` under condition ``if("@FOO_WITH_BAZ@")``

@@ -3,3 +3,7 @@
 
 Library with dependencies
 -------------------------
+
+.. admonition:: TODO
+
+  ``find_dependency`` in ``Config.cmake.in``

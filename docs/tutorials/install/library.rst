@@ -3,3 +3,7 @@
 
 Library
 =======
+
+.. admonition:: TODO
+
+  ALIAS: Unify interface for both ``find_package`` and ``add_subdirectory``
