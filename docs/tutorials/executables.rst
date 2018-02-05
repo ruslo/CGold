@@ -56,6 +56,8 @@ Building executable from ``main.cpp``:
   [executable-examples]> ./_builds/foo
   Hello from CGold!
 
+.. _target duplicates:
+
 Duplicates
 ----------
 
