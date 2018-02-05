@@ -34,6 +34,7 @@ boolean
 breakpoint
 checkbox
 configs
+customizable
 dereferenced
 dereferencing
 executables
@@ -49,6 +50,8 @@ scalability
 scalable
 shareable
 showstopper
+subdirectory
+submodule
 subproject
 toolchain
 toolchains
