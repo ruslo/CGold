@@ -77,8 +77,8 @@ of ``boo`` it's enough to modify CMake code without changing project structure.
 
 Assuming that both libraries are under :ref:`VCS <VCS>` control, by
 doing plain copy operation you're **losing information about version** of
-``boo``. Also if you want to modify ``boo`` sources then merging them with next
-``boo`` version update might be not a trivial operation.
+``boo``. Also if you want to modify ``boo`` sources locally, then merging them
+with update of ``boo`` from upstream might be not a trivial operation.
 
 Git submodule
 ~~~~~~~~~~~~~
@@ -168,7 +168,7 @@ resolution, mixing two separate concepts:
   * Two versions of ``x`` available: ``v1.0`` and ``v2.0``
 
 Options is a common way to customize your CMake code, often it's involve
-changing used dependencies set and project structure. Let's add option
+the change of used dependencies and change of project structure. Let's add option
 ``FOO_WITH_A`` to the example to control optional dependency ``foo`` -> ``a``:
 
 .. literalinclude:: /examples/dep-examples/deps-submodule-option/CMakeLists.txt
@@ -237,10 +237,10 @@ Disable module ``a`` and behavior of ``b`` changed!
 
   But this obviously doesn't scale well since ``x`` is an implicit dependency
   and we have no control over whether it will be used in future ``a``/``b``
-  releases or more dependencies will be introduced or on which options/platfroms
+  releases or more dependencies will be introduced or on which options/platforms
   they depends, etc.
 
-Since version of ``x`` tied to project structure every time you switch
+Since version of ``x`` tied to project structure every time you switch option
 ``FOO_WITH_A`` the whole project will rebuild:
 
 .. code-block:: none

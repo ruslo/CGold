@@ -171,7 +171,7 @@ Pros:
 
 Cons:
 
-* Only **build from sources**. There is no builtin mechanism for supporting
+* Only **build from sources**. There is no built-in mechanism for supporting
   distribution of binaries and meta information. Usually user have to build
   everything from scratch on new machine.
 * You have to know everything about your dependencies and carefully manage
