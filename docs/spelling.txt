@@ -52,6 +52,7 @@ shareable
 showstopper
 subdirectory
 submodule
+submodules
 subproject
 toolchain
 toolchains
