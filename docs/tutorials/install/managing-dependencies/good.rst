@@ -153,11 +153,11 @@ root directory **with your custom dependencies** instead of system dependencies:
 
   [examples]> rm -rf _builds
   [examples]> cmake -Hdep-examples/deps-find-package -B_builds -DCMAKE_PREFIX_PATH=/.../examples/_ep_install -DCMAKE_VERBOSE_MAKEFILE=ON
-  [examples]> cmake --build _builds 
+  [examples]> cmake --build _builds
   /usr/bin/c++ ... -o foo
       /.../_ep_install/lib/liba.a
       /.../_ep_install/lib/libb.a
-      /.../_ep_install/lib/libx.a 
+      /.../_ep_install/lib/libx.a
 
 Pros:
 
