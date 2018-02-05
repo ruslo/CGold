@@ -43,3 +43,15 @@
 [submodule "docs/examples/toolchain-usage-examples"]
 	path = docs/examples/toolchain-usage-examples
 	url = https://github.com/cgold-examples/toolchain-usage-examples
+[submodule "docs/examples/dep-examples/deps-submodule-option"]
+	path = docs/examples/dep-examples/deps-submodule-option
+	url = https://github.com/cgold-examples/deps-submodule-option
+[submodule "docs/examples/dep-examples/deps-submodule-conflict"]
+	path = docs/examples/dep-examples/deps-submodule-conflict
+	url = https://github.com/cgold-examples/deps-submodule-conflict
+[submodule "docs/examples/dep-examples/deps-find-package"]
+	path = docs/examples/dep-examples/deps-find-package
+	url = https://github.com/cgold-examples/deps-find-package
+[submodule "docs/examples/dep-examples/deps-super-build"]
+	path = docs/examples/dep-examples/deps-super-build
+	url = https://github.com/cgold-examples/deps-super-build
