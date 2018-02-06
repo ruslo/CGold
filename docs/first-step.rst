@@ -4,6 +4,10 @@
 First step
 ----------
 
+.. image:: dont-panic.png
+  :align: center
+  :alt: DON'T PANIC!
+
 .. _first step:
 
 Okay, time to run some code! Now we will check tools we need, create project
