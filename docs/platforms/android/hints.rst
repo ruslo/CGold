@@ -119,7 +119,7 @@ And this one for device:
 
 .. code-block:: none
 
-  > adb -e shell getprop ro.product.cpu.abi
+  > adb -d shell getprop ro.product.cpu.abi
   armeabi-v7a
 
 Log
