@@ -165,25 +165,3 @@ Information can be taken from ``CMAKE_BINARY_DIR`` (see :ref:`-B <-B>`) and
 
   * `CMAKE_BINARY_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_BINARY_DIR.html>`__
   * `CMAKE_CURRENT_BINARY_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_BINARY_DIR.html>`__
-
-Common variables
-----------------
-
-Since every ``CMakeLists.txt`` is a :ref:`listfile <listfile>` so common
-listfile variables like ``CMAKE_CURRENT_LIST_DIR`` or
-``CMAKE_CURRENT_LIST_FILE`` available. For ``CMakeLists.txt`` added by
-``add_subdirectory`` there will be no difference between
-``CMAKE_CURRENT_LIST_DIR`` and ``CMAKE_CURRENT_SOURCE_DIR``, also
-``CMAKE_CURRENT_LIST_FILE`` will be always full path to ``CMakeLists.txt``.
-However it's not always true for other types of CMake listfiles, see next
-chapter for details.
-
-.. admonition:: CMake documentation
-
-  * `CMAKE_CURRENT_LIST_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_DIR.html>`__
-  * `CMAKE_CURRENT_LIST_FILE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_FILE.html>`__
-  * `CMAKE_CURRENT_LIST_LINE <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_LIST_LINE.html>`__
-
-.. seealso::
-
-  * :ref:`CMAKE_CURRENT_LIST_DIR vs CMAKE_CURRENT_SOURCE_DIR <cmake_current_list_dir vs cmake_current_source_dir>`
