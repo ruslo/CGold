@@ -13,7 +13,7 @@ Layout
 +----------+--------------+------------------------------------------+
 | include/ | *<project>/* | **<project>.hpp**                        |
 +----------+--------------+------------------------------------------+
-| lib/     | **<project>_<target>**                                  |
+| lib*/    | **<project>_<target>**                                  |
 |          +--------------+--------------+---------------------------+
 |          | cmake/       | *<project>/* | **<project>Config.cmake** |
 +----------+--------------+--------------+---------------------------+
@@ -28,18 +28,25 @@ Layout
 
 .. code-block:: cmake
 
+
+  include(GNUInstallDirs)
+
   install(
       TARGETS <project>_<target>_1 <project>_<target>_2
       EXPORT <project>Targets
-      LIBRARY DESTINATION "lib"
-      ARCHIVE DESTINATION "lib"
-      RUNTIME DESTINATION "bin"
-      INCLUDES DESTINATION "include"
+      LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+      ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+      RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+      INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
   )
 
 .. seealso::
 
   * :ref:`Project layout <project layout>`
+
+.. admonition:: CMake documentation
+
+  * `GNUInstallDirs <https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html>`__
 
 Linux layout after installation of
 `example project <https://github.com/cgold-examples/fruits>`__:
