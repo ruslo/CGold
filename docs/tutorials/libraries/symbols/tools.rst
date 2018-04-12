@@ -188,3 +188,27 @@ Undefined by ``External`` + ``UNDEF``:
   * `DUMPBIN reference <https://msdn.microsoft.com/en-us/library/c1h23y6c.aspx>`__
   * `DUMPBIN /SYMBOLS <https://msdn.microsoft.com/en-us/library/b842y285.aspx>`__
 
+Use ``/EXPORTS`` if you want to see the symbols available in DLL:
+
+.. code-block:: none
+  :emphasize-lines: 2
+
+  [library-examples]> dumpbin /exports _builds\Release\boo.dll | findstr "Boo"
+    1    0 00001000 ?boo@Boo@@QAEHHD@Z
+
+Use ``undname`` to demangle:
+
+.. code-block:: none
+  :emphasize-lines: 1, 6
+
+  [library-examples]> undname ?boo@Boo@@QAEHHD@Z
+  Microsoft (R) C++ Name Undecorator
+  Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Undecoration of :- "?boo@Boo@@QAEHHD@Z"
+  is :- "public: int __thiscall Boo::boo(int,char)"
+
+.. seealso::
+
+  * `DUMPBIN /EXPORTS <https://msdn.microsoft.com/en-us/library/30e78zd0.aspx>`__
+  * `Viewing Decorated Names <https://msdn.microsoft.com/en-us/library/5x49w699.aspx>`__
