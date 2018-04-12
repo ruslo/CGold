@@ -35,6 +35,7 @@ breakpoint
 checkbox
 configs
 customizable
+demangle
 dereferenced
 dereferencing
 executables
