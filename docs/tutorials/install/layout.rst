@@ -53,23 +53,25 @@ Linux layout after installation of
 
 .. code-block:: none
 
-  ├── bin/
+  ├── bin
   │   ├── fruits_breakfast*
   │   └── fruits_dinner*
-  ├── include/
-  │   └── fruits/
+  ├── include
+  │   └── fruits
   │       ├── fruits.hpp
-  │       ├── rosaceae/
+  │       ├── FRUITS_ROSACEAE_EXPORT.h
+  │       ├── FRUITS_TROPICAL_EXPORT.h
+  │       ├── rosaceae
   │       │   ├── Pear.hpp
   │       │   ├── Plum.hpp
   │       │   └── rosaceae.hpp
-  │       └── tropical/
+  │       └── tropical
   │           ├── Avocado.hpp
   │           ├── Pineapple.hpp
   │           └── tropical.hpp
-  └── lib/
-      ├── cmake/
-      │   └── fruits/
+  └── lib
+      ├── cmake
+      │   └── fruits
       │       ├── fruitsConfig.cmake
       │       ├── fruitsConfigVersion.cmake
       │       ├── fruitsTargets.cmake
@@ -82,26 +84,65 @@ Windows layout after installation of
 
 .. code-block:: none
 
-  ├── bin/
-  │   ├── fruits_breakfast.exe
-  │   └── fruits_dinner.exe
-  ├── include/
-  │   └── fruits/
-  │       ├── fruits.hpp
-  │       ├── rosaceae/
-  │       │   ├── Pear.hpp
-  │       │   ├── Plum.hpp
-  │       │   └── rosaceae.hpp
-  │       └── tropical/
-  │           ├── Avocado.hpp
-  │           ├── Pineapple.hpp
-  │           └── tropical.hpp
-  └── lib/
-      ├── cmake/
-      │   └── fruits/
-      │       ├── fruitsConfig.cmake
-      │       ├── fruitsConfigVersion.cmake
-      │       ├── fruitsTargets.cmake
-      │       └── fruitsTargets-release.cmake
+  ├── bin
+  │   ├── fruits_breakfast.exe
+  │   └── fruits_dinner.exe
+  ├── include
+  │   └── fruits
+  │       ├── fruits.hpp
+  │       ├── FRUITS_ROSACEAE_EXPORT.h
+  │       ├── FRUITS_TROPICAL_EXPORT.h
+  │       ├── rosaceae
+  │       │   ├── Pear.hpp
+  │       │   ├── Plum.hpp
+  │       │   └── rosaceae.hpp
+  │       └── tropical
+  │           ├── Avocado.hpp
+  │           ├── Pineapple.hpp
+  │           └── tropical.hpp
+  └── lib
+      ├── cmake
+      │   └── fruits
+      │       ├── fruitsConfig.cmake
+      │       ├── fruitsConfigVersion.cmake
+      │       ├── fruitsTargets.cmake
+      │       └── fruitsTargets-release.cmake
       ├── fruits_rosaceae.lib
       └── fruits_tropical.lib
+
+
+Windows Debug + DLL:
+
+.. code-block:: none
+
+  ├── bin
+  │   ├── fruits_breakfast.exe
+  │   ├── fruits_breakfast.pdb
+  │   ├── fruits_dinner.exe
+  │   ├── fruits_dinner.pdb
+  │   ├── fruits_rosaceaed.dll
+  │   ├── fruits_rosaceaed.pdb
+  │   ├── fruits_tropicald.dll
+  │   └── fruits_tropicald.pdb
+  ├── include
+  │   └── fruits
+  │       ├── fruits.hpp
+  │       ├── FRUITS_ROSACEAE_EXPORT.h
+  │       ├── FRUITS_TROPICAL_EXPORT.h
+  │       ├── rosaceae
+  │       │   ├── Pear.hpp
+  │       │   ├── Plum.hpp
+  │       │   └── rosaceae.hpp
+  │       └── tropical
+  │           ├── Avocado.hpp
+  │           ├── Pineapple.hpp
+  │           └── tropical.hpp
+  └── lib
+      ├── cmake
+      │   └── fruits
+      │       ├── fruitsConfig.cmake
+      │       ├── fruitsConfigVersion.cmake
+      │       ├── fruitsTargets.cmake
+      │       └── fruitsTargets-debug.cmake
+      ├── fruits_rosaceaed.lib
+      └── fruits_tropicald.lib
