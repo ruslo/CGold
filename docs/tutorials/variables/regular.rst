@@ -515,10 +515,12 @@ remove elements by index, etc.:
 
   * `list <https://cmake.org/cmake/help/latest/command/list.html>`__
 
-Empty list
-==========
+.. _list with one empty element:
 
-Since list is really just a string there is no such object as
+List with one empty element
+===========================
+
+Since list is really just a string **there is no such object** as
 "list with one empty element". Empty string is a list with no elements -
 length is 0. String ``;`` is a list with two empty elements - length is 2.
 

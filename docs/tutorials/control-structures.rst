@@ -479,6 +479,36 @@ CMake style
   -- Generating done
   -- Build files have been written to: /.../control-structures/_builds
 
+CMake style limitations
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Since it's not possible to create
+:ref:`list with one empty element <list with one empty element>` and because of
+internal ``CMakeParseArguments`` limitations next calls will have equivalent
+results:
+
+.. literalinclude:: /examples/control-structures/cmake-style-limitations/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 8, 13, 26-27, 31, 34, 37
+
+.. code-block:: none
+  :emphasize-lines: 2, 4-5, 7-8, 10-11
+
+  [examples]> rm -rf _builds
+  [examples]> cmake -Hcontrol-structures/cmake-style-limitations -B_builds
+  *** Run (1) ***
+  X is defined: NO
+  X value: ''
+  *** Run (2) ***
+  X is defined: NO
+  X value: ''
+  *** Run (3) ***
+  X is defined: NO
+  X value: ''
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../examples/_builds
+
 Return value
 ~~~~~~~~~~~~
 
