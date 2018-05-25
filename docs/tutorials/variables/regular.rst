@@ -294,7 +294,7 @@ Name of variable may consist of **any** characters:
 Quotes
 ======
 
-In the previous example, the quote character ``"`` was used to create a name containing 
+In the previous example, the quote character ``"`` was used to create a name containing
 a space - this is called *quoted argument*. Note that the argument must start and end
 with a quote character, otherwise it becomes an *unquoted argument*. In this case, the
 quote character will be treated as part of the string:
@@ -514,6 +514,74 @@ remove elements by index, etc.:
 .. admonition:: CMake documentation
 
   * `list <https://cmake.org/cmake/help/latest/command/list.html>`__
+
+Empty list
+==========
+
+Since list is really just a string there is no such object as
+"list with one empty element". Empty string is a list with no elements -
+length is 0. String ``;`` is a list with two empty elements - length is 2.
+
+Historically result of appending empty element to an empty list is an empty
+list:
+
+.. literalinclude:: /examples/usage-of-variables/empty-list/CMakeLists.txt
+  :language: cmake
+  :emphasize-lines: 13-14, 20-21, 27-28
+
+.. code-block:: none
+  :emphasize-lines: 4-16, 19-31, 34-46
+
+  [examples]> rm -rf _builds
+  [examples]> cmake -Husage-of-variables/empty-list -B_builds
+
+  Adding non-empty element to non-empty list.
+
+  Add 'c' to list 'a;b'
+  Result: 'a;b;c' (length = 3)
+
+  Add 'c' to list 'a;b;c'
+  Result: 'a;b;c;c' (length = 4)
+
+  Add 'c' to list 'a;b;c;c'
+  Result: 'a;b;c;c;c' (length = 5)
+
+  Add 'c' to list 'a;b;c;c;c'
+  Result: 'a;b;c;c;c;c' (length = 6)
+
+
+  Adding empty element to non-empty list.
+
+  Add '' to list 'a;b'
+  Result: 'a;b;' (length = 3)
+
+  Add '' to list 'a;b;'
+  Result: 'a;b;;' (length = 4)
+
+  Add '' to list 'a;b;;'
+  Result: 'a;b;;;' (length = 5)
+
+  Add '' to list 'a;b;;;'
+  Result: 'a;b;;;;' (length = 6)
+
+
+  Adding empty element to empty list.
+
+  Add '' to list ''
+  Result: '' (length = 0)
+
+  Add '' to list ''
+  Result: '' (length = 0)
+
+  Add '' to list ''
+  Result: '' (length = 0)
+
+  Add '' to list ''
+  Result: '' (length = 0)
+
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: /.../examples/_builds
 
 Recommendation
 ==============
