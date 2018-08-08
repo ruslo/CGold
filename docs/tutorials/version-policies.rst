@@ -144,6 +144,10 @@ with no warnings:
   -- Generating done
   -- Build files have been written to: /.../minimum-required-example/_builds/good
 
+.. seealso::
+
+  * `CMake issue #17712 <https://gitlab.kitware.com/cmake/cmake/issues/17712#note_371862>`__
+
 .. admonition:: Examples on GitHub
 
   * `Repository <https://github.com/cgold-examples/minimum-required-example>`__
