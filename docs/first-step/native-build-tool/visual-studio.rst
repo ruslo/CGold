@@ -4,9 +4,9 @@
 Visual Studio
 =============
 
-``Visual Studio`` is an IDE created by ``Microsoft``. Here are the links to the
-``*.iso`` images of community versions:
+``Visual Studio`` is an IDE created by ``Microsoft``. Here are the links to the community versions:
 
+* `Visual Studio Community 2017 <https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community>`__ 
 * `Visual Studio Community 2015 <https://go.microsoft.com/fwlink/?LinkId=615448&clcid=0x409>`__ 
 * `Visual Studio Community 2013 <https://go.microsoft.com/fwlink/?LinkId=532496&type=ISO&clcid=0x409>`__
 
