@@ -17,13 +17,13 @@ CMake can be used as a cross-platform scripting language.
 Example
 ~~~~~~~
 
-Script for creating file:
+Script for creating a file:
 
 .. literalinclude:: /examples/cmake-sources/script/create-file.cmake
   :language: cmake
   :emphasize-lines: 3
 
-Run script by ``cmake -P``:
+Run the script by ``cmake -P``:
 
 .. code-block:: none
   :emphasize-lines: 2, 4, 6
@@ -38,7 +38,7 @@ Run script by ``cmake -P``:
 Minimum required (bad)
 ~~~~~~~~~~~~~~~~~~~~~~
 
-We should use ``cmake_minimum_required`` as the first command in script just
+We should use ``cmake_minimum_required`` as the first command in a script just
 like with the :doc:`regular CMakeLists.txt </tutorials/version-policies>`.
 Lack of ``cmake_minimum_required`` may lead to problems:
 

@@ -11,7 +11,7 @@ CMake modules is a common way to reuse code.
 Include standard
 ~~~~~~~~~~~~~~~~
 
-CMake comes with set of
+CMake comes with a set of
 `standard modules <https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html>`__:
 
 .. literalinclude:: /examples/cmake-sources/include-processor-count/CMakeLists.txt
@@ -41,7 +41,7 @@ CMake comes with set of
 Include custom
 ~~~~~~~~~~~~~~
 
-You can modify ``CMAKE_MODULE_PATH`` variable to add the path with your
+You can modify a ``CMAKE_MODULE_PATH`` variable to add the path with your
 custom CMake modules:
 
 .. literalinclude:: /examples/cmake-sources/include-users/CMakeLists.txt
@@ -83,7 +83,7 @@ project name:
 
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/Modules")
 
-  include(tool_verifier) # BAD! What if parent project already has 'tool_verifier'?
+  include(tool_verifier) # BAD! What if a parent project already has 'tool_verifier'?
 
   include(foo_tool_verifier) # Good, includes "./cmake/Modules/foo_tool_verifier.cmake"
 
@@ -99,14 +99,14 @@ project name:
 Modify correct
 ~~~~~~~~~~~~~~
 
-Note that the correct way to set this path is to **append** it to existing
+Note that the correct way to set this path is to **append** it to an existing
 value:
 
 .. literalinclude:: /examples/cmake-sources/modify-path/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 6, 8, 10
 
-For example when user want to use his own modules instead of standard for
+For example when a user wants to use his own modules instead of standard for
 any reason:
 
 .. literalinclude:: /examples/cmake-sources/modify-path/standard/ProcessorCount.cmake

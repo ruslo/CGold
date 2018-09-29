@@ -6,10 +6,10 @@ Common variables
 
 Since every ``CMakeLists.txt`` is a :ref:`listfile <listfile>` hence the common
 listfile variables like ``CMAKE_CURRENT_LIST_DIR`` or
-``CMAKE_CURRENT_LIST_FILE`` available. For ``CMakeLists.txt`` added by
+``CMAKE_CURRENT_LIST_FILE`` are available. For ``CMakeLists.txt`` added by
 ``add_subdirectory`` there will be no difference between
 ``CMAKE_CURRENT_LIST_DIR`` and ``CMAKE_CURRENT_SOURCE_DIR``, also
-``CMAKE_CURRENT_LIST_FILE`` will be always full path to ``CMakeLists.txt``.
+``CMAKE_CURRENT_LIST_FILE`` will be always a full path to ``CMakeLists.txt``.
 However it's not always true for other types of CMake listfiles.
 
 .. admonition:: CMake documentation
@@ -47,8 +47,8 @@ CMAKE_CURRENT_LIST_DIR vs CMAKE_CURRENT_SOURCE_DIR
 --------------------------------------------------
 
 The difference between those two variables is about type of information they
-provide. ``CMAKE_CURRENT_SOURCE_DIR`` variable describe **source tree** and
-should be read as *current source tree directory*.
+provide. A ``CMAKE_CURRENT_SOURCE_DIR`` variable describes **a source tree** and
+should be read as *a current source tree directory*.
 Here is a list of sibling variables describing source/binary trees:
 
 * CMAKE_SOURCE_DIR
@@ -65,9 +65,9 @@ The next files **always** exist:
 * ``${PROJECT_SOURCE_DIR}/CMakeLists.txt``
 * ``${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt``
 
-``CMAKE_CURRENT_LIST_DIR`` variable describe **current listfile** (it is not
-necessary ``CMakeLists.txt``, it can be ``somemodule.cmake``), should
-be read as *directory of currently processed listfile*, i.e.
+A ``CMAKE_CURRENT_LIST_DIR`` variable describes **a current listfile** (it is not
+necessarily ``CMakeLists.txt``, it can be ``somemodule.cmake``), and should
+be read as *a directory of a currently processed listfile*, i.e.
 directory of ``CMAKE_CURRENT_LIST_FILE``. Here is another list of sibling
 variables:
 
@@ -79,13 +79,13 @@ variables:
 Example
 -------
 
-Assume we have external CMake module that calculates SHA1 of CMakeLists.txt
-and save it with some custom info to ``sha1`` file in current binary directory:
+Assume we have an external CMake module that calculates SHA1 of CMakeLists.txt
+and saves it with some custom info to a ``sha1`` file in a current binary directory:
 
 .. literalinclude:: /examples/cmake-sources/with-external-module/external/mymodule.cmake
   :language: cmake
 
-``mymodule.cmake`` use some resource. Resource ``info/message.txt``
+``mymodule.cmake`` uses some resource. Resource ``info/message.txt``
 is a file with content:
 
 .. literalinclude:: /examples/cmake-sources/with-external-module/external/info/message.txt
@@ -105,7 +105,7 @@ CMakeLists.txt located **in source directory**:
   :language: cmake
   :emphasize-lines: 4
 
-Subdirectory ``boo`` use those module:
+Subdirectory ``boo`` uses this module:
 
 .. literalinclude:: /examples/cmake-sources/with-external-module/example/boo/CMakeLists.txt
   :language: cmake
@@ -124,7 +124,7 @@ Subdirectory ``boo`` use those module:
   -- Generating done
   -- Build files have been written to: /.../cmake-sources/_builds
 
-Check ``sha1`` file created by module:
+Check a ``sha1`` file created by the module:
 
 .. code-block:: none
   :emphasize-lines: 4
@@ -134,7 +134,7 @@ Check ``sha1`` file created by module:
 
   sha1(CMakeLists.txt) = 9f0ceda4ca514a074589fc7591aad0635b6565eb
 
-Verify value manually:
+Verify a value manually:
 
 .. code-block:: none
   :emphasize-lines: 2
@@ -150,15 +150,15 @@ This diagram will make everything clear:
 Recommendation
 --------------
 
-Instead of keeping in head all this information you can remember just two
+Instead of keeping in a head all this information you can remember just two
 variables:
 
 * ``CMAKE_CURRENT_LIST_DIR``
 * ``CMAKE_CURRENT_BINARY_DIR``
 
-Note that *in function* ``CMAKE_CURRENT_LIST_DIR`` variable is set to the
-directory where function **used**, not where
-function **defined** (see :ref:`function <function list dir>` for details).
+Note that *in functions* a ``CMAKE_CURRENT_LIST_DIR`` variable is set to the
+directory where a function **is used**, not where
+a function **is defined** (see :ref:`function <function list dir>` for details).
 
 Use ``CMAKE_CURRENT_BINARY_DIR`` for storing generated files.
 
@@ -208,7 +208,7 @@ With this recommendation previous example can be rewritten in next way:
   As you may notice we don't have to use ``_long_variable`` names since function
   has it's own scope.
 
-And call ``mymodule`` function instead of including module:
+And call a ``mymodule`` function instead of including a module:
 
 .. literalinclude:: /examples/cmake-sources/with-external-module-good/example/boo/CMakeLists.txt
   :language: cmake
