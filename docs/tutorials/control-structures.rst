@@ -19,7 +19,7 @@ Conditional blocks
 Simple examples
 ~~~~~~~~~~~~~~~
 
-Example of using ``if`` command with ``NO``/``YES`` constants and variables
+Example of using an ``if`` command with ``NO``/``YES`` constants and variables
 with ``NO``/``YES`` values:
 
 .. literalinclude:: /examples/control-structures/if-simple/CMakeLists.txt
@@ -62,7 +62,7 @@ CMP0054
 Some of the ``if`` commands accept ``<variable|string>`` arguments. This may
 lead to quite surprising behavior.
 
-For example if we have variable ``A`` and it is set to empty string we can
+For example if we have a variable ``A`` and it is set to an empty string we can
 check it with:
 
 .. code-block:: cmake
@@ -72,28 +72,28 @@ check it with:
     message("Value of A is empty string")
   endif()
 
-You can save the name of variable in another variable and do the same:
+You can save the name of the variable in another variable and do the same:
 
 .. code-block:: cmake
 
   set(A "")
   set(B "A") # save name of the variable
   if(${B} STREQUAL "")
-    message("Value of ${B} is empty string")
+    message("Value of ${B} is an empty string")
   endif()
 
-If CMake policy ``CMP0054`` is set to ``OLD`` or not present at all
-(before CMake 3.1), this operation ignore quotes:
+If a CMake policy ``CMP0054`` is set to ``OLD`` or not present at all
+(before CMake 3.1), this operation ignores quotes:
 
 .. code-block:: cmake
 
   set(A "")
   set(B "A") # save name of the variable
   if("${B}" STREQUAL "") # same as 'if(${B} STREQUAL "")'
-    message("Value of ${B} is empty string")
+    message("Value of ${B} is an empty string")
   endif()
 
-It means operation depends on the context: do variable with name ``${B}``
+It means an operation depends on the context: is a variable with the name ``${B}``
 present in current scope or not?
 
 .. literalinclude:: /examples/control-structures/cmp0054-confuse/CMakeLists.txt
@@ -137,7 +137,7 @@ Since CMake accepts any names of the variables you can't filter out
 Fix
 ~~~
 
-To avoid such issues you should use CMake 3.1 and ``CMP0054`` policy:
+To avoid such issues you should use CMake 3.1 and a ``CMP0054`` policy:
 
 .. literalinclude:: /examples/control-structures/cmp0054-fix/CMakeLists.txt
   :language: cmake
@@ -156,7 +156,7 @@ To avoid such issues you should use CMake 3.1 and ``CMP0054`` policy:
 Workaround
 ~~~~~~~~~~
 
-For CMake before 3.1 as a workaround you can use ``string(COMPARE EQUAL ...)``
+For CMake before 3.1 as a workaround you can use a ``string(COMPARE EQUAL ...)``
 command:
 
 .. literalinclude:: /examples/control-structures/cmp0054-workaround/CMakeLists.txt
@@ -184,7 +184,7 @@ foreach
 
   * `foreach <https://cmake.org/cmake/help/latest/command/foreach.html>`__
 
-Example of ``foreach(<variable> <list>)`` command:
+Example of a ``foreach(<variable> <list>)`` command:
 
 .. literalinclude:: /examples/control-structures/foreach/CMakeLists.txt
   :language: cmake
@@ -230,7 +230,7 @@ If you want to merge two lists you should do it explicitly
 foreach with range
 ~~~~~~~~~~~~~~~~~~
 
-Example of usage ``foreach(... RANGE ...)`` command:
+Example of usage of a ``foreach(... RANGE ...)`` command:
 
 .. literalinclude:: /examples/control-structures/foreach-range/CMakeLists.txt
   :language: cmake
@@ -271,7 +271,7 @@ Example of usage ``foreach(... RANGE ...)`` command:
 while
 ~~~~~
 
-Example of usage ``while`` command:
+Example of usage of a ``while`` command:
 
 .. literalinclude:: /examples/control-structures/while/CMakeLists.txt
   :language: cmake
@@ -305,7 +305,7 @@ break
 
   * `break <https://cmake.org/cmake/help/latest/command/break.html>`__
 
-Exit from loop with ``break`` command:
+Exit from a loop with a ``break`` command:
 
 .. literalinclude:: /examples/control-structures/break/CMakeLists.txt
   :language: cmake
@@ -483,7 +483,7 @@ CMake style limitations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Since it's not possible to create
-:ref:`list with one empty element <list with one empty element>` and because of
+a :ref:`list with one empty element <list with one empty element>` and because of
 internal ``CMakeParseArguments`` limitations next calls will have equivalent
 results:
 
@@ -512,8 +512,8 @@ results:
 Return value
 ~~~~~~~~~~~~
 
-There is no special command to return value from function. You can set
-variable to the :ref:`parent scope <parent scope>` instead:
+There is no special command to return a value from a function. You can set
+a variable to the :ref:`parent scope <parent scope>` instead:
 
 .. literalinclude:: /examples/control-structures/return-value/CMakeLists.txt
   :language: cmake
@@ -539,7 +539,7 @@ Return
 
   * `return <https://cmake.org/cmake/help/latest/command/return.html>`__
 
-You can exit from function using ``return`` command:
+You can exit from a function using a ``return`` command:
 
 .. literalinclude:: /examples/control-structures/return/CMakeLists.txt
   :language: cmake
@@ -563,8 +563,8 @@ CMAKE_CURRENT_LIST_DIR
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Value of ``CMAKE_CURRENT_LIST_FILE`` and ``CMAKE_CURRENT_LIST_DIR`` is set
-to the file/directory from where function **is called**, not the file where
-function **is defined**:
+to the file/directory from where the function **is called**, not the file where
+the function **is defined**:
 
 .. literalinclude:: /examples/control-structures/function-location/CMakeLists.txt
   :language: cmake
