@@ -24,15 +24,6 @@ Path to this directory will be saved in
 `CMAKE_SOURCE_DIR <https://cmake.org/cmake/help/latest/variable/CMAKE_SOURCE_DIR.html>`__
 variable.
 
-.. warning::
-
-  PowerShell will modify arguments and put the space between ``-S`` and ``.``.
-  You can protect argument by quoting it:
-
-  .. code-block:: none
-
-    cmake '-S.' -B_builds
-
 .. seealso::
 
   * :ref:`-B <-B>`
