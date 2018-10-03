@@ -10,6 +10,10 @@
 -H
 --
 
+.. note::
+
+  Has been replaced in 3.13 with the official source directory flag of :ref:`-S <-S>`.
+
 Add ``-H<path-to-source-tree>`` to set directory with ``CMakeLists.txt``.
 This internal option is not documented but
 `widely used by community <https://github.com/search?q=%22cmake+-H%22&ref=searchresults&type=Code&utf8=%E2%9C%93>`__.
@@ -39,6 +43,7 @@ variable.
 
 .. seealso::
 
+  * :ref:`-S <-S>`
   * :ref:`-B <-B>`
   * :ref:`Source tree <source tree>`
 
