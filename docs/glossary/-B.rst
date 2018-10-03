@@ -15,12 +15,14 @@ Path to this directory will be saved in
 variable.
 
 .. note::
-Starting with CMake 3.13,  ``-B`` is an officially supported flag and can handle
-spaces correctly and can be used independently of the :ref:`-S <-S>` or :ref:`-H <-H>` options.
 
-.. code-block:: none
+  Starting with CMake 3.13,  ``-B`` is an officially supported flag, can
+  handle spaces correctly and can be used independently of the :ref:`-S <-S>`
+  or :ref:`-H <-H>` options.
 
-  cmake -B _builds .
+  .. code-block:: none
+
+    cmake -B _builds .
 
 .. seealso::
 
