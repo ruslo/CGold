@@ -161,7 +161,7 @@ Force as a workaround
 =====================
 
 ``FORCE`` can be used to fix the problem that described
-:ref:`eariler <cache confusing>`:
+:ref:`earlier <cache confusing>`:
 
 .. literalinclude:: /examples/usage-of-variables/no-force-confuse/CMakeLists.txt
   :language: cmake
