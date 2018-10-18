@@ -24,7 +24,7 @@ Language/syntax
 This is probably the first thing you will be hit with. The :ref:`CMake <CMake>`
 language is not something you can compare with what you have likely used
 before. There are no classes, no maps, no virtual functions or lambdas. Even
-parsing functions and input arguments then returning results is something quite
+parsing the input arguments of each function then returning results is something quite
 tricky for the beginners.  :ref:`CMake <CMake>` is definitely not a language
 you want to try to experiment with implementation of red-black tree or
 processing JSON responses from a server.  **But it does** handle regular
