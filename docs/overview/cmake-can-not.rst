@@ -36,8 +36,8 @@ way: if you want to do some nasty non-standard thing then probably you should
 stop.  If you think it is something important and useful, then it might be
 quite useful for other :ref:`CMake <CMake>` users too. In this case you need to
 think about implementing new feature **in CMake itself**.  :ref:`CMake <CMake>`
-is open-source project written in C++, and additional features are always being added.
-Additionaly,  you can discuss this problem in the `CMake mailing-list
+is open-source project written in C++, and additional features are always being introduced.
+You can also discuss any problems in the `CMake mailing-list
 <https://cmake.org/mailman/listinfo/cmake-developers>`_ to see how you can help
 with improving the current state.
 
