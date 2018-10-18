@@ -107,7 +107,7 @@ generator.
 
 Similarly with ``Xcode``. In general :ref:`CMake <CMake>` can't mix two different
 toolchains (at least for now) so it's not possible to generate an ``Xcode``
-project with ``iOS`` and ``OSX`` targets &mdash again, just generate code for each
+project with ``iOS`` and ``OSX`` targets—again, just generate code for each
 platform independently.
 
 .. note::
