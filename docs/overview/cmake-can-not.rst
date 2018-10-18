@@ -127,7 +127,7 @@ aware of how to generate projects using CMake. In practice it means they have
 to know which CMake arguments to use, some basic examples being
 ``cmake -H. -B_builds -GXcode`` and ``cmake -H. -B_builds "-GVisual Studio 12 2013"``
 for Xcode and Visual Studio, respectively. Additionaly, they must understand the 
-[changes they must make in their workflow](https://cgold.readthedocs.io/en/latest/overview/cmake-can-not.html#affecting-workflow). As a general rule, developers should make an effort to learn the tools
+:ref:`changes they must make in their workflow <affecting workflow>`. As a general rule, developers should make an effort to learn the tools
 used in making the code they wish to utilize. Only when providing an end product to users is it
 your responsibility to generate user-friendly installers like ``*.msi`` instead of
 simply providing the project files.
