@@ -323,3 +323,7 @@ The downsides of such approach:
   It's not convenient if such build takes a long time.
 
 * Dependency resolution **is not option friendly**.
+
+.. seealso::
+
+  * `Why not bundle dependencies <https://wiki.gentoo.org/wiki/Why_not_bundle_dependencies>`__
