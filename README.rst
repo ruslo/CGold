@@ -19,4 +19,4 @@ CGold: The Hitchhiker’s Guide to the CMake
 * Sources: `<https://github.com/ruslo/CGold>`_
 * Documentation: `<https://cgold.readthedocs.io>`_
 * Reporting broken links, issues, general discussion: `<https://github.com/ruslo/CGold/issues/new>`_
-* Contacts: Ruslan Baratov <ruslan_baratov@yahoo.com>
+* Contacts: https://cgold.readthedocs.io/en/latest/contacts.html
