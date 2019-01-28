@@ -4,6 +4,7 @@
 .. spelling::
 
   Gitter
+  refactor
 
 Contacts
 --------
