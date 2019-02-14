@@ -5,7 +5,7 @@ macro
 =====
 
 Unlike ``function`` command the ``macro`` command doesn't create scope so it
-do :ref:`modify variables <same scope>` from scope where it called.
+does :ref:`modify variables <same scope>` from scope where it called.
 
 .. note::
 
