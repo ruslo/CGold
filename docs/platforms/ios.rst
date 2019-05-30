@@ -9,3 +9,4 @@ iOS
 
   ios/errors
   ios/universal
+  ios/framework
