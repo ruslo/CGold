@@ -245,3 +245,30 @@ in different directories. This code will not work with Xcode generator:
 
   add_library(boo OBJECT x.cpp boo/x.cpp)
   add_executable(foo foo.cpp $<TARGET_OBJECTS:boo>)
+
+As a workaround source files can be renamed:
+
+.. code-block:: cmake
+  :emphasize-lines: 6
+
+  # CMakeLists.txt
+
+  cmake_minimum_required(VERSION 3.2)
+  project(foo)
+
+  add_library(boo OBJECT x.1.cpp boo/x.2.cpp)
+  add_executable(foo foo.cpp $<TARGET_OBJECTS:boo>)
+
+Or additional target can be introduced:
+
+.. code-block:: cmake
+  :emphasize-lines: 7
+
+  # CMakeLists.txt
+
+  cmake_minimum_required(VERSION 3.2)
+  project(foo)
+
+  add_library(boo.1 OBJECT x.cpp)
+  add_library(boo.2 OBJECT boo/x.cpp)
+  add_executable(foo foo.cpp $<TARGET_OBJECTS:boo.1> $<TARGET_OBJECTS:boo.2>)
