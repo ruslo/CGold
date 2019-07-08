@@ -39,4 +39,8 @@ If you like CGold and its goals, consider supporting it by making a donation.
   :target: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DRH22JCVH3FUG
   :alt: PayPal donation
 
+.. image:: https://raster.shields.io/badge/patreon-donate-green.png
+  :target: https://patreon.com/ruslo
+  :alt: Patreon donation
+
 Thanks! :)
