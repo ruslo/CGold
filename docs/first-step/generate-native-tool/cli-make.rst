@@ -13,7 +13,7 @@ to the directory with sources:
   [cgold-example]> ls
   CMakeLists.txt foo.cpp
 
-Generate Makefile using CMake. Use :ref:`-H. <-H>` :ref:`-B_builds <-B>` for
+Generate Makefile using CMake. Use :ref:`-S . <-S>` :ref:`-B _builds <-B>` for
 specifying paths and ``-G "Unix Makefiles"`` for the generator (note that
 ``Unix Makefiles`` is usually the default generator so ``-G`` probably not
 needed at all):
@@ -21,7 +21,7 @@ needed at all):
 .. code-block:: none
   :emphasize-lines: 1, 18
 
-  [cgold-example]> cmake -H. -B_builds -G "Unix Makefiles"
+  [cgold-example]> cmake -S . -B _builds -G "Unix Makefiles"
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
