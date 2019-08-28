@@ -56,7 +56,7 @@ Let's build the project now:
   :emphasize-lines: 2, 4-5
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hlink-error-odr-local -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
+  [library-examples]> cmake -Slink-error-odr-local -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
   ...
   [library-examples]> cmake --build _builds
 
@@ -112,7 +112,7 @@ Links fine now:
   :emphasize-lines: 5, 7, 9, 15, 18
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hlink-error-odr-local-fix -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
+  [library-examples]> cmake -Slink-error-odr-local-fix -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
   ...
   [library-examples]> cmake --build _builds
   /usr/bin/c++ -DBOO_USE_SHORT_INT /.../Boo.cpp

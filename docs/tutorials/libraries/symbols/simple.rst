@@ -57,7 +57,7 @@ Generate project:
   :emphasize-lines: 2
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hlink-error -B_builds
+  [library-examples]> cmake -Slink-error -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -149,7 +149,7 @@ Should work now:
   :emphasize-lines: 2, 21, 32-33
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hlink-error-fix -B_builds
+  [library-examples]> cmake -Slink-error-fix -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc

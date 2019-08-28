@@ -40,7 +40,7 @@ will be **two builds** and **two root directories**.
 
   > cd library-examples
   [library-examples]> rm -rf _builds _install
-  [library-examples]> cmake -Hright-way -B_builds/shared -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX="`pwd`/_install/configuration-A"
+  [library-examples]> cmake -Sright-way -B_builds/shared -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX="`pwd`/_install/configuration-A"
   [library-examples]> cmake --build _builds/shared --target install
   Scanning dependencies of target foo
   [ 50%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
@@ -50,7 +50,7 @@ will be **two builds** and **two root directories**.
   -- Install configuration: ""
   -- Installing: /.../library-examples/_install/configuration-A/lib/libfoo.so
 
-  [library-examples]> cmake -Hright-way -B_builds/static -DCMAKE_INSTALL_PREFIX="`pwd`/_install/configuration-B"
+  [library-examples]> cmake -Sright-way -B_builds/static -DCMAKE_INSTALL_PREFIX="`pwd`/_install/configuration-B"
   [library-examples]> cmake --build _builds/static --target install
   Scanning dependencies of target foo
   [ 50%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
@@ -94,7 +94,7 @@ produce ``foo.lib``:
 
   > cd library-examples
   [library-examples]> rmdir _builds _install /S /Q
-  [library-examples]> cmake -Hright-way -B_builds\static -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=%cd%\_install
+  [library-examples]> cmake -Sright-way -B_builds\static -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=%cd%\_install
   [library-examples]> cmake --build _builds\static --config Release --target install
   ...
   -- Install configuration: "Release"
@@ -106,7 +106,7 @@ But shared build will produce **both** ``foo.lib`` and ``foo.dll``, effectively
 .. code-block:: bat
   :emphasize-lines: 5-6
 
-  [library-examples]> cmake -Hright-way -B_builds\shared -G "Visual Studio 14 2015" -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=%cd%\_install
+  [library-examples]> cmake -Sright-way -B_builds\shared -G "Visual Studio 14 2015" -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=%cd%\_install
   [library-examples]> cmake --build _builds\shared --config Release --target install
   ...
   -- Install configuration: "Release"
@@ -123,7 +123,7 @@ Even if libraries doesn't conflict on file level their **configs** will conflict
 
   > cd library-examples
   [library-examples]> rm -rf _install _builds
-  [library-examples]> cmake -Hbar -B_builds/shared -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [library-examples]> cmake -Sbar -B_builds/shared -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   [library-examples]> cmake --build _builds/shared --target install
   [library-examples]> grep lib/libbar.so -IR _install
   _install/lib/cmake/bar/barTargets-release.cmake:  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libbar.so"
@@ -134,7 +134,7 @@ Config for static variant will have the same ``barTargets-release.cmake`` name:
 .. code-block:: none
   :emphasize-lines: 3-5
 
-  [library-examples]> cmake -Hbar -B_builds/static -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [library-examples]> cmake -Sbar -B_builds/static -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   [library-examples]> cmake --build _builds/static --target install
   [library-examples]> grep lib/libbar.a -IR _install
   _install/lib/cmake/bar/barTargets-release.cmake:  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libbar.a"
@@ -202,7 +202,7 @@ By default we will build executable and static library:
 
   > cd library-examples
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hcustom -B_builds
+  [library-examples]> cmake -Scustom -B_builds
   [library-examples]> cmake --build _builds
   [library-examples]> ls _builds/libfoo.a _builds/boo
   _builds/libfoo.a
@@ -213,7 +213,7 @@ But we are free to switch to shared library:
 .. code-block:: none
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hcustom -B_builds -DBUILD_SHARED_LIBS=ON
+  [library-examples]> cmake -Scustom -B_builds -DBUILD_SHARED_LIBS=ON
   [library-examples]> cmake --build _builds
   [library-examples]> ls _builds/libfoo.dylib _builds/boo
   _builds/libfoo.dylib
@@ -224,7 +224,7 @@ Create bundle:
 .. code-block:: none
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hcustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON
+  [library-examples]> cmake -Scustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON
   [library-examples]> cmake --build _builds
   [library-examples]> ls -d _builds/libfoo.a _builds/boo.app
   _builds/libfoo.a
@@ -235,7 +235,7 @@ Or do the both:
 .. code-block:: none
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hcustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON -DBUILD_SHARED_LIBS=ON
+  [library-examples]> cmake -Scustom -B_builds -DCMAKE_MACOSX_BUNDLE=ON -DBUILD_SHARED_LIBS=ON
   [library-examples]> cmake --build _builds
   [library-examples]> ls -d _builds/libfoo.dylib _builds/boo.app
   _builds/libfoo.dylib
@@ -265,7 +265,7 @@ executable:
 
   > cd library-examples
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hsurprise -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
+  [library-examples]> cmake -Ssurprise -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
   [library-examples]> cmake --build _builds
   ...
   /usr/bin/c++ -o foo ... boo/libboo.a
@@ -276,7 +276,7 @@ library, so he expects shared in next configuration:
 .. code-block:: none
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hsurprise -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON -DBUILD_SHARED_LIBS=ON
+  [library-examples]> cmake -Ssurprise -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON -DBUILD_SHARED_LIBS=ON
 
 But of course he still got static because type of library is forced:
 
@@ -296,7 +296,7 @@ planning to use one of the variants:
   :emphasize-lines: 5, 13
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hsurprise -B_builds
+  [library-examples]> cmake -Ssurprise -B_builds
   [library-examples]> cmake --build _builds
   Scanning dependencies of target boo
   [ 16%] Building CXX object boo/CMakeFiles/boo.dir/boo.cpp.o
@@ -331,11 +331,11 @@ in fact **we don't really interested in**:
 
   > cd library-examples
   [library-examples]> rm -rf _builds _install
-  [library-examples]> cmake -Hbar -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [library-examples]> cmake -Sbar -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   [library-examples]> cmake --build _builds --target install
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Huse_bar -B_builds -DCMAKE_PREFIX_PATH="`pwd`/_install"
+  [library-examples]> cmake -Suse_bar -B_builds -DCMAKE_PREFIX_PATH="`pwd`/_install"
   [library-examples]> cmake --build _builds
   Scanning dependencies of target use_bar_shared
   [ 25%] Building CXX object CMakeFiles/use_bar_shared.dir/use_bar.cpp.o
@@ -435,7 +435,7 @@ Let's build it:
 .. code-block:: none
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hdup -B_builds
+  [library-examples]> cmake -Sdup -B_builds
   [library-examples]> cmake --build _builds
 
 We are linked to the ``libbaz.so`` and we **do linked** to ``libbar_shared.so``

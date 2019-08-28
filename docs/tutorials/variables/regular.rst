@@ -73,7 +73,7 @@ in scope of ``boo`` directory:
   :emphasize-lines: 2-5
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hdirectory-scope -B_builds
+  [usage-of-variables]> cmake -Sdirectory-scope -B_builds
   Top level scope (before): 123
   Directory 'boo' scope: 456
   Top level scope (after): 123
@@ -97,7 +97,7 @@ the current scope it will be dereferenced to an empty string:
   :emphasize-lines: 2-7
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Htake-from-parent-scope -B_builds
+  [usage-of-variables]> cmake -Stake-from-parent-scope -B_builds
   Top level scope state: { abc = '123', xyz = '456' }
   [boo]: Scope for function 'boo' copied from parent: { abc = '123', xyz = '456' }
   [boo]: Command 'set(abc ...)' modify current scope, state: { abc = '789', xyz = '456' }
@@ -127,7 +127,7 @@ like ``set`` and ``unset`` will affect the current scope:
   :emphasize-lines: 2-6
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hsame-scope -B_builds
+  [usage-of-variables]> cmake -Ssame-scope -B_builds
   abc (before): 123
   abc (after): 456
   xyz (before): 336
@@ -176,7 +176,7 @@ the cache:
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hfrom-cache -B_builds
+  [usage-of-variables]> cmake -Sfrom-cache -B_builds
   Regular variable from current scope: 123
   Cache variable if regular not found: 789
   -- Configuring done
@@ -197,7 +197,7 @@ will remove the regular variable with the same name from current scope:
   :emphasize-lines: 2,3
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hcache-remove-regular -B_builds
+  [usage-of-variables]> cmake -Scache-remove-regular -B_builds
   Regular variable unset, take from cache: 789
   -- Configuring done
   -- Generating done
@@ -221,7 +221,7 @@ function and not from top level scope:
   :emphasize-lines: 2-5
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hcache-confuse -B_builds
+  [usage-of-variables]> cmake -Scache-confuse -B_builds
   Function scope before cache modify = 123
   Function scope after cache modify = 789
   Parent scope is not affected, take variable from current scope, not cache = 123
@@ -235,7 +235,7 @@ removing cache:
 .. code-block:: none
   :emphasize-lines: 1-4
 
-  [usage-of-variables]> cmake -Hcache-confuse -B_builds
+  [usage-of-variables]> cmake -Scache-confuse -B_builds
   Function scope before cache modify = 123
   Function scope after cache modify = 123
   Parent scope is not affected, take variable from current scope, not cache = 123
@@ -259,7 +259,7 @@ Variable names are case-sensitive:
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hcase-sensitive -B_builds
+  [usage-of-variables]> cmake -Scase-sensitive -B_builds
   a: 123
   b: 567
   aBc: 333
@@ -280,7 +280,7 @@ Name of variable may consist of **any** characters:
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hany-names -B_builds
+  [usage-of-variables]> cmake -Sany-names -B_builds
   Variable name: 'abc', value: '123'
   Variable name: 'ab c', value: '456'
   Variable name: 'ab?c', value: '789'
@@ -307,7 +307,7 @@ quote character will be treated as part of the string:
   :emphasize-lines: 3-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hquotes -B_builds
+  [usage-of-variables]> cmake -Squotes -B_builds
   a = 'Quoted argument'
   b = 'x-"Unquoted argument"'
   c =
@@ -369,7 +369,7 @@ Dereferencing of variable by ``${...}`` will happen as many times as needed:
   :emphasize-lines: 2,17-26
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hnested-dereference -B_builds
+  [usage-of-variables]> cmake -Snested-dereference -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -413,7 +413,7 @@ name, etc.:
   :emphasize-lines: 2,17-20
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Htypes-of-variable -B_builds
+  [usage-of-variables]> cmake -Stypes-of-variable -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -500,7 +500,7 @@ remove elements by index, etc.:
   :emphasize-lines: 2-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hlist-operations -B_builds
+  [usage-of-variables]> cmake -Slist-operations -B_builds
   length of 'a;b;c' (l0) = 3
   length of 'a;b;c' (l1) = 3
   length of 'a;b c' (l2) = 2
@@ -535,7 +535,7 @@ list:
   :emphasize-lines: 4-16, 19-31, 34-46
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Husage-of-variables/empty-list -B_builds
+  [examples]> cmake -Susage-of-variables/empty-list -B_builds
 
   Adding non-empty element to non-empty list.
 

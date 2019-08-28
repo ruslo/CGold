@@ -37,7 +37,7 @@ Run test on ``Linux``:
   :emphasize-lines: 2, 4-5, 9, 15, 21-22
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hset-compiler -B_builds
+  [project-examples]> cmake -Sset-compiler -B_builds
   Before 'project':
     C: ''
     C++: ''
@@ -78,7 +78,7 @@ Also ``project`` is a place where toolchain file will be read.
   :emphasize-lines: 2-5, 9, 12, 15-17, 20, 23, 26-28, 30
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Htoolchain -B_builds -DCMAKE_TOOLCHAIN_FILE=toolchain.cmake
+  [project-examples]> cmake -Stoolchain -B_builds -DCMAKE_TOOLCHAIN_FILE=toolchain.cmake
   Before 'project'
   Processing toolchain
   Processing toolchain
@@ -133,7 +133,7 @@ is empty now:
   :emphasize-lines: 2, 8, 15
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hc-compiler -B_builds
+  [project-examples]> cmake -Sc-compiler -B_builds
   Before 'project':
     C: ''
     C++: ''
@@ -164,7 +164,7 @@ tools will not be triggered):
   :emphasize-lines: 2, 11-12
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hcpp-not-found -B_builds
+  [project-examples]> cmake -Scpp-not-found -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
   -- Check for working C compiler: /usr/bin/cc -- works
@@ -190,7 +190,7 @@ No checks for C or C++ compiler as you can see:
 .. code-block:: none
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hno-language -B_builds
+  [project-examples]> cmake -Sno-language -B_builds
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../project-examples/_builds
@@ -226,7 +226,7 @@ Command ``project`` declare ``*_{SOURCE,BINARY}_DIR`` variables. Since version
   :emphasize-lines: 2, 4-7, 23-26
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hvariables -B_builds
+  [project-examples]> cmake -Svariables -B_builds
   Before project:
     Source:
     Binary:
@@ -271,7 +271,7 @@ when you have hierarchy of projects:
   :emphasize-lines: 22
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hhierarchy -B_builds
+  [project-examples]> cmake -Shierarchy -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -320,7 +320,7 @@ before any other commands. It means that ``project`` will be called **before**
   :emphasize-lines: 17
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hnot-declared -B_builds
+  [project-examples]> cmake -Snot-declared -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc

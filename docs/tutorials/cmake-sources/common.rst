@@ -36,7 +36,7 @@ Information about any kind of listfile can be taken from
   :emphasize-lines: 3-4
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hpath-to-module -B_builds
+  [cmake-sources]> cmake -Spath-to-module -B_builds
   Full path to module: /.../cmake-sources/path-to-module/cmake/mymodule.cmake
   Module located in directory: /.../cmake-sources/path-to-module/cmake
   -- Configuring done
@@ -114,7 +114,7 @@ Subdirectory ``boo`` uses this module:
 .. code-block:: none
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hwith-external-module/example -B_builds -DCMAKE_MODULE_PATH=`pwd`/with-external-module/external
+  [cmake-sources]> cmake -Swith-external-module/example -B_builds -DCMAKE_MODULE_PATH=`pwd`/with-external-module/external
   Top level CMakeLists.txt
   Processing foo/CMakeList.txt
   Processing boo/CMakeList.txt

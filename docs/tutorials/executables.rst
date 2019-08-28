@@ -26,7 +26,7 @@ Building executable from ``main.cpp``:
   :emphasize-lines: 2, 20
 
   [executable-examples]> rm -rf _builds
-  [executable-examples]> cmake -Hsimple -B_builds
+  [executable-examples]> cmake -Ssimple -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -80,7 +80,7 @@ if they are declared in different ``CMakeLists.txt``:
   :emphasize-lines: 2, 17-22
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hexecutable-examples/duplicates -B_builds
+  [examples]> cmake -Sexecutable-examples/duplicates -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
