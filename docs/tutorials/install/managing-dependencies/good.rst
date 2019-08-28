@@ -19,7 +19,7 @@ them to your system and then integrate into CMake using
   :emphasize-lines: 2
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-find-package -B_builds -DFOO_WITH_A=ON
+  [examples]> cmake -Sdep-examples/deps-find-package -B_builds -DFOO_WITH_A=ON
   [examples]> cmake --build _builds
 
 Result of running test with module ``a`` enabled:
@@ -41,7 +41,7 @@ With module ``a`` disabled:
 
 .. code-block:: none
 
-  [examples]> cmake -Hdep-examples/deps-find-package -B_builds -DFOO_WITH_A=OFF
+  [examples]> cmake -Sdep-examples/deps-find-package -B_builds -DFOO_WITH_A=OFF
 
 Third parties remains the same of course, only ``foo`` executable rebuild:
 
@@ -103,7 +103,7 @@ Using such project you can install all dependencies to some custom root
   :emphasize-lines: 2, 8, 12-16, 21, 25-29, 34, 38-42
 
   [examples]> rm -rf _ep_build
-  [examples]> cmake -Hdep-examples/deps-super-build -B_ep_build -DCMAKE_INSTALL_PREFIX=_ep_install
+  [examples]> cmake -Sdep-examples/deps-super-build -B_ep_build -DCMAKE_INSTALL_PREFIX=_ep_install
   [examples]> cmake --build _ep_build
   ...
   -- Downloading...
@@ -152,7 +152,7 @@ root directory **with your custom dependencies** instead of system dependencies:
   :emphasize-lines: 2, 5-7
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-find-package -B_builds -DCMAKE_PREFIX_PATH=/.../examples/_ep_install -DCMAKE_VERBOSE_MAKEFILE=ON
+  [examples]> cmake -Sdep-examples/deps-find-package -B_builds -DCMAKE_PREFIX_PATH=/.../examples/_ep_install -DCMAKE_VERBOSE_MAKEFILE=ON
   [examples]> cmake --build _builds
   /usr/bin/c++ ... -o foo
       /.../_ep_install/lib/liba.a

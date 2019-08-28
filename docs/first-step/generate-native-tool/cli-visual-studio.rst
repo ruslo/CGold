@@ -16,13 +16,13 @@ Run ``cmd.exe`` and go to the directory with sources:
   ... foo.cpp
 
 Generate Visual Studio solution using CMake. Use
-:ref:`-H. <-H>` :ref:`-B_builds <-B>` for specifying paths
+:ref:`-S. <-S>` :ref:`-B_builds <-B>` for specifying paths
 and ``-G "Visual Studio 14 2015 Win64"`` for the generator:
 
 .. code-block:: none
   :emphasize-lines: 1, 16
 
-  [cgold-example]> cmake -H. -B_builds -G "Visual Studio 14 2015 Win64"
+  [cgold-example]> cmake -S. -B_builds -G "Visual Studio 14 2015 Win64"
   -- The C compiler identification is MSVC 19.0.23918.0
   -- The CXX compiler identification is MSVC 19.0.23918.0
   -- Check for working C compiler using: Visual Studio 14 2015 Win64

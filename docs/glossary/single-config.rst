@@ -13,7 +13,7 @@ Example of building ``Debug`` variant:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds -DCMAKE_BUILD_TYPE=Debug
+  > cmake -S. -B_builds -DCMAKE_BUILD_TYPE=Debug
   > cmake --build _builds
 
 To use another build type like ``Release`` use

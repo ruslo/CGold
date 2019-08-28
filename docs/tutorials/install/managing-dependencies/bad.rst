@@ -123,7 +123,7 @@ At first you will simply get :ref:`target names conflict <target duplicates>`:
   :emphasize-lines: 2, 18-20
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-submodule-conflict -B_builds
+  [examples]> cmake -Sdep-examples/deps-submodule-conflict -B_builds
   -- The C compiler identification is GNU 5.4.1
   -- The CXX compiler identification is GNU 5.4.1
   -- Check for working C compiler: /usr/bin/cc
@@ -187,7 +187,7 @@ functionality is leaking into module ``b``:
   :emphasize-lines: 2, 12-13
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=ON
+  [examples]> cmake -Sdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=ON
   ...
   [examples]> cmake --build _builds
   ...
@@ -207,7 +207,7 @@ Disable module ``a`` and behavior of ``b`` changed!
   :emphasize-lines: 2, 12-13
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=OFF
+  [examples]> cmake -Sdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=OFF
   ...
   [examples]> cmake --build _builds
   ...
@@ -247,7 +247,7 @@ Since version of ``x`` tied to project structure every time you switch option
   :emphasize-lines: 2
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=ON
+  [examples]> cmake -Sdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=ON
 
 Build everything from scratch first time:
 
@@ -287,7 +287,7 @@ Disable component ``a``:
 
 .. code-block:: none
 
-  [examples]> cmake -Hdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=OFF
+  [examples]> cmake -Sdep-examples/deps-submodule-option -B_builds -DFOO_WITH_A=OFF
 
 Whole project rebuild!
 

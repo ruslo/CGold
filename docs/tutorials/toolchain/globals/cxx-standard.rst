@@ -89,7 +89,7 @@ generation and compilation:
   :emphasize-lines: 2, 9, 17-19
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Htoolchain-usage-examples/globals/cxx-standard/bad -B_builds -DWITH_FOO=ON
+  [examples]> cmake -Stoolchain-usage-examples/globals/cxx-standard/bad -B_builds -DWITH_FOO=ON
   -- The C compiler identification is GNU 5.4.1
   -- The CXX compiler identification is GNU 5.4.1
   ...
@@ -138,7 +138,7 @@ You can add it with ``-DCMAKE_TOOLCHAIN_FILE=/path/to/cxx11.cmake``:
   :emphasize-lines: 2, 20, 29-31
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Htoolchain-usage-examples/globals/cxx-standard/toolchain -B_builds -DCMAKE_TOOLCHAIN_FILE=cxx11.cmake -DWITH_FOO=YES
+  [examples]> cmake -Stoolchain-usage-examples/globals/cxx-standard/toolchain -B_builds -DCMAKE_TOOLCHAIN_FILE=cxx11.cmake -DWITH_FOO=YES
   -- The C compiler identification is GNU 5.4.1
   -- The CXX compiler identification is GNU 5.4.1
   -- Check for working C compiler: /usr/bin/cc

@@ -22,29 +22,29 @@ without conflicts, e.g. Debug and Release variant:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds/Debug -DCMAKE_BUILD_TYPE=Debug
-  > cmake -H. -B_builds/Release -DCMAKE_BUILD_TYPE=Release
+  > cmake -S. -B_builds/Debug -DCMAKE_BUILD_TYPE=Debug
+  > cmake -S. -B_builds/Release -DCMAKE_BUILD_TYPE=Release
 
 or any other kind of customization, e.g. options:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds/feature-on -DFOO_FEATURE=ON
-  > cmake -H. -B_builds/feature-off -DFOO_FEATURE=OFF
+  > cmake -S. -B_builds/feature-on -DFOO_FEATURE=ON
+  > cmake -S. -B_builds/feature-off -DFOO_FEATURE=OFF
 
 generators:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds/xcode -G Xcode
-  > cmake -H. -B_builds/make -G "Unix Makefiles"
+  > cmake -S. -B_builds/xcode -G Xcode
+  > cmake -S. -B_builds/make -G "Unix Makefiles"
 
 platforms:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds/osx -G Xcode
-  > cmake -H. -B_builds/ios -G Xcode -DCMAKE_TOOLCHAIN_FILE=/.../ios.cmake
+  > cmake -S. -B_builds/osx -G Xcode
+  > cmake -S. -B_builds/ios -G Xcode -DCMAKE_TOOLCHAIN_FILE=/.../ios.cmake
 
 VCS friendly
 ------------

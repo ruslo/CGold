@@ -18,7 +18,7 @@ of install procedure:
   :emphasize-lines: 2, 10, 12, 17
 
   [install-examples]> rm -rf _builds
-  [install-examples]> cmake -Hsimple -B_builds -DCMAKE_INSTALL_PREFIX=_install/config-A
+  [install-examples]> cmake -Ssimple -B_builds -DCMAKE_INSTALL_PREFIX=_install/config-A
   [install-examples]> cmake --build _builds --target install
   Scanning dependencies of target foo
   [ 50%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
@@ -28,7 +28,7 @@ of install procedure:
   -- Install configuration: ""
   -- Installing: /.../install-examples/_install/config-A/lib/libfoo.a
 
-  [install-examples]> cmake -Hsimple -B_builds -DCMAKE_INSTALL_PREFIX=_install/config-B
+  [install-examples]> cmake -Ssimple -B_builds -DCMAKE_INSTALL_PREFIX=_install/config-B
   [install-examples]> cmake --build _builds --target install
   [100%] Built target foo
   Install the project...
@@ -49,7 +49,7 @@ code!
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds
-  [install-examples]> cmake -Hmodify-bad -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [install-examples]> cmake -Smodify-bad -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -95,7 +95,7 @@ On the fly
   :emphasize-lines: 3, 7, 10, 14
 
   [install-examples]> rm -rf _builds
-  [install-examples]> cmake -Hsimple -B_builds -DCMAKE_INSTALL_PREFIX=""
+  [install-examples]> cmake -Ssimple -B_builds -DCMAKE_INSTALL_PREFIX=""
   [install-examples]> make -C _builds DESTDIR="`pwd`/_install/config-A" install
   ...
   Install the project...
@@ -129,7 +129,7 @@ problems with permissions on configure step instead of a silent copy:
   :emphasize-lines: 2, 17-20
 
   [install-examples]> rm -rf _builds
-  [install-examples]> cmake -Hwrong-usage -B_builds
+  [install-examples]> cmake -Swrong-usage -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -159,7 +159,7 @@ in archive:
   :emphasize-lines: 3, 11, 12
 
   [install-examples]> rm -rf _builds _install
-  [install-examples]> cmake -Hwrong-usage -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [install-examples]> cmake -Swrong-usage -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   [install-examples]> (cd _builds && cpack -G TGZ)
   CPack: Create package using TGZ
   CPack: Install projects
@@ -185,7 +185,7 @@ All work should be delegated to ``install`` command instead, in such case
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds _install
-  [install-examples]> cmake -Hright-usage -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [install-examples]> cmake -Sright-usage -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -256,7 +256,7 @@ Configure for ``DESTDIR`` usage:
   :emphasize-lines: 2
 
   [install-examples]> rm -rf _builds _install foo-0.1.1-Linux
-  [install-examples]> cmake -Hconfigure -B_builds -DCMAKE_INSTALL_PREFIX=""
+  [install-examples]> cmake -Sconfigure -B_builds -DCMAKE_INSTALL_PREFIX=""
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc
@@ -311,7 +311,7 @@ Regular install:
   :emphasize-lines: 2, 20, 23-26
 
   [install-examples]> rm -rf _builds _install
-  [install-examples]> cmake -Hconfigure -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
+  [install-examples]> cmake -Sconfigure -B_builds -DCMAKE_INSTALL_PREFIX="`pwd`/_install"
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc

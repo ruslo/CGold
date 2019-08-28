@@ -45,7 +45,7 @@ Templates
   :emphasize-lines: 2, 4-5, 9, 15, 21-22
 
   [project-examples]> rm -rf _builds
-  [project-examples]> cmake -Hset-compiler -B_builds
+  [project-examples]> cmake -Sset-compiler -B_builds
 
 .. image:: gnu.png
   :align: center

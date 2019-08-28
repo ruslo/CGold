@@ -72,7 +72,7 @@ Generate:
 .. code-block:: none
   :emphasize-lines: 1, 5, 11
 
-  [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
+  [platforms-android-on-windows]> cmake -S. -B_builds "-GVisual Studio 14 2015 ARM"
   -- The C compiler identification is Clang 3.6.0
   -- The CXX compiler identification is Clang 3.6.0
   -- Check for working C compiler using: Visual Studio 14 2015 ARM
@@ -140,7 +140,7 @@ If you see error like that:
 
 .. code-block:: none
 
-  [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
+  [platforms-android-on-windows]> cmake -S. -B_builds "-GVisual Studio 14 2015 ARM"
   CMake Error at CMakeLists.txt:7 (message):
     File not found:
 
@@ -159,7 +159,7 @@ you will see this error:
 
 .. code-block:: none
 
-  [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
+  [platforms-android-on-windows]> cmake -S. -B_builds "-GVisual Studio 14 2015 ARM"
   CMake Error at CMakeLists.txt:17 (project):
     CMAKE_SYSTEM_NAME is 'VCMDDAndroid' but 'Visual C++ for Mobile Development
     (Android support)' is not installed.
@@ -173,7 +173,7 @@ if you see this error:
 
 .. code-block:: none
 
-  [platforms-android-on-windows]> cmake -H. -B_builds "-GVisual Studio 14 2015 ARM"
+  [platforms-android-on-windows]> cmake -S. -B_builds "-GVisual Studio 14 2015 ARM"
   -- The C compiler identification is unknown
   -- The CXX compiler identification is unknown
   CMake Error at CMakeLists.txt:17 (project):

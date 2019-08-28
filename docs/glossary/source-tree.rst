@@ -8,7 +8,7 @@ Source tree
 
 Hierarchy of directories with source files such as CMake/C++ sources.
 :ref:`CMake <CMake>` starts with the :ref:`CMakeLists.txt <CMakeLists.txt>`
-from top of the source tree. This directory can be set by :ref:`-H <-H>`
+from top of the source tree. This directory can be set by :ref:`-S <-S>`
 in command line or by ``Browse Source...`` in CMake-GUI.
 
 This directory is mean to be shareable. E.g. probably you should not store
@@ -17,7 +17,7 @@ directory that you want to be managed with :ref:`VCS <VCS>`.
 
 .. seealso::
 
-  * :ref:`-H <-H>`
+  * :ref:`-S <-S>`
   * :ref:`Binary tree <binary tree>`
   * :doc:`GUI + Visual Studio </first-step/generate-native-tool/gui-visual-studio>`
   * :doc:`GUI + Xcode </first-step/generate-native-tool/gui-xcode>`

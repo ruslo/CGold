@@ -20,7 +20,7 @@ Environment variable can be read by using ``$ENV{...}`` syntax:
   [usage-of-variables]> echo $USERNAME
   ruslo
   [usage-of-variables]> export USERNAME
-  [usage-of-variables]> cmake -Hread-env -B_builds
+  [usage-of-variables]> cmake -Sread-env -B_builds
   Environment variable USERNAME: ruslo
   -- Configuring done
   -- Generating done
@@ -42,7 +42,7 @@ By using ``set(ENV{...})`` syntax CMake can set environment variable:
   [usage-of-variables]> echo $USERNAME
   ruslo
   [usage-of-variables]> export USERNAME
-  [usage-of-variables]> cmake -Hset-env -B_builds
+  [usage-of-variables]> cmake -Sset-env -B_builds
   Environment variable USERNAME: Jane Doe
   -- Configuring done
   -- Generating done
@@ -64,7 +64,7 @@ Unset environment variable:
   [usage-of-variables]> echo $USERNAME
   ruslo
   [usage-of-variables]> export USERNAME
-  [usage-of-variables]> cmake -Hunset-env -B_builds
+  [usage-of-variables]> cmake -Sunset-env -B_builds
   Environment variable USERNAME:
   -- Configuring done
   -- Generating done
@@ -91,7 +91,7 @@ Child process will inherit environment variables of parent:
   :emphasize-lines: 2, 3, 7
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Henv-inherit -B_builds
+  [usage-of-variables]> cmake -Senv-inherit -B_builds
   Set environment variable
   Top level ABC: This is ABC
   Environment variable from level1: This is ABC
@@ -118,7 +118,7 @@ Note that in previous examples variable was set on
   :emphasize-lines: 2, 3
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Henv-configure -B_builds
+  [usage-of-variables]> cmake -Senv-configure -B_builds
   Environment variable ABC: 123
   -- Configuring done
   -- Generating done
@@ -162,7 +162,7 @@ time it will break normal :ref:`workflow <workflow>`:
 
   [usage-of-variables]> rm -rf _builds
   [usage-of-variables]> export ABC=abc
-  [usage-of-variables]> cmake -Henv-depends -B_builds
+  [usage-of-variables]> cmake -Senv-depends -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -206,7 +206,7 @@ You have to run configure manually yourself:
 .. code-block:: none
   :emphasize-lines: 1, 9
 
-  [usage-of-variables]> cmake -Henv-depends -B_builds
+  [usage-of-variables]> cmake -Senv-depends -B_builds
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds

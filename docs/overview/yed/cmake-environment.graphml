@@ -203,7 +203,7 @@
 from CMake code:
 
 cmake \
-    -H. \
+    -S. \
     -B_builds<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>

@@ -126,7 +126,7 @@ In other words, you can't be "the CMake person" who will generate separate proje
 those who use Xcode and those who use Visual Studio. All developers in the team should be
 aware of how to generate projects using CMake. In practice it means they have
 to know which CMake arguments to use, some basic examples being
-``cmake -H. -B_builds -GXcode`` and ``cmake -H. -B_builds "-GVisual Studio 12 2013"``
+``cmake -S. -B_builds -GXcode`` and ``cmake -S. -B_builds "-GVisual Studio 12 2013"``
 for Xcode and Visual Studio, respectively. Additionally, they must understand the
 :ref:`changes they must make in their workflow <affecting workflow>`. As a general rule, developers should make an effort to learn the tools
 used in making the code they wish to utilize. Only when providing an end product to users is it
