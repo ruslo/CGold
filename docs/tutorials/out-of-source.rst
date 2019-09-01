@@ -9,8 +9,8 @@ Out-of-source build
 The next important term is "out-of-source build". "Out-of-source build" is a
 good practice of keeping separately generated files from
 :ref:`binary tree <binary tree>` and source files from
-:ref:`source tree <source tree>`. CMake do support contrary "in-source build"
-layout but such an approach has no real benefits and not recommended.
+:ref:`source tree <source tree>`. CMake does support contrary "in-source build"
+layout, but such an approach has no real benefits and not recommended.
 
 .. _out-of-source-config:
 
