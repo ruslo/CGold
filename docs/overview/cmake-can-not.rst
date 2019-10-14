@@ -12,7 +12,7 @@ What can't be done with CMake
 
 .. Can't find good reference. Let me know if can find a better link (Ruslo)
 
-:ref:`CMake <CMake>` has it's strengths and weaknesses. Most of the drawbacks
+:ref:`CMake <CMake>` has its strengths and weaknesses. Most of the drawbacks
 mentioned here can be worked around by using approaches that may differ from
 your normal workflow, yet still reach the end goal. Try to look at them from another
 angle; think of the picture as a whole and remember that the advantages definitely
