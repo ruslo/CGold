@@ -93,12 +93,12 @@ Incomplete functionality coverage
 There are some missing features in :ref:`CMake <CMake>`. Mapping of
 CMake functionality <-> :ref:`native build tool <Native build tool>` functionality
 is not always bijective. Often this can be worked around by generating different
-native tool files from the same CMake code. For example it's possible using
-autotools create two versions of library
-(:doc:`shared + static </tutorials/libraries/static-shared>`) by one run.
-However this may affect performance, or be outright impossible for other platforms
-(e.g. on Windows). With :ref:`CMake <CMake>` you can generate two versions of
-project from one ``CMakeLists.txt`` file: one each for shared and static
+native tool files from the same CMake code. For example, it's possible using
+autotools to create two versions of a library
+(:doc:`shared + static </tutorials/libraries/static-shared>`) in a single run.
+However, this may affect performance, or be outright impossible for other platforms
+(e.g. Windows). With :ref:`CMake <CMake>`, you can generate two versions of
+project from a single ``CMakeLists.txt`` file: one each for shared and static
 variants, effectively running generate/build twice.
 
 With ``Visual Studio`` you can have two variants, x86 and x64, in one solution
@@ -137,7 +137,7 @@ simply providing the project files.
 
   * `CMAKE_USE_RELATIVE_PATHS removed since CMake 3.4 <https://cmake.org/cmake/help/latest/release/3.4.html#deprecated-and-removed-features>`__
 
-Even if support for relative paths will be re-implemented in the future each developer
+Even if support for relative paths will be re-implemented in the future, each developer
 in the team should have :ref:`CMake <CMake>` installed, as there are other tasks which
 :ref:`CMake <CMake>` automatically takes care of that may be done incorrectly if done manually.
 A few examples are:
