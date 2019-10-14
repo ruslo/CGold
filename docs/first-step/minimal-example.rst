@@ -32,19 +32,19 @@ Description
 foo.cpp
 ~~~~~~~
 
-Explanation of the ``foo.cpp`` content is out of scope of this document so will
+Explanation of the ``foo.cpp`` content is out of the scope of this document, so it will
 be skipped.
 
 CMakeLists.txt
 ~~~~~~~~~~~~~~
 
-First line of ``CMakeLists.txt`` is a comment and will be ignored:
+The first line of ``CMakeLists.txt`` is a comment and will be ignored:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
   :emphasize-lines: 1
 
-Next line tell us about ``CMake`` version for which this file is written:
+The next line tells us about the ``CMake`` version for which this file is written:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
@@ -66,10 +66,10 @@ Adding executable ``foo`` with source ``foo.cpp``:
   :language: cmake
   :emphasize-lines: 6
 
-:ref:`CMake <CMake>` has some predefined settings so it will figure out next
+:ref:`CMake <CMake>` has some predefined settings so it will figure out the following
 things:
 
-* ``*.cpp`` extension is for the C++ sources, so target ``foo`` will be build with C++ compiler
-* on Windows executables usually have suffix ``.exe`` so result binary will have name ``foo.exe``
-* on Unix platforms like OSX or Linux executables usually have no suffixes
-  so result binary will have name ``foo``
+* ``*.cpp`` extension is for the C++ sources, so target ``foo`` will be built with the C++ compiler
+* on Windows executables usually have suffix ``.exe``, so the resulting binary will be named ``foo.exe``
+* on Unix platforms like OSX or Linux executables usually have no suffixes,
+  so the resulting binary will be named ``foo``
