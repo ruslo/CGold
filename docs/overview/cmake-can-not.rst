@@ -97,7 +97,7 @@ native tool files from the same CMake code. For example, it's possible using
 autotools to create two versions of a library
 (:doc:`shared + static </tutorials/libraries/static-shared>`) in a single run.
 However, this may affect performance, or be outright impossible for other platforms
-(e.g. Windows). With :ref:`CMake <CMake>`, you can generate two versions of
+(e.g., Windows). With :ref:`CMake <CMake>`, you can generate two versions of a
 project from a single ``CMakeLists.txt`` file: one each for shared and static
 variants, effectively running generate/build twice.
 
