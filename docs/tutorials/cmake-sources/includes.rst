@@ -22,7 +22,7 @@ CMake comes with a set of
   :emphasize-lines: 2, 3
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hinclude-processor-count -B_builds
+  [cmake-sources]> cmake -Sinclude-processor-count -B_builds
   Number of processors: 4
   -- Configuring done
   -- Generating done
@@ -56,7 +56,7 @@ custom CMake modules:
   :emphasize-lines: 3
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hinclude-users -B_builds
+  [cmake-sources]> cmake -Sinclude-users -B_builds
   Hello from MyModule!
   -- Configuring done
   -- Generating done
@@ -119,7 +119,7 @@ Works fine:
   :emphasize-lines: 3-4
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hmodify-path -B_builds "-DCMAKE_MODULE_PATH=`pwd`/modify-path/standard"
+  [cmake-sources]> cmake -Smodify-path -B_builds "-DCMAKE_MODULE_PATH=`pwd`/modify-path/standard"
   Force processor count
   Number of processors: 16
   -- Configuring done
@@ -147,7 +147,7 @@ They will **not** be loaded:
   :emphasize-lines: 3
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hmodify-incorrect -B_builds "-DCMAKE_MODULE_PATH=`pwd`/modify-incorrect/standard"
+  [cmake-sources]> cmake -Smodify-incorrect -B_builds "-DCMAKE_MODULE_PATH=`pwd`/modify-incorrect/standard"
   Number of processors: 4
   -- Configuring done
   -- Generating done

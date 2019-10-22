@@ -88,7 +88,7 @@ CMake will think that you're running code with old policies and warns you:
 .. code-block:: none
   :emphasize-lines: 4-5
 
-  [minimum-required-example]> cmake -Hbad -B_builds/bad
+  [minimum-required-example]> cmake -Sbad -B_builds/bad
   -- The C compiler identification is GNU 4.9.3
   -- The CXX compiler identification is GNU 4.9.3
   CMake Warning at /.../share/cmake-3.3.1/Modules/Platform/CYGWIN.cmake:15 (message):
@@ -124,7 +124,7 @@ with no warnings:
 
 .. code-block:: none
 
-  [minimum-required-example]> cmake -Hgood -B_builds/good
+  [minimum-required-example]> cmake -Sgood -B_builds/good
   -- The C compiler identification is GNU 4.9.3
   -- The CXX compiler identification is GNU 4.9.3
   -- Check for working C compiler: /usr/bin/cc
@@ -185,7 +185,7 @@ Works fine for CMake before ``3.0``:
   [policy-examples]> cmake --version
   cmake version 2.8.12.2
   [policy-examples]> rm -rf _builds
-  [policy-examples]> cmake -Hbug-2.8 -B_builds
+  [policy-examples]> cmake -Sbug-2.8 -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -208,7 +208,7 @@ For CMake version ``>= 3.0`` warning will be reported:
   [policy-examples]> cmake --version
   cmake version 3.5.2
   [policy-examples]> rm -rf _builds
-  [policy-examples]> cmake -Hbug-2.8 -B_builds
+  [policy-examples]> cmake -Sbug-2.8 -B_builds
   ...
   -- Configuring done
   CMake Warning (dev) at CMakeLists.txt:4 (add_library):
@@ -234,7 +234,7 @@ warning turns into error:
   :emphasize-lines: 2,18
 
   [policy-examples]> rm -rf _builds
-  [policy-examples]> cmake -Hset-3.0 -B_builds
+  [policy-examples]> cmake -Sset-3.0 -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -298,7 +298,7 @@ Looks good for ``CMake 3.0+``:
   [policy-examples]> cmake --version
   cmake version 3.5.2
   [policy-examples]> rm -rf _builds
-  [policy-examples]> cmake -Hunknown-2.8 -B_builds
+  [policy-examples]> cmake -Sunknown-2.8 -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -325,7 +325,7 @@ have no idea what this policy is about:
   > cmake --version
   cmake version 2.8.12.2
   > rm -rf _builds
-  > cmake -Hunknown-2.8 -B_builds
+  > cmake -Sunknown-2.8 -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc

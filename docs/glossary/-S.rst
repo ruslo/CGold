@@ -11,7 +11,7 @@
 --
 
 Add ``-S <path-to-source-tree>`` to set directory with ``CMakeLists.txt``.
-This option was added in CMake 3.13 and replaces the the undocumented and internal variable ``-H``. This option can be used independently of ``-B``.
+This option was added in CMake 3.13 and replaces the the undocumented and internal variable ``-S``. This option can be used independently of ``-B``.
 
 .. code-block:: none
 

@@ -46,7 +46,7 @@ Build library:
   :emphasize-lines: 2, 21, 24, 27-28
 
   [library-examples]> rm -rf _builds
-  [library-examples]> cmake -Hlibrary-symbols -B_builds
+  [library-examples]> cmake -Slibrary-symbols -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc

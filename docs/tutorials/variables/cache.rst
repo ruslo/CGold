@@ -14,7 +14,7 @@ Cache variables saved in :ref:`CMakeCache.txt` file:
   :emphasize-lines: 2, 7
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hcache-cmakecachetxt -B_builds
+  [usage-of-variables]> cmake -Scache-cmakecachetxt -B_builds
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
@@ -39,7 +39,7 @@ are set globally:
   :emphasize-lines: 2-3
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hcache-no-scope -B_builds
+  [usage-of-variables]> cmake -Scache-no-scope -B_builds
   A: 123
   -- Configuring done
   -- Generating done
@@ -60,7 +60,7 @@ effect - old variable will be used still:
 
   [usage-of-variables]> rm -rf _builds
   [usage-of-variables]> cp double-set/1/CMakeLists.txt double-set/
-  [usage-of-variables]> cmake -Hdouble-set -B_builds
+  [usage-of-variables]> cmake -Sdouble-set -B_builds
   Variable from cache: 123
   -- Configuring done
   -- Generating done
@@ -77,7 +77,7 @@ Update :ref:`CMakeLists.txt <cmakelists.txt>` (don't remove cache!):
   :emphasize-lines: 2-3, 8
 
   [usage-of-variables]> cp double-set/2/CMakeLists.txt double-set/
-  [usage-of-variables]> cmake -Hdouble-set -B_builds
+  [usage-of-variables]> cmake -Sdouble-set -B_builds
   Variable from cache: 123
   -- Configuring done
   -- Generating done
@@ -94,7 +94,7 @@ Cache variable can be set by ``-D`` command line option.  Variable that set by
 .. code-block:: none
   :emphasize-lines: 1-2, 7
 
-  [usage-of-variables]> cmake -Dabc=444 -Hdouble-set -B_builds
+  [usage-of-variables]> cmake -Dabc=444 -Sdouble-set -B_builds
   Variable from cache: 444
   -- Configuring done
   -- Generating done
@@ -121,7 +121,7 @@ it by ``-C``:
   :emphasize-lines: 2, 4-6
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -C initial-cache/cache.cmake -Hinitial-cache -B_builds
+  [usage-of-variables]> cmake -C initial-cache/cache.cmake -Sinitial-cache -B_builds
   loading initial cache file initial-cache/cache.cmake
   A: 123
   B: 456
@@ -144,7 +144,7 @@ you can add ``FORCE``:
   :emphasize-lines: 2-3
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -DA=456 -Hforce -B_builds
+  [usage-of-variables]> cmake -DA=456 -Sforce -B_builds
   A: 123
   -- Configuring done
   -- Generating done
@@ -171,12 +171,12 @@ Force as a workaround
   :emphasize-lines: 2-3, 7-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hno-force-confuse -B_builds
+  [usage-of-variables]> cmake -Sno-force-confuse -B_builds
   A: 456
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> cmake -Hno-force-confuse -B_builds
+  [usage-of-variables]> cmake -Sno-force-confuse -B_builds
   A: 123
   -- Configuring done
   -- Generating done
@@ -193,12 +193,12 @@ regular variable with the same name will be unset too each time:
   :emphasize-lines: 2-3, 7-8
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hforce-workaround -B_builds
+  [usage-of-variables]> cmake -Sforce-workaround -B_builds
   A: 456
   -- Configuring done
   -- Generating done
   -- Build files have been written to: /.../usage-of-variables/_builds
-  [usage-of-variables]> cmake -Hforce-workaround -B_builds
+  [usage-of-variables]> cmake -Sforce-workaround -B_builds
   A: 456
   -- Configuring done
   -- Generating done
@@ -325,7 +325,7 @@ in cache ``456`` and ``789`` **will be ignored**, so final result is ``123``:
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hinternal-force -B_builds
+  [usage-of-variables]> cmake -Sinternal-force -B_builds
   FOO_A (internal): 789
   FOO_B (string): 123
   -- Configuring done
@@ -371,7 +371,7 @@ Default value:
   :emphasize-lines: 2-4
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hproject-customization -B_builds
+  [usage-of-variables]> cmake -Sproject-customization -B_builds
   FOO_A: Default value for A
   FOO_B: Default value for B
   -- Configuring done
@@ -383,7 +383,7 @@ User's value:
 .. code-block:: none
   :emphasize-lines: 1-2
 
-  [usage-of-variables]> cmake -DFOO_A=User -Hproject-customization -B_builds
+  [usage-of-variables]> cmake -DFOO_A=User -Sproject-customization -B_builds
   FOO_A: User
   FOO_B: Default value for B
   -- Configuring done
@@ -395,7 +395,7 @@ Note that such approach doesn't work for regular CMake variable ``FOO_B``:
 .. code-block:: none
   :emphasize-lines: 1, 3
 
-  [usage-of-variables]> cmake -DFOO_B=User -Hproject-customization -B_builds
+  [usage-of-variables]> cmake -DFOO_B=User -Sproject-customization -B_builds
   FOO_A: User
   FOO_B: Default value for B
   -- Configuring done
@@ -415,7 +415,7 @@ Command ``option`` can be used for creating boolean cache entry:
   :emphasize-lines: 2-4, 9-10
 
   [usage-of-variables]> rm -rf _builds
-  [usage-of-variables]> cmake -Hoption -B_builds
+  [usage-of-variables]> cmake -Soption -B_builds
   FOO_A: OFF
   FOO_B: ON
   -- Configuring done

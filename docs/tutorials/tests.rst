@@ -61,7 +61,7 @@ Configure and build project:
   :emphasize-lines: 2, 20
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Htest-examples/simple -B_builds
+  [examples]> cmake -Stest-examples/simple -B_builds
   -- The C compiler identification is GNU 5.4.0
   -- The CXX compiler identification is GNU 5.4.0
   -- Check for working C compiler: /usr/bin/cc

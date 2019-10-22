@@ -13,13 +13,13 @@ Open terminal and go to the directory with sources:
   CMakeLists.txt foo.cpp
 
 Generate Xcode project using CMake. Use
-:ref:`-H. <-H>` :ref:`-B_builds <-B>` for specifying paths
+:ref:`-S. <-S>` :ref:`-B_builds <-B>` for specifying paths
 and ``-GXcode`` for the generator:
 
 .. code-block:: none
   :emphasize-lines: 1, 18
 
-  [cgold-example]> cmake -H. -B_builds -GXcode
+  [cgold-example]> cmake -S. -B_builds -GXcode
   -- The C compiler identification is AppleClang 7.3.0.7030031
   -- The CXX compiler identification is AppleClang 7.3.0.7030031
   -- Check for working C compiler: /.../Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang

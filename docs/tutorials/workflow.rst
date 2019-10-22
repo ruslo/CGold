@@ -7,7 +7,7 @@ Workflow
 There is a nice feature in :ref:`CMake <CMake>` that can greatly simplify
 developer's workflow: :ref:`native build tool <native build tool>` will watch
 CMake sources for changes and run re-configure step on update automatically. In
-command-line terms it means that you have to run ``cmake -H. -B_builds`` **only
+command-line terms it means that you have to run ``cmake -S. -B_builds`` **only
 once**, you don't need to run configure again after modification of
 CMakeLists.txt - you can keep using ``cmake --build``.
 
@@ -29,7 +29,7 @@ Generate Makefile:
 .. code-block:: none
   :emphasize-lines: 1, 16
 
-  [minimal-with-message]> cmake -H. -B_builds
+  [minimal-with-message]> cmake -S. -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -82,7 +82,7 @@ Let's "modify" ``foo.cpp`` source:
 Make detects that executable ``foo`` is out-of-date and rebuild it. Well, that's
 what build systems designed for :)
 
-Now let's "change" CMakeLists.txt. Do we need to run ``cmake -H. -B_builds``
+Now let's "change" CMakeLists.txt. Do we need to run ``cmake -S. -B_builds``
 again? The answer is NO - just keep using ``cmake --build _builds``.
 CMakeLists.txt added as dependent file to the Makefile:
 
@@ -150,7 +150,7 @@ Suspicious behavior
 
 If your workflow doesn't match configure-once approach then it may be a
 symptom of wrongly written CMake code. Especially when you have to run
-``cmake -H. -B_builds`` twice or when ``cmake --build _builds`` doesn't catch
+``cmake -S. -B_builds`` twice or when ``cmake --build _builds`` doesn't catch
 updates from CMake code.
 
 .. admonition:: CMake issue

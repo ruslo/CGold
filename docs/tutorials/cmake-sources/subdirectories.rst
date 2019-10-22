@@ -34,7 +34,7 @@ creates a node in a source tree:
   :emphasize-lines: 3-7
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hsimple-tree -B_builds
+  [cmake-sources]> cmake -Ssimple-tree -B_builds
   Top level CMakeLists.txt
   Processing foo/CMakeList.txt
   Processing boo/CMakeList.txt
@@ -52,7 +52,7 @@ Source variables
 
 ``CMAKE_CURRENT_SOURCE_DIR`` variable will hold a full path to a currently
 processed node. Root of the tree is always available in
-``CMAKE_SOURCE_DIR`` (see :ref:`-H <-H>`):
+``CMAKE_SOURCE_DIR`` (see :ref:`-S <-S>`):
 
 .. literalinclude:: /examples/cmake-sources/simple-tree-source-vars/CMakeLists.txt
   :language: cmake
@@ -78,7 +78,7 @@ processed node. Root of the tree is always available in
   :emphasize-lines: 4-5, 7-8, 10-11, 13-14, 16-17
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hsimple-tree-source-vars -B_builds
+  [cmake-sources]> cmake -Ssimple-tree-source-vars -B_builds
   Top level CMakeLists.txt
   CMAKE_SOURCE_DIR: /.../cmake-sources/simple-tree-source-vars
   CMAKE_CURRENT_SOURCE_DIR: /.../cmake-sources/simple-tree-source-vars
@@ -134,7 +134,7 @@ Information can be taken from ``CMAKE_BINARY_DIR`` (see :ref:`-B <-B>`) and
   :emphasize-lines: 4-5, 7-8, 10-11, 13-14, 16-17
 
   [cmake-sources]> rm -rf _builds
-  [cmake-sources]> cmake -Hsimple-tree-binary-vars -B_builds
+  [cmake-sources]> cmake -Ssimple-tree-binary-vars -B_builds
   Top level CMakeLists.txt
   CMAKE_BINARY_DIR: /.../cmake-sources/_builds
   CMAKE_CURRENT_BINARY_DIR: /.../cmake-sources/_builds

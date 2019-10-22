@@ -63,7 +63,7 @@ both targets:
   :emphasize-lines: 8
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hlibrary-examples/link-error-odr-global -B_builds
+  [examples]> cmake -Slibrary-examples/link-error-odr-global -B_builds
   ...
   [examples]> cmake --build _builds
   ...
@@ -98,7 +98,7 @@ Building C++11 variant:
   :emphasize-lines: 2, 7
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hlibrary-examples/link-error-odr-global-fix -B_builds -DCMAKE_CXX_STANDARD=11
+  [examples]> cmake -Slibrary-examples/link-error-odr-global-fix -B_builds -DCMAKE_CXX_STANDARD=11
   ...
   [examples]> cmake --build _builds
   ...
@@ -111,7 +111,7 @@ Building C++98 variant:
   :emphasize-lines: 2, 7
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hlibrary-examples/link-error-odr-global-fix -B_builds -DCMAKE_CXX_STANDARD=98
+  [examples]> cmake -Slibrary-examples/link-error-odr-global-fix -B_builds -DCMAKE_CXX_STANDARD=98
   ...
   [examples]> cmake --build _builds
   ...

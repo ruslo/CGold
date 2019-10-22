@@ -19,7 +19,7 @@ variant:
 
 .. code-block:: none
 
-  > cmake -H. -B_builds -DCMAKE_CONFIGURATION_TYPES=Release;Debug -GXcode
+  > cmake -S. -B_builds -DCMAKE_CONFIGURATION_TYPES=Release;Debug -GXcode
   > cmake --build _builds --config Debug
 
 It is legal to use same ``_builds`` directory to build ``Release`` variant

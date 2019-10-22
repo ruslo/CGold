@@ -61,7 +61,7 @@ if os.path.exists(commands_file):
 else:
   commands = [
     'rm -rf _builds',
-    'cmake -H{} -B_builds'.format(relative_example_dir)
+    'cmake -S{} -B_builds'.format(relative_example_dir)
   ]
 
 doc_file.write('.. code-block:: none\n')

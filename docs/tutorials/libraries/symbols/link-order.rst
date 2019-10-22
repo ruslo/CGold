@@ -79,7 +79,7 @@ Build will fail with linker error:
   :emphasize-lines: 2, 20, 40, 42-45
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hlibrary-examples/link-order-bad -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
+  [examples]> cmake -Slibrary-examples/link-order-bad -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
   -- The C compiler identification is GNU 5.4.1
   -- The CXX compiler identification is GNU 5.4.1
   -- Check for working C compiler: /usr/bin/cc
@@ -174,7 +174,7 @@ control the right order of files:
   :emphasize-lines: 2, 20, 22
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hlibrary-examples/link-order-fix -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
+  [examples]> cmake -Slibrary-examples/link-order-fix -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON
   -- The C compiler identification is GNU 5.4.1
   -- The CXX compiler identification is GNU 5.4.1
   -- Check for working C compiler: /usr/bin/cc

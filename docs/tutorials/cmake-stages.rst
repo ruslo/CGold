@@ -107,7 +107,7 @@ Example of generating Makefile on Linux:
   :emphasize-lines: 2, 17
 
   [minimal-with-message-master]> rm -rf _builds
-  [minimal-with-message-master]> cmake -H. -B_builds
+  [minimal-with-message-master]> cmake -S. -B_builds
   -- The C compiler identification is GNU 4.8.4
   -- The CXX compiler identification is GNU 4.8.4
   -- Check for working C compiler: /usr/bin/cc
@@ -144,7 +144,7 @@ If you run configure again CMakeLists.txt will be parsed one more time and
 .. code-block:: none
   :emphasize-lines: 2
 
-  [minimal-with-message-master]> cmake -H. -B_builds
+  [minimal-with-message-master]> cmake -S. -B_builds
   Processing CMakeLists.txt
   -- Configuring done
   -- Generating done

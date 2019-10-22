@@ -30,7 +30,7 @@ with ``NO``/``YES`` values:
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hif-simple -B_builds
+  [control-structures]> cmake -Sif-simple -B_builds
   Condition 1
   Condition 3
   -- Configuring done
@@ -47,7 +47,7 @@ Adding ``else``/``elseif``:
   :emphasize-lines: 2-6
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hif-else -B_builds
+  [control-structures]> cmake -Sif-else -B_builds
   Condition 1
   Condition 4
   Condition 6
@@ -104,7 +104,7 @@ present in current scope or not?
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hcmp0054-confuse -B_builds
+  [control-structures]> cmake -Scmp0054-confuse -B_builds
   A = Jane Doe
   A is empty
   -- Configuring done
@@ -125,7 +125,7 @@ Since CMake accepts any names of the variables you can't filter out
   :emphasize-lines: 2-6
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Htry-fix -B_builds
+  [control-structures]> cmake -Stry-fix -B_builds
   A = Jane Doe
   A is empty (1)
   A is empty (2)
@@ -147,7 +147,7 @@ To avoid such issues you should use CMake 3.1 and a ``CMP0054`` policy:
   :emphasize-lines: 2-3
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hcmp0054-fix -B_builds
+  [control-structures]> cmake -Scmp0054-fix -B_builds
   A = Jane Doe
   -- Configuring done
   -- Generating done
@@ -167,7 +167,7 @@ command:
   :emphasize-lines: 2-4
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hcmp0054-workaround -B_builds
+  [control-structures]> cmake -Scmp0054-workaround -B_builds
   A = Jane Doe
   A is not empty
   -- Configuring done
@@ -194,7 +194,7 @@ Example of a ``foreach(<variable> <list>)`` command:
   :emphasize-lines: 2, 4-6, 8-10, 11, 12, 14, 16-17, 19-24
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hforeach -B_builds
+  [control-structures]> cmake -Sforeach -B_builds
   Explicit list:
     A
     B
@@ -240,7 +240,7 @@ Example of usage of a ``foreach(... RANGE ...)`` command:
   :emphasize-lines: 2, 4-14, 16-21, 23-25
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hforeach-range -B_builds
+  [control-structures]> cmake -Sforeach-range -B_builds
   Simple range:
     0
     1
@@ -281,7 +281,7 @@ Example of usage of a ``while`` command:
   :emphasize-lines: 2, 4-8, 10-14
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hwhile -B_builds
+  [control-structures]> cmake -Swhile -B_builds
   Loop with condition as variable:
     a = x
     a = xx
@@ -315,7 +315,7 @@ Exit from a loop with a ``break`` command:
   :emphasize-lines: 2, 4-6, 8-12
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hbreak -B_builds
+  [control-structures]> cmake -Sbreak -B_builds
   Stop 'while' loop:
     x
     xx
@@ -343,7 +343,7 @@ Since CMake 3.2 it's possible to continue the loop:
   :emphasize-lines: 2, 6, 9
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hcontinue -B_builds
+  [control-structures]> cmake -Scontinue -B_builds
   Loop with 'continue':
     process 0
     process 1
@@ -386,7 +386,7 @@ Function without arguments:
   :emphasize-lines: 3-4
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hsimple-function -B_builds
+  [control-structures]> cmake -Ssimple-function -B_builds
   Calling 'foo' function
   Calling 'foo' function
   -- Configuring done
@@ -406,7 +406,7 @@ Function with arguments and example of ``ARGV*``, ``ARGC``, ``ARGN`` usage:
   :emphasize-lines: 4-6, 8-11, 13-14
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hfunction-args -B_builds
+  [control-structures]> cmake -Sfunction-args -B_builds
   Calling function 'foo':
     x = 1
     y = 2
@@ -440,7 +440,7 @@ CMake style
   :emphasize-lines: 4-13, 15-23, 30-33, 36
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hcmake-style -B_builds
+  [control-structures]> cmake -Scmake-style -B_builds
   *** Run (1) ***
   FOO: TRUE
   BOO: FALSE
@@ -495,7 +495,7 @@ results:
   :emphasize-lines: 2, 4-5, 7-8, 10-11
 
   [examples]> rm -rf _builds
-  [examples]> cmake -Hcontrol-structures/cmake-style-limitations -B_builds
+  [examples]> cmake -Scontrol-structures/cmake-style-limitations -B_builds
   *** Run (1) ***
   X is defined: NO
   X value: ''
@@ -523,7 +523,7 @@ a variable to the :ref:`parent scope <parent scope>` instead:
   :emphasize-lines: 3-4, 6
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hreturn-value -B_builds
+  [control-structures]> cmake -Sreturn-value -B_builds
   Before 'boo': 333
   After 'boo': 123
   Calling 'bar' with arguments: '123' 'var_out'
@@ -549,7 +549,7 @@ You can exit from a function using a ``return`` command:
   :emphasize-lines: 3-5
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hreturn -B_builds
+  [control-structures]> cmake -Sreturn -B_builds
   Exit on A
   Exit on B
   Exit
@@ -582,7 +582,7 @@ the function **is defined**:
   :emphasize-lines: 2, 4-6, 8-10
 
   [control-structures]> rm -rf _builds
-  [control-structures]> cmake -Hfunction-location -B_builds
+  [control-structures]> cmake -Sfunction-location -B_builds
   foo_run(123)
   Called from: /.../control-structures/function-location
   Defined in file: /.../control-structures/function-location/cmake/Modules/foo_run.cmake
