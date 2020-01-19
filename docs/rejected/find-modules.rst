@@ -5,8 +5,8 @@ FindXXX.cmake
 =============
 
 There are no instructions for writing ``FindXXX.cmake`` files like
-``FindZLIB.cmake``_ because it's easier to add some code to generate
-``ZLIBConfig.cmake``_ automatically.
+``FindZLIB.cmake`` because it's easier to add some code to generate
+``ZLIBConfig.cmake`` automatically.
 
 Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__:
 
