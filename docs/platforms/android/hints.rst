@@ -45,20 +45,15 @@ Get Android NDK
 .. admonition:: Polly
 
   * Script `install-ci-dependencies.py`_ will install Android NDK if environment
-    variable ``TOOLCHAIN`` set to ``android-*`` (`.travis.yml example`_).
+    variable ``TOOLCHAIN`` set to ``android-*``.
 
 `Android NDK`_ contains compilers and other tools for C++ development.
 
 .. _install-ci-dependencies.py: https://github.com/ruslo/polly/blob/d71cc9ad1c68f78b12a33ad91e171f5b82fcc65b/bin/install-ci-dependencies.py
-.. _.travis.yml example: https://github.com/forexample/hunter-simple/blob/989d83359ccd73b4f3a544d02d10895c24ccce3f/.travis.yml#L123-L130
 .. _Android NDK: https://developer.android.com/ndk/downloads/index.html
 
 Get Android SDK
 ===============
-
-.. admonition:: Hunter
-
-  * Android SDK will be downloaded automatically, no need to install it.
 
 `Android SDK`_ tools used for development on Android platform:
 adb, android, emulator, etc.
