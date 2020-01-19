@@ -200,9 +200,7 @@ Cons:
 
   If dependency tree is complex it can be hard to maintain such super-build.
 * Writing correct customizable ``ExternalProject_Add`` rules is not a trivial
-  task. Take a look at
-  `real working code <https://github.com/ruslo/hunter/blob/8c950b0de024ae2767f5a886836196331c03a827/cmake/schemes/url_sha1_cmake.cmake.in#L103-L184>`__
-  for example (and it really is just a tip of the iceberg).
+  task.
 
 Requirements
 ~~~~~~~~~~~~

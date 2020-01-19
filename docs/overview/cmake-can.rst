@@ -162,10 +162,6 @@ stack. Next `activity diagram`_ shows CMake, CTest and CPack connections:
 
   * :doc:`CMake Workflow </tutorials/workflow>`
 
-.. admonition:: Hunter
-
-  * `Hunter in CMake environment <https://docs.hunter.sh/en/latest/user-guides/regular.html#hunter-in-cmake-environment>`__
-
 Summary
 =======
 

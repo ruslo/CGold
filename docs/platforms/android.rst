@@ -8,4 +8,3 @@ Android
   :maxdepth: 1
 
   /platforms/android/hints
-  /platforms/android/windows

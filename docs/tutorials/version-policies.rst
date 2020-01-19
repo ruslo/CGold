@@ -54,10 +54,6 @@ need to know:
 The last case will fit most of them but will harder to maintain for developer
 and probably will require automatic testing system with good coverage.
 
-.. seealso::
-
-  * `CMake versions for Hunter <https://docs.hunter.sh/en/latest/quick-start/cmake.html>`__
-
 For example the code with version ``2.8`` as a minimum one and with ``3.0``
 features will look like:
 

@@ -9,6 +9,6 @@ Samples
 * Install library, optional dependencies (system ZLIB)
 * https://github.com/cgold-examples/fruits
 
-  * optional dependencies (Hunter)
+  * optional dependencies
   * version
   * CMake modules

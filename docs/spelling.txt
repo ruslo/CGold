@@ -41,7 +41,6 @@ dereferencing
 executables
 globbing
 hacky
-hunterization
 iOS
 listfile
 listfiles

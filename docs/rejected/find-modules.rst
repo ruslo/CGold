@@ -5,8 +5,8 @@ FindXXX.cmake
 =============
 
 There are no instructions for writing ``FindXXX.cmake`` files like
-`FindZLIB.cmake`_ because it's easier to add some code to generate
-`ZLIBConfig.cmake`_ automatically.
+``FindZLIB.cmake``_ because it's easier to add some code to generate
+``ZLIBConfig.cmake``_ automatically.
 
 Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__:
 
@@ -23,6 +23,3 @@ Quote from `CMake wiki <https://cmake.org/Wiki/CMake:Improving_Find*_Modules>`__
 .. admonition:: Examples on GitHub
 
   * `Package example <https://github.com/forexample/package-example>`__
-
-.. _FindZLIB.cmake: https://github.com/Kitware/CMake/blob/7a47745d69003ec580e8f38d26dbf8858a4f5b18/Modules/FindZLIB.cmake
-.. _ZLIBConfig.cmake: https://github.com/hunter-packages/zlib/blob/8d3ad09e42332d21a578d6e6ecf2756d58e48761/CMakeLists.txt#L222
