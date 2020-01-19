@@ -19,5 +19,5 @@ Public
 Private
 =======
 
-* Write me at ruslan_baratov@yahoo.com
+* Write me at x@ruslo.dev
 * Private chat room on Gitter: https://gitter.im/ruslo
