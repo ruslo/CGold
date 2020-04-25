@@ -15,6 +15,10 @@ As documentation states ``OBJECT`` library is a non-archival collection of objec
 target_link_libraries
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+  This limitation was removed in `CMake 3.12 <https://cmake.org/cmake/help/v3.17/release/3.12.html#commands>`__
+
 ``OBJECT`` library can't be used on the right hand side of ``target_link_libraries`` command.
 In practice it means that you will not be able to make a hierarchy of targets as you
 do with regular ``add_library`` command.
