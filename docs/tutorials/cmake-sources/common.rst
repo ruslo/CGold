@@ -193,7 +193,7 @@ Make sure you **fully understand** what each variable means in other scenarios:
   referring to ``${PROJECT_SOURCE_DIR}/resources``.
 
 * ``CMAKE_CURRENT_SOURCE_DIR`` this is a directory with ``CMakeLists.txt``.
-  If you're using this variable internally you can substitute is with
+  If you're using this variable internally you can substitute it with
   ``CMAKE_CURRENT_LIST_DIR``. In case you're creating module for external usage
   consider moving all functionality to ``function``.
 
