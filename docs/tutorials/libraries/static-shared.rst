@@ -347,7 +347,7 @@ in fact **we don't really interested in**:
 .. note::
 
   Such issue **can't be solved** by library usage requirements since library
-  ``bar`` doesn't know apriori if will it be linked to shared library or not.
+  ``bar`` doesn't know a priori if will it be linked to shared library or not.
 
 Scalability
 ~~~~~~~~~~~
