@@ -4,13 +4,13 @@
 CLI: Visual Studio
 ------------------
 
-To build Visual Studio solution from command line ``MSBuild.exe`` can be used.
-You must add ``MSBuild.exe`` location to PATH or open Visual Studio Developer
+To build the Visual Studio solution from the command line, ``MSBuild.exe`` can be used.
+You must add the ``MSBuild.exe`` location to your PATH or open Visual Studio Developer
 Prompt instead of ``cmd.exe`` (run ``where msbuild`` to check)  and run
 ``msbuild _builds\foo.sln``
 
-But CMake offer cross-tool way to do exactly the same: ``cmake --build _builds``
-(no need to have ``MSBuild.exe`` in PATH).
+But CMake offers a cross-tool way to do exactly the same: ``cmake --build _builds``
+(no need to have ``MSBuild.exe`` in your PATH).
 
 .. code-block:: none
 
@@ -24,7 +24,7 @@ But CMake offer cross-tool way to do exactly the same: ``cmake --build _builds``
 
   Time Elapsed 00:00:01.54
 
-By default Debug variant of ``foo.exe`` will be build, you can run it by:
+By default the Debug variant of ``foo.exe`` will be built, you can run it by:
 
 .. code-block:: none
 
