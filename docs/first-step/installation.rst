@@ -17,7 +17,7 @@ CMake Installation
 .. https://www.youtube.com/watch?v=GOyalYaBlpU Dead now :(
 
 Obviously to use some tool you need to install it first. CMake can be installed
-using default system package manager or by getting binaries from
+using your default system package manager or by getting binaries from
 `Download page <https://cmake.org/download/>`_.
 
 Ubuntu

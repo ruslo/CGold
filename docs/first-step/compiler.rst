@@ -4,7 +4,7 @@
 Compiler
 --------
 
-:doc:`native-build-tool` will only orchestrate our builds but we need to have the
+The :doc:`native-build-tool` will only orchestrate our builds but we need to have the
 compiler which will actually create binaries from our C++ sources.
 
 .. toctree::

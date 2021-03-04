@@ -6,14 +6,14 @@ Native build tool
 
 As already mentioned CMake is **not designed** to do the build itself -
 it :ref:`generates files <cmake generate native build tool>`
-which can be used by real :ref:`native build tool <Native build tool>`,
-hence you need to choose such
+which can be used by a real :ref:`native build tool <Native build tool>`,
+hence you need to choose such a
 tool(s) and install it if needed. Option `-G \<generator-name>`_ can be used to
-specify what type of generator will be run. If no such option present CMake
+specify what type of generator will be used. If no such option present CMake
 will use default generator (e.g. ``Unix Makefiles`` on \*nix platforms).
 
-List of available `generators`_ depends on the host OS (e.g. ``Visual Studio``
-family generators not available on ``Linux``). You can get this list by running
+The list of available `generators`_ depends on the host OS (e.g. ``Visual Studio``
+family generators are not available on ``Linux``). You can get this list by running
 ``cmake --help``:
 
 .. code-block:: none

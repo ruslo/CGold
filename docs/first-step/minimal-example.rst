@@ -9,14 +9,14 @@
 Minimal example
 ---------------
 
-Create empty directory and put ``foo.cpp`` and ``CMakeLists.txt`` files into it.
+Create an empty directory and put ``foo.cpp`` and ``CMakeLists.txt`` files into it.
 
 .. admonition:: Examples on GitHub
 
   * `Repository <https://github.com/cgold-examples/minimal-example>`__
   * `Latest ZIP <https://github.com/cgold-examples/minimal-example/archive/master.zip>`__
 
-``foo.cpp`` is a C++ source of our executable:
+``foo.cpp`` is the C++ source of our executable:
 
 .. literalinclude:: /examples/minimal-example/foo.cpp
   :language: cpp
@@ -53,8 +53,8 @@ The next line tells us about the ``CMake`` version for which this file is writte
 ``2.8`` means we can use this configuration with ``CMake`` versions like
 ``2.8``, ``2.8.7``, ``3.0``, ``3.5.1``, etc. but not with ``2.6.0`` or ``2.4.2``.
 
-Declaration of the project ``foo``, e.g. ``Visual Studio`` solution will
-have name ``foo.sln``, ``Xcode`` project name will be ``foo.xcodeproj``:
+With the declaration of the project ``foo``, the ``Visual Studio`` solution will
+have name ``foo.sln``, and the ``Xcode`` project name will be ``foo.xcodeproj``:
 
 .. literalinclude:: /examples/minimal-example/CMakeLists.txt
   :language: cmake
@@ -70,6 +70,6 @@ Adding executable ``foo`` with source ``foo.cpp``:
 things:
 
 * ``*.cpp`` extension is for the C++ sources, so target ``foo`` will be built with the C++ compiler
-* on Windows executables usually have suffix ``.exe``, so the resulting binary will be named ``foo.exe``
+* on Windows executables usually have the suffix ``.exe``, so the resulting binary will be named ``foo.exe``
 * on Unix platforms like OSX or Linux executables usually have no suffixes,
   so the resulting binary will be named ``foo``

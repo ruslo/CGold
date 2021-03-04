@@ -4,8 +4,8 @@
 CLI: Make
 ---------
 
-Instructions are the same for both ``Linux`` and ``OSX``. Open terminal and go
-to the directory with sources:
+The instructions are the same for both ``Linux`` and ``OSX``. Open a terminal and change
+to the directory with the sources:
 
 .. code-block:: none
 
@@ -13,9 +13,9 @@ to the directory with sources:
   [cgold-example]> ls
   CMakeLists.txt foo.cpp
 
-Generate Makefile using CMake. Use :ref:`-H. <-H>` :ref:`-B_builds <-B>` for
+Generate a Makefile using CMake. Use :ref:`-H. <-H>` :ref:`-B_builds <-B>` for
 specifying paths and ``-G "Unix Makefiles"`` for the generator (note that
-``Unix Makefiles`` is usually the default generator so ``-G`` probably not
+``Unix Makefiles`` is usually the default generator so ``-G`` is probably not
 needed at all):
 
 .. code-block:: none
@@ -40,11 +40,11 @@ needed at all):
   -- Generating done
   -- Build files have been written to: /.../cgold-example/_builds
 
-Generated ``Makefile`` can be found in ``_builds`` directory:
+The generated ``Makefile`` can be found in the ``_builds`` directory:
 
 .. code-block:: none
 
   > ls _builds/Makefile
   _builds/Makefile
 
-Next let's :doc:`build and run executable </first-step/run-executable/cli-make>`.
+Next let's :doc:`build and run the executable </first-step/run-executable/cli-make>`.

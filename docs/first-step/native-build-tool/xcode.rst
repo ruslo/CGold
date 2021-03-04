@@ -28,7 +28,7 @@ Run install:
 .. image:: osx-screens/xcode/03-run-install.png
   :align: center
 
-After successful install run ``Launchpad``:
+After successful installation run ``Launchpad``:
 
 .. image:: osx-screens/xcode/04-launchpad.png
   :align: center
@@ -45,13 +45,13 @@ Success!
 
 .. note::
 
-  Other developer tools is :ref:`installed now too <osx developer tools installed>`.
+  Other developer tools are :ref:`installed now too <osx developer tools installed>`.
 
 Several/custom Xcode versions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to have several ``Xcode`` versions simultaneously for testing
-purposes or you want the exact version of ``Xcode`` you can download/install
+purposes or you want a specific version of ``Xcode`` you can download/install
 it manually from `Apple Developers site <https://developer.apple.com/download/more/>`_.
 
 For example:
@@ -67,7 +67,7 @@ For example:
   7.2.1/
   7.3.1/
 
-Default directory and version can be checked by ``xcode-select``/``xcodebuild`` tools:
+The default directory and version can be checked with ``xcode-select``/``xcodebuild`` tools:
 
 .. code-block:: none
 
@@ -78,7 +78,7 @@ Default directory and version can be checked by ``xcode-select``/``xcodebuild`` 
   Xcode 7.3.1
   Build version 7D1014
 
-Default version can be changed by ``xcode-select -switch``:
+The default version can be changed with ``xcode-select -switch``:
 
 .. code-block:: none
 
@@ -88,7 +88,7 @@ Default version can be changed by ``xcode-select -switch``:
   Xcode 7.2
   Build version 7C68
 
-Or using environment variable ``DEVELOPER_DIR``:
+Or by using the environment variable ``DEVELOPER_DIR``:
 
 .. code-block:: none
 

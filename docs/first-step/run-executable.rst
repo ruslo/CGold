@@ -4,9 +4,10 @@
 Build and run executable
 ------------------------
 
-In this section we will build and run ``foo`` executable. In case if IDE was
-used you can do it by opening project in IDE or using command line (it doesn't
-matter how project was generated before: using GUI or CLI version of CMake).
+In this section we will build and run the ``foo`` executable. You can do
+it by opening the project in an IDE or by using the command line (it
+doesn't matter how the project was generated earlier: by using either
+the GUI or CLI version of CMake).
 
 .. toctree::
   :maxdepth: 2
