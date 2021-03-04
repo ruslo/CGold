@@ -4,7 +4,7 @@
 Generate native tool files
 --------------------------
 
-You can use GUI or command-line version of CMake to generate native files.
+You can use the GUI or command-line version of CMake to generate native files.
 
 .. toctree::
   :maxdepth: 2
