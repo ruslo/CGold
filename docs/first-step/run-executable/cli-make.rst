@@ -4,7 +4,7 @@
 CLI: Make
 ---------
 
-Usually to build executable with Make you need to find directory with ``Makefile``
+Usually to build an executable with Make, you need to find the directory with the ``Makefile``
 and run ``make`` in it:
 
 .. code-block:: none
@@ -16,7 +16,7 @@ and run ``make`` in it:
   [100%] Linking CXX executable foo
   [100%] Built target foo
 
-But CMake offer cross-tool way to do exactly the same by ``cmake --build _builds``:
+But CMake offers a cross-tool way to do exactly the same by ``cmake --build _builds``:
 
 .. code-block:: none
 

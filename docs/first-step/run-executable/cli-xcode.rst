@@ -4,7 +4,7 @@
 CLI: Xcode
 ----------
 
-To build and Xcode project from the command line, ``xcodebuild`` can be used.
+To build an Xcode project from the command line, ``xcodebuild`` can be used.
 Check it can be found:
 
 .. code-block:: none
