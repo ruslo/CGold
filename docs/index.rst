@@ -14,8 +14,8 @@ This guide will show you how to use :ref:`CMake <CMake>` and will help you to
 write elegant, correct and scalable projects. We'll start from the simple cases
 and add more features one by one. This tutorial covers only part of the CMake
 capabilities - some topics are skipped intentionally in favor of better modern
-approaches [1]_. Document designed to be a good tutorial for the very beginners
-but touches some aspects in which advanced developers may be interested too.
+approaches [1]_. This document is designed to be a good tutorial for the very beginners
+but touches on some aspects in which advanced developers may be interested too.
 Look at this document as a skeleton/starting point for further CMake learning.
 
 Enjoy!
