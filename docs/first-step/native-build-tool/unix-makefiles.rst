@@ -32,7 +32,7 @@ OSX Installation
 ================
 
 If you're planning to install :doc:`xcode` then install it first. ``make`` and
-other tools go with ``Xcode``. Otherwise ``make`` can be installed
+other tools come with ``Xcode``. Otherwise ``make`` can be installed
 with ``Command line tools`` only.
 
 Run ``Launchpad``:
@@ -46,12 +46,12 @@ Find ``Terminal`` and launch it:
   :align: center
 
 Try to execute ``make`` (or any other commands for development like GCC, git,
-clang, etc.). Popup dialog window will appear:
+clang, etc.). The following popup dialog window will appear:
 
 .. image:: osx-screens/dev-tools/03-developers-tools-pop-up.png
   :align: center
 
-Click ``Install`` wait until it finished with successful message:
+Click ``Install``. Wait until it has finished with the success message:
 
 .. image:: osx-screens/dev-tools/04-installed.png
   :align: center
