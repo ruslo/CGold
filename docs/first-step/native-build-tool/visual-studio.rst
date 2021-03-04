@@ -23,7 +23,7 @@ Visual Studio
 Manage features
 ---------------
 
-Installer will offer you the menu to manage features you need. Don't forget to
+The installer will offer you a menu to manage the features you need. Don't forget to
 add :menuselection:`Programming Languages --> Visual C++`:
 
 .. image:: win-screens/visual-cxx.png
