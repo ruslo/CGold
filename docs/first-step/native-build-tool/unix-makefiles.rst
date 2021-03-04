@@ -46,7 +46,7 @@ Find ``Terminal`` and launch it:
   :align: center
 
 Try to execute ``make`` (or any other commands for development like GCC, git,
-clang, etc.). The following popup dialog window will appear:
+clang, etc.). The following pop-up dialog window will appear:
 
 .. image:: osx-screens/dev-tools/03-developers-tools-pop-up.png
   :align: center
