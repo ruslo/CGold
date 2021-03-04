@@ -4,13 +4,13 @@
 Ubuntu GCC
 ==========
 
-``GCC`` compiler usually used on ``Linux OS``. To install it on ``Ubuntu`` run:
+The ``GCC`` compiler is usually used on ``Linux OS``. To install it on ``Ubuntu`` run:
 
 .. code-block:: none
 
   > sudo apt-get install -y gcc
 
-Check location and version
+Check the location and version
 
 .. code-block:: none
 
