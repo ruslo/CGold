@@ -7,18 +7,18 @@ Out-of-source build
 ===================
 
 The next important term is "out-of-source build". "Out-of-source build" is a
-good practice of keeping separately generated files from
-:ref:`binary tree <binary tree>` and source files from
-:ref:`source tree <source tree>`. CMake does support contrary "in-source build"
-layout, but such an approach has no real benefits and not recommended.
+good practice of keeping separate the generated files of the
+:ref:`binary tree <binary tree>` from the source files of the
+:ref:`source tree <source tree>`. CMake does support the contrary "in-source build"
+layout, but such an approach has no real benefit and is not recommended.
 
 .. _out-of-source-config:
 
 Multiple configurations
 -----------------------
 
-Out-of-source build allows you to have different configurations simultaneously
-without conflicts, e.g. Debug and Release variant:
+An out-of-source build allows you to have different configurations simultaneously
+without conflicts, e.g. Debug and Release variants:
 
 .. code-block:: none
 
@@ -49,8 +49,8 @@ platforms:
 VCS friendly
 ------------
 
-Out-of-source build allow you to ignore temporary binaries by just adding
-``_builds`` directory to the no-tracking-files list:
+An out-of-source build allows you to ignore temporary binaries by just adding
+the ``_builds`` directory to the no-tracking-files list:
 
 .. code-block:: none
 
@@ -58,7 +58,7 @@ Out-of-source build allow you to ignore temporary binaries by just adding
 
   _builds
 
-compare it with similar file for in-source build:
+compare it with the entries required for an in-source build:
 
 .. code-block:: none
 
@@ -84,14 +84,15 @@ compare it with similar file for in-source build:
 Other notes
 -----------
 
-In-source build at the first glance may looks more friendly for the developers
-who used to store projects/solution files in :ref:`VCS <VCS>`. But in fact
-out-of-source build will remind you one more time that now your workflow
+An in-source build at first glance may look more friendly for developers
+who are used to storing project/solution files in :ref:`VCS <VCS>`. But in fact
+an out-of-source build will remind you one more time that now your workflow has
 changed, CMake is in charge and :ref:`you should not <affecting workflow>` edit
-your project settings in IDE.
+your project settings in your IDE.
 
-Another note is that out-of-source mean not only set ``cmake -B_builds`` but
-also remember to put any kind of automatically generated files to ``_builds``.
-E.g. if you have C++ template ``myproject.h.in`` which is used to generate
-``myproject.h``, then you need to keep ``myproject.h.in`` in source tree and put
-``myproject.h`` to the binary tree.
+Another note is that using an out-of-source build means that not only do you
+need to set ``cmake -B_builds`` but also remember that you have to put any
+kind of automatically generated files into ``_builds``.
+E.g. if you have a C++ template ``myproject.h.in`` which is used to generate
+``myproject.h``, then you need to keep ``myproject.h.in`` in the source tree
+and put ``myproject.h`` in the binary tree.
