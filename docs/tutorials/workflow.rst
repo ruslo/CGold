@@ -151,7 +151,7 @@ Suspicious behavior
 If your workflow doesn't match the configure-once approach then it may be a
 symptom of wrongly written CMake code. Especially when you have to run
 ``cmake -H. -B_builds`` twice or when ``cmake --build _builds`` doesn't detect
-updates to the CMake code.
+updates that have been made to the CMake code.
 
 .. admonition:: CMake issue
 
