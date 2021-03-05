@@ -7,7 +7,7 @@ Tutorials
 =========
 
 If you reached this section it means you can handle
-:doc:`basic configuration </first-step>`. It's time to see everything in details
+:doc:`basic configuration </first-step>`. It's time to see everything in detail
 and add more features.
 
 .. note::
