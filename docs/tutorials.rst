@@ -14,13 +14,13 @@ and add more features.
 
   In provided examples:
 
-  * CMake will be run in command-line format but CMake-GUI will work in similar
+  * CMake will be run in command-line format but CMake-GUI will work in a similar
     way, if behavior differs it will be noted explicitly
   * For the host platform ``Linux`` is chosen, use analogous commands
     if you use another host. E.g. use ``dir _builds`` on Windows instead of
     ``ls _builds``
-  * ``Unix Makefiles`` will be used as a generator. On \*nix platforms this is
-    default one. Peculiarities of other generators will be described explicitly
+  * ``Unix Makefiles`` will be used as the generator. On \*nix platforms this is
+    the default generator. Peculiarities of other generators will be described explicitly
 
 .. toctree::
   :maxdepth: 2
