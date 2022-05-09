@@ -9,7 +9,7 @@ developer's workflow: The :ref:`native build tool <native build tool>` will watc
 the CMake sources for changes and re-run the configure step automatically. In
 command-line terms it means that you have to run ``cmake -H. -B_builds`` **only
 once**, you don't need to run configure again after modification of
-CMakeLists.txt - you can keep using simply ``cmake --build``.
+CMakeLists.txt - you can simply use ``cmake --build``.
 
 Makefile example
 ================

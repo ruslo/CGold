@@ -72,8 +72,8 @@ versions of CMake then you need to put the smallest one in
 
 .. _cmake_minimum_required should be first:
 
-Even if some commands look harmless at the first glance it may be not so
-in fact, e.g. ``project`` is the place where a lot of checks happens and where
+Even if some commands look harmless, they might not be. For example, ``project``
+is the place where a lot of checks happens and where the
 toolchain is loaded. If you run this example on ``Cygwin`` platform:
 
 .. literalinclude:: /examples/minimum-required-example/bad/CMakeLists.txt
@@ -156,12 +156,12 @@ CMake policies
 
  * `CMake policies <https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html>`__
 
-When new version of CMake released there may be a list of policies describing
+When a new version of CMake is released, there may be a list of policies describing
 cases when behavior changed comparing to the previous CMake version.
 
-Let's see how it works on practice. In CMake ``3.0`` policy
+Let's see how it works in practice. In CMake ``3.0`` policy
 `CMP0038 <https://cmake.org/cmake/help/latest/policy/CMP0038.html>`__
-was introduced. Before version ``3.0`` user can have target linked to itself,
+was introduced. Before version ``3.0``, a target could be linked to itself,
 which make no sense and definitely **is a bug**:
 
 .. literalinclude:: /examples/policy-examples/bug-2.8/CMakeLists.txt
@@ -218,7 +218,7 @@ For CMake version ``>= 3.0`` warning will be reported:
   -- Generating done
   -- Build files have been written to: /.../policy-examples/_builds
 
-Assume you want to drop the support of old version and more to some new
+Assume you want to drop support for the old version and more to some new
 ``3.0`` features. When you set ``cmake_minimum_required(VERSION 3.0)``
 
 .. literalinclude:: /examples/policy-examples/set-3.0/CMakeLists.txt
@@ -255,11 +255,11 @@ warning turns into error:
   [policy-examples]> echo $?
   1
 
-Two cases will be shown below. In first case we want to keep support of old
-version (``2.8`` for now) so it will work with both ``CMake 2.8`` and
-``CMake 3.0+``. In second case we decide to drop support of old version and move
-to ``CMake 3.0+``. We'll see how it will affect policies. It will be shown in
-the end that in fact without **using new features** from ``CMake 3.0`` it
+Two cases will be shown below. In the first case we want to keep support of
+version ``2.8`` so it will work with both ``CMake 2.8`` and
+``CMake 3.0+``. In the second case we decide to drop support of version ``2.8`` and move
+to ``CMake 3.0+``. We'll see how it affects the policies. It will be shown
+that without **using new features** from ``CMake 3.0``, it
 doesn't make sense to change ``cmake_minimum_required``.
 
 Keep using old
@@ -357,8 +357,8 @@ Final version:
 Moving to new version
 ~~~~~~~~~~~~~~~~~~~~~
 
-With ``cmake_minimum_required`` updated to ``3.0`` warning turns into error.
-To suppress error without doing real fix (temporary solution) you can add
+With ``cmake_minimum_required`` updated to ``3.0``, the warning turns into an error.
+As a temporary solutuion, the error can be suppressed by adding a
 ``cmake_policy`` directive:
 
 .. literalinclude:: /examples/policy-examples/suppress-3.0/CMakeLists.txt
@@ -371,7 +371,7 @@ To suppress error without doing real fix (temporary solution) you can add
   condition since ``cmake_minimum_required(VERSION 3.0)`` guarantee us that
   we are using ``CMake 3.0+``.
 
-Policy can be removed after real fix applied:
+This policy can then be removed once a better solution is found:
 
 .. literalinclude:: /examples/policy-examples/fix-3.0/CMakeLists.txt
   :diff: /examples/policy-examples/suppress-3.0/CMakeLists.txt
