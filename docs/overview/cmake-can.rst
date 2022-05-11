@@ -68,7 +68,7 @@ VCS friendly
 
 Version Control (:ref:`VCS <VCS>`) is used to share and save your code's
 history of changes when you work in a team. However, different IDEs use unique
-files to track project files (``*.sln``, ``.pbxproj``, ``.vscode``, ect)
+files to track project files (``*.sln``, ``*.pbxproj``, ``*.vscode``, etc)
 For example, here is the diff after adding ``bar.cpp`` source file to the ``bar`` 
 executable in ``Visual Studio``:
 
