@@ -38,9 +38,9 @@ approach is error prone and not flexible.
 
 .. _cmake generate native build tool:
 
-CMake solve this design flaw by adding extra step to development process. You
-can describe your project in ``CMakeLists.txt`` file and use :ref:`CMake <CMake>` to
-generate tools you currently interested in using cross-platform :ref:`CMake <CMake>` code:
+CMake solve this design flaw by adding an extra step to the development process. You
+can describe your project in a ``CMakeLists.txt`` file and use :ref:`CMake <CMake>` to
+generate the cross-platform build tools:
 
 .. image:: /overview/images/generate-native-files.png
   :align: center
@@ -66,11 +66,11 @@ keep using your favorite tools like ``Visual Studio/msbuild``,
 VCS friendly
 ============
 
-When you work in team on your code you probably want to share and save the
-history of changes, that's what usually :ref:`VCS <VCS>` used for. How does
-storing of IDE files like ``*.sln`` works on practice? Here is the diff after
-adding ``bar`` executable with ``bar.cpp`` source file to the ``Visual Studio``
-solution:
+Version Control (:ref:`VCS <VCS>`) is used to share and save your code's
+history of changes when you work in a team. However, different IDEs use unique
+files to track project files (``*.sln``, ``*.pbxproj``, ``*.vscode``, etc)
+For example, here is the diff after adding ``bar.cpp`` source file to the ``bar`` 
+executable in ``Visual Studio``:
 
 .. literalinclude:: /overview/snippets/foo-new.sln
   :diff: /overview/snippets/foo-old.sln
@@ -98,9 +98,8 @@ When using ``Xcode``:
 .. literalinclude:: /overview/snippets/project-new.pbxproj
   :diff: /overview/snippets/project-old.pbxproj
 
-As you can see there are a lot of magic happens while doing quite simple
-task like adding new target with one source file. Looking at the diffs above
-try to answer next questions:
+As you can see, a lot of magic happens while doing a simple
+task like adding one new source file to a target. Aditionaly,
 
 * Are you sure that all XML sections added on purpose and was not the result
   of accidental clicking?
@@ -126,7 +125,7 @@ Experimenting
 =============
 
 Even if your team has no plans to work with some :ref:`native tools <Native build tool>`
-originally this may change in future. E.g. you have worked with ``Makefile`` and
+originally, this may change in the future. E.g. you have worked with ``Makefile`` and
 want to try ``Ninja``. What you will do? Convert manually? Find the converter?
 Write converter from scratch? Write new ``Ninja`` configuration from scratch?
 With :ref:`CMake <CMake>` you can change ``cmake -G 'Unix Makefiles'`` to

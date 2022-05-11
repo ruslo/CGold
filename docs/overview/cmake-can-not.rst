@@ -34,7 +34,7 @@ XML files, autotools configs or `JSON-like syntax`_.
 
 Think about it in this
 way: if you want to do some nasty non-standard thing then probably you should
-stop.  If you think it is something important and useful, then it might be
+stop.  If you think it is something important, then it might be
 quite useful for other :ref:`CMake <CMake>` users too. In this case you need to
 think about implementing new feature **in CMake itself**.  :ref:`CMake <CMake>`
 is open-source project written in C++, and additional features are always being introduced.
