@@ -358,7 +358,7 @@ Moving to new version
 ~~~~~~~~~~~~~~~~~~~~~
 
 With ``cmake_minimum_required`` updated to ``3.0``, the warning turns into an error.
-As a temporary solutuion, the error can be suppressed by adding a
+As a temporary solution, the error can be suppressed by adding a
 ``cmake_policy`` directive:
 
 .. literalinclude:: /examples/policy-examples/suppress-3.0/CMakeLists.txt

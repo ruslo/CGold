@@ -99,7 +99,7 @@ When using ``Xcode``:
   :diff: /overview/snippets/project-old.pbxproj
 
 As you can see, a lot of magic happens while doing a simple
-task like adding one new source file to a target. Aditionaly,
+task like adding one new source file to a target. Additionally,
 
 * Are you sure that all XML sections added on purpose and was not the result
   of accidental clicking?
