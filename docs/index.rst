@@ -6,7 +6,7 @@ CGold: The Hitchhiker's Guide to the CMake
 
 .. warning::
 
-  **THIS DOCUMENT IS UNDER CONSTRUCTION! WORK IN PROGRESS!**
+  The project is not under active development
 
 Welcome to **CGold**!
 

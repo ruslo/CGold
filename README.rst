@@ -3,7 +3,7 @@ CGold: The Hitchhiker’s Guide to the CMake
 
 |build| |travis| |license|
 
-\:fire: :fire: :fire: **WORK IN PROGRESS!** :fire: :fire: :fire:
+The project is not under active development
 
 .. |build| image:: https://readthedocs.org/projects/cgold/badge/?version=latest
   :target: https://cgold.readthedocs.io/en/latest/?badge=latest
