@@ -53,7 +53,7 @@ And final executable ``baz``:
 Let's build the project now:
 
 .. code-block:: none
-  :emphasize-lines: 2, 4-5
+  :emphasize-lines: 2, 4
 
   [library-examples]> rm -rf _builds
   [library-examples]> cmake -Hlink-error-odr-local -B_builds -DCMAKE_VERBOSE_MAKEFILE=ON

@@ -420,7 +420,7 @@ is preferable:
 
 .. literalinclude:: /examples/library-examples/dup/baz/CMakeLists.txt
   :language: cmake
-  :emphasize-lines: 4-5
+  :emphasize-lines: 3-4
 
 Our executable links to both libraries. Probably we don't know/not interested
 in fact that ``baz`` use ``bar`` too. We decide that static linkage is

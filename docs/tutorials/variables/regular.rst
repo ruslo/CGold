@@ -191,7 +191,7 @@ will remove the regular variable with the same name from current scope:
 
 .. literalinclude:: /examples/usage-of-variables/cache-remove-regular/CMakeLists.txt
   :language: cmake
-  :emphasize-lines: 4,5,9
+  :emphasize-lines: 4,5,7
 
 .. code-block:: none
   :emphasize-lines: 2,3
