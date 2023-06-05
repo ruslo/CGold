@@ -12,19 +12,19 @@ src="${venv_dir}/bin/activate"
 
 if [ ! -f "${src}" ];
 then
-  virtualenv "${venv_dir}"
+  python3 -m venv "${venv_dir}"
 fi
 
 source "${src}"
 
-which python
-python --version
+which python3
+python3 --version
 
-which pip
-pip --version
+which pip3
+pip3 --version
 
-pip install -U pip
-pip install -r requirements.txt
+pip3 install -U pip
+pip3 install -r requirements.txt
 
 rm -rf _build _static _spelling
 

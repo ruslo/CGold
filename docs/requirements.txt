@@ -1,4 +1,4 @@
-Sphinx==1.4.5
-sphinx-rtd-theme==0.4.0
-sphinxcontrib-spelling==2.2.0
-docutils==0.16
+Sphinx==6.2.1
+sphinx-rtd-theme==1.2.0
+sphinxcontrib-spelling==8.0.0
+docutils==0.18.1

@@ -160,8 +160,8 @@ html_static_path = ['_static', 'rtfd-css/docs/rtfd-css']
 # Add custom .css files
 # https://github.com/snide/sphinx_rtd_theme/issues/117#issuecomment-41571653
 def setup(app):
-   app.add_stylesheet("custom.css")
-   app.add_stylesheet("rtfd-css.css")
+   app.add_css_file("custom.css")
+   app.add_css_file("rtfd-css.css")
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
